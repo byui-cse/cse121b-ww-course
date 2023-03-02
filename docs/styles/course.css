@@ -19,9 +19,15 @@
 }
 
 body {
-  font: 400 16px / 1.5 Montserrat, 'Open Sans', Helvetica, sans-serif;
+  font: 400 16px / 1.5 Montserrat, Helvetica, sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: .5rem;
 }
 
 h1,
@@ -38,21 +44,26 @@ h1 {
   margin-left: 1rem;
   font-weight: normal;
 }
+
 #coursetitle {
   display: none;
 }
+
 h2 {
   font-size: 1.6rem;
-  margin: 1rem 0;
+  margin: 1.2rem 0.25rem;
 }
+
 h3 {
   font-size: 1.4rem;
   margin: 0.75rem 0.5rem;
 }
+
 h4 {
   font-size: 1.2rem;
   margin: 0.75rem;
 }
+
 h5 {
   font-size: 1rem;
   color: var(--navy);
@@ -62,12 +73,15 @@ h5 {
 a {
   color: var(--navy);
 }
+
 a:link {
   color: var(--alink);
 }
+
 a:active {
   color: var(--red);
 }
+
 a:visited,
 a:focus {
   color: var(--avisited);
@@ -77,17 +91,18 @@ p {
   margin: 1rem;
 }
 
-h4 + p {
+h4+p {
   margin-left: 1.25rem;
 }
 
-h5 ~ p {
+h5~p {
   margin-left: 1.5rem;
 }
 
 ol ol,
 ul ul {
-  margin-top: 1rem; /* override default */
+  margin-top: 1rem;
+  /* override default */
 }
 
 li {
@@ -107,6 +122,11 @@ li p {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
   background-color: var(--byuiblue);
   padding: 0.5rem;
@@ -118,13 +138,44 @@ header {
   background-color: #000;
   padding: 12px 11px;
   position: absolute;
-  top: -0.5rem;
-  right: 1rem;
+  top: 0;
+  right: 0;
 }
 
 main {
   margin: 1.5rem 1rem;
 }
+
+nav {
+  display: flex;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+nav span {
+  font-size: .8rem;
+  font-weight: 700;
+  background-color: var(--lightgray);
+  margin: 0 .25rem .25rem;
+  text-align: center;
+}
+
+nav span a:link,
+nav span a:visited,
+nav span a:active,
+nav span a:focus {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  padding: .5rem 1rem;
+  order: var(--bord);
+}
+
+nav span a:hover {
+  background-color: var(--byuiblue);
+  color: #fff;
+}
+
 
 footer {
   border-top: var(--bord);
@@ -147,7 +198,6 @@ details {
 }
 
 details p {
-  font-size: smaller;
   margin: 0.5rem 0 0 0.5rem;
 }
 
@@ -175,11 +225,100 @@ kbd {
   color: red;
 }
 
-.page {
-  max-width: 960px;
-  position: relative;
-  margin: 0 auto;
+mark {
+  padding: 0.5rem;
+  font-style: italic;
 }
+
+mark::before {
+  content: '⚒️';
+}
+
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: smaller;
+  margin: 0 0 1rem 0;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: calc(var(--aspect-ratio, 0.5625) * 100%);
+  margin: 0.5em auto;
+}
+
+.video-container iframe {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem auto;
+  width: 80%;
+  border: var(--bord);
+  background-color: var(--lightgray);
+}
+
+table caption {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+th {
+  background-color: var(--darkgray);
+  color: #fff;
+}
+
+th,
+td {
+  border: var(--bord);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.active {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.active a:link,
+.active a:visited,
+.active a:active,
+.active a:focus {
+  color: #fff;
+}
+
+td.detailed-text-cell {
+  text-align: left;
+  font-size: 90%;
+}
+
+td.detailed-text-cell ul,
+td.detailed-text-cell ol {
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+td.detailed-text-cell li {
+  margin-bottom: 0.1rem;
+}
+
+.team::after {
+  content: " \1F465"
+}
+
 .callout {
   margin: 1rem;
   border: var(--bord);
@@ -189,6 +328,8 @@ kbd {
 
 .reference {
   background-color: var(--lightgray);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .info {
@@ -203,9 +344,21 @@ kbd {
   background-color: var(--warning);
 }
 
+.discussion {
+  background-color: var(--details);
+}
+
+.discussion h5 {
+  color: var(--black);
+}
+
 .question {
   color: var(--navy);
   border-top: var(--bord);
+}
+
+blockquote {
+  border-left: 3px solid var(--darkgray);
 }
 
 .smaller {
@@ -221,19 +374,75 @@ kbd {
 .step-reset {
   counter-reset: step;
 }
+
 .step {
   counter-increment: step;
 }
+
 .step::before {
   content: 'Step ' counter(step) ':  ';
   font-size: x-large;
   color: var(--navy);
 }
 
+.part-reset {
+  counter-reset: part;
+}
+
+.part {
+  counter-increment: part;
+  margin-left: 1rem;
+}
+
+.part::before {
+  content: 'Part ' counter(part) ':  ';
+  font-size: x-large;
+  color: var(--navy);
+}
+
+.check {
+  list-style: '☑️ ';
+}
+
+#weeks {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+#weeks li {
+  margin-left: 0;
+  margin-right: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: .25rem .5rem;
+}
+
+#weeks li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+#weeks li:hover {
+  background-color: var(--byuiblue);
+}
+
+#weeks li a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #fff;
+}
+
 @media screen and (min-width: 600px) {
+
+  .page {
+    position: relative;
+  }
+
   .logo {
     width: 75px;
     padding: 18px 15px;
+    top: -.5rem;
+    right: 1rem;
   }
 
   h1 {
