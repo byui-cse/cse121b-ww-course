@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 330 | The Document Object Model</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>WDD 330<span id="coursetitle">: Web Frontend Development II</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <h2>The Document Object Model</h2>
+    <h3>Overview</h3>
+    <p>The Document Object Model or DOM represents the logical tree structure of a document. The DOM
+      allows us to connect to the document through programming languages.</p>
+    <div class="callout info">
+      "The DOM represents a document with a logical tree. Each branch of the tree ends in a node,
+      and each
+      node contains objects. DOM methods allow programmatic access to the tree. With them, you can
+      change
+      the document's structure, style, or content. Nodes can also have event handlers attached to
+      them. Once an event is triggered, the event handlers get executed." - MDN Web Docs
+    </div>
+
+    <h3>Prepare</h3>
+    <ul>
+      <li>Read: 📃 <a href="https://javascript.info/browser-environment#dom-document-object-model"
+          target="_blank">DOM (Document Object Model)</a> - javascript.info</li>
+      <li>Read: 📃 <a href="https://javascript.info/dom-nodes" target="_blank">DOM tree</a> -
+        javascript.info</li>
+    </ul>
+
+    <h3>Activity Instructions</h3>
+
+    <ol>
+      <li>
+        Using the <a href="https://javascript.info/dom-navigation" target="_blank">Walking the
+          DOM</a> document from javascript.info, complete the three (3) <a
+          href="https://javascript.info/dom-navigation#tasks" target="_blank">Tasks</a> provided.
+      </li>
+      <li>Let us test the concept presented in the previous tasks about non-element nodes in the
+        DOM.
+        <ol>
+          <li>Navigate to the <a href="https://www.churchofjesuschrist.org" target="_blank">Church
+              website</a>.</li>
+          <li>Open up the browser's DevTools.</li>
+          <li>Go to the console tab and clear the contents Ø.</li>
+          <li>Write a for-of loop that will output to the console all the child nodes of the
+            document.body.
+            <details>
+              <summary>Hint</summary>
+              <p class="smaller">An example of how to do this is found in the Walking the DOM
+                article under DOM collections. Make sure to output to the console and not to pop-up,
+                alert boxes.
+              <details>
+                <summary>Code Hint - Try your own first</summary>
+                <pre>
+                    <code class="javascript">
+  for (let node of document.body.childNodes)  console.log(node)
+                    </code>
+                  </pre>
+              </details>
+              </p>
+            </details>
+          </li>
+          <li>Run this loop in the console. You should see over 25 child nodes being display.</li>
+          <li>Find the first non-element node (#text).
+            <details>
+              <summary>What node is this #text node's <code>nextSibling</code></summary>
+              <p class="smaller">&lt;div id="platform"&gt;&lt;div&gt;</p>
+            </details>
+          </li>
+
+        </ol>
+        <div class="callout info">These #text nodes' content are not that interesting. Regardless,
+          you can use the console to view all sort of information about each child node.</div>
+      </li>
+    </ol>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
