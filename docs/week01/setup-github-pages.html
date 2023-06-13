@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 121B | Setup: GitHub Pages</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>CSE 121B<span id="coursetitle">: JavaScript Language</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course">Home</a></span>
+      <span class="active"><a
+          href="https://byui-cse.github.io/cse121b-ww-course/week01">W1</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week02">W2</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week03">W3</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week04">W4</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week05">W5</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week06">W6</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week07">W7</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/resources">Resources</a></span>
+    </nav>
+    <h2>Setup: GitHub Pages</h2>
+    <h3>Overview</h3>
+    <p>In this course, you will be publishing your work to your own website which is freely served
+      through GitHub Pages. Your peers, graders, and the instructor will then be able to access your
+      site for collaboration and feedback. You have already established a GitHub account and
+      installed git technology so that you can commit and push/upload your work to your GitHub
+      repository. We will be doing that inside of VS Code.</p>
+    <div class="callout info">"GitHub Pages is a static site hosting service designed to host your
+      personal, organization, or project pages directly from a GitHub repository" - <a
+        href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages"
+        target="_blank"> docs.github.com</a>
+    </div>
+    <h3>Instructions</h3>
+    <h4 class="step">Publish the cse121b folder to GitHub</h4>
+    <ol>
+      <li>In VS Code, <strong>open your cse121b folder</strong> if it is not already open.
+        <div class="callout info">
+          The system may prompt you to trust the file source. Click <strong>Trust</strong> to
+          continue.
+        </div>
+      </li>
+      <li>Select the <strong>Source Control</strong> icon in VS Code's Activity Bar.
+        <div class="callout info">
+          By default, the <strong>Activity Bar</strong> is found on the left-hand side of the screen
+          and will have up to five icons. If the Activity Bar is not visible, click <strong>View ->
+            Appearance -> Activity Bar</strong> to turn it visible.
+        </div>
+        <figure><img src="../images/source_control_icon.png" alt="Source Control Icon in VS Code"
+            loading="lazy" width="350">
+          <figcaption>Figure 1: Source Control Icon in VS Code's Activity Bar</figcaption>
+        </figure>
+      </li>
+      <li>Click the blue button that says <strong>Publish to GitHub</strong>. If you don't see this
+        button, make sure you have all other git repo folders closed.
+        <figure><img src="../images/publish_github_button.png" alt="Source Control Icon in VS Code"
+            loading="lazy" width="350">
+          <figcaption>Figure 2: Publish to GitHub Button in the Source Control panel</figcaption>
+        </figure>
+      </li>
+      <li>Click <strong>Allow</strong> if you get a message saying "<em>The extension 'GitHub' wants
+          to sign in using GitHub.</em>"</li>
+      <li>If you are prompted for an authorization for Visual Studio Code to Access GitHub, click
+        <strong>Continue</strong>.
+      </li>
+      <li>If you are asked to allow the page to open "Visual Studio Code", click
+        <strong>Allow</strong>.
+      </li>
+      <li>You may also be asked to allow an extension to open this URI, click <strong>Open</strong>.
+      </li>
+      <li>VSCode will choose the folder you have open, the cse121b folder as the the repository and
+        give you the option to "Publish to GitHub public repository". Choose the one that says
+        <strong>"public"</strong>, not private. This will make a new public repository in our GitHub
+        account.
+        <figure><img src="../images/public_repo_option.png"
+            alt="Publish to GitHub public repository" loading="lazy" width="350">
+          <figcaption>Figure 3: Publish to GitHub public repository</figcaption>
+        </figure>
+      </li>
+      <li>It will show a list of the files in the cse121b folder. They will be selected by default
+        so
+        just
+        click <strong>OK</strong> to include the files in the new repository.</li>
+      <li>You may get a prompt to "Authorize Git Credential Manager" here. Click
+        <strong>Authorize</strong>.
+      </li>
+      <li>If you get a message asking if you'd like to periodically run fetch you can say "Yes", but
+        it is not necessary.
+        <div class="callout info">
+          If you look at your GitHub account on github.com, a new repository named cse121b will be
+          there along with any files or folders that were in your local cse121b folder. This local
+          folder is now connected to the remote repository on GitHub and is a repository itself.
+        </div>
+      </li>
+    </ol>
+    <div class="callout info">
+      Demonstration: 🎦 <a href="https://youtu.be/mrGMxZkkIzg" target="_blank">Setting up VSCode to
+        push to
+        a GitHub repository</a>
+    </div>
+    <h4 class="step">Enable GitHub Pages</h4>
+    <ol>
+      <li>Login to your <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        account if needed.</li>
+      <li>Open your <strong>cse121b</strong> repository.</li>
+      <li>Click <strong>⚙️ Settings</strong> in the repository menu.</li>
+      <li>Click <strong>Pages</strong> in the submenu that appears on the right of the settings
+        panel.</li>
+      <li>Under the <strong>Build and deployment</strong> section of GitHub Pages, select the
+        <strong>main</strong> branch. Leave the next pull down menu with the default value of
+        <strong>📁 / root</strong>.<br>
+        <div class="callout info">If your branch is named <strong>master</strong> instead of main,
+          that is fine.</div>
+      </li>
+      <li>In the top section, a message should display something like <strong>"Your site is live at
+          https://githubusername.github.io/cse121b"</strong>. This is your URL.</li>
+      <li>That is all that needs to be done to enable GitHub Pages site publishing. After a few
+        minutes, <strong>test</strong> the URL. Your course home page should open.</li>
+      <li><strong>Test</strong> the content of your page using this <a
+          href="../grader/w01-homepage.html">Page Assessment</a> tool.</li>
+      <li><strong>Share</strong> your GitHub Pages cse121b URL with a family member or friend.</li>
+      <li><strong>Bookmark</strong> or Favorite your GitHub Pages cse121b URL.</li>
+    </ol>
+    <div class="callout info">
+      Demonstration: 🎦 <a href="https://youtu.be/_jzY3dryS5A" target="_blank">GitHub Pages
+        Setup</a>
+    </div>
+    <h4 class="step">Testing</h4>
+    <p>Test that your home page is being served up by running this <a
+        href="../grader/w01-homepage.html" target="_blank">page evaluation</a> tool.</p>
+    <h3>Submission</h3>
+    <ol>
+      <li>After you have completed the work, return to I-Learn to submit your GitHub Pages URL which
+        will have the following format:
+        <pre><code class="text">https://your-github-username.github.io/cse121b/</code></pre>
+      </li>
+    </ol>
+    <hr>
+    <nav>
+      <span><a href="setup-git.html">Next ➡️ git</a></span>
+    </nav>
+  </main>
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../scripts/preventCodeSelect.js"></script>
+</body>
+
+</html>

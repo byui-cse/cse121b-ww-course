@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 121B | Setup: Git</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>CSE 121B<span id="coursetitle">: JavaScript Language</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+
+  <main class="page">
+    <nav>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course">Home</a></span>
+      <span class="active"><a
+          href="https://byui-cse.github.io/cse121b-ww-course/week01">W1</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week02">W2</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week03">W3</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week04">W4</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week05">W5</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week06">W6</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/week07">W7</a></span>
+      <span><a href="https://byui-cse.github.io/cse121b-ww-course/resources">Resources</a></span>
+    </nav>
+    <h2>Setup: Git Installation</h2>
+    <h3>Overview</h3>
+    <p>Git is a version control software framework that will run behind the scenes, tracking your
+      additions, updates, and deletions to your project files and folders. You will use git to
+      commit files to your tracked projects and push/upload your work to your GitHub, remote
+      repository.</p>
+    <div class="callout info">Watch: 🎦 <a href="https://youtu.be/FsgEtgmh268" target="_blank">What
+        is Git?</a></div>
+    <h3>Instructions</h3>
+    <h4>Install Git on your computer</h4>
+
+    <p>Select only <strong>one</strong> of the following instruction sets depending on your
+      operating system of Windows, Mac, or Linux.</p>
+
+    <details>
+      <summary><strong>Windows Users</strong></summary>
+      <ol>
+        <li>Before downloading <strong>Git</strong>, check to make sure you don't already have
+          Git installed on your computer.
+          <ol>
+            <li>Open a <strong>command prompt</strong> by clicking the Start button and typing
+              <code class="cli">cmd</code> in the search box. You should get the command prompt
+              terminal to open.
+              <div class="callout info">
+                <p>Alternatively, in VS Code, you can use the terminal panel to complete any
+                  command line task. use the <code>Ctrl+`</code> keyboard shortcut to toggle the
+                  terminal panel.
+              </div>
+            </li>
+            <li>Enter the following command and then press <strong>Enter</strong>:
+              <pre><code class="cli">git --version</code></pre>
+            </li>
+            <li>If you see a version number, you already have Git installed. If you don't see a
+              version number, you need to install Git.</li>
+
+          </ol>
+        </li>
+        <li>To install Git for Windows. Go to <a href="https://git-scm.com/downloads"
+            target="_blank"> git-scm.com/downloads</a> and select <strong>Download for
+            Windows</strong>.<br> An .exe file will be downloaded.</li>
+        <li>Double click that .exe file to open and run the installation executable. The process
+          of installing Git will start.
+          <ol>
+            <li>Allow the installer to make changes to your computer.</li>
+            <li>Click <strong>Next</strong> through all of the setup windows, leaving all the
+              defaults. There
+              will be many windows.</li>
+            <li>The last window will let you click <strong>Install</strong> and then click
+              <strong>Finish</strong>.
+            </li>
+          </ol>
+        </li>
+
+        <li>Open up a <strong>new</strong> Command Prompt window by closing the first Command
+          Prompt window and start a instance by clicking the Start button and typing
+          <code class="cli">cmd</code> in the search box.
+        </li>
+        <li>Enter the <code class="cli">git --version</code> command and then press
+          <strong>Enter</strong> to see if Git is installed. You should see the version number.
+        </li>
+        <li>While we are still in the Command Prompt, we will type in two more commands to set
+          up our username and email that are associated with our GitHub account. Again, it
+          doesn't matter what the path prompt is. These are global settings so you can type them
+          from any path prompt.
+          <div class="callout info">Make sure you use your own username and email between the ""
+            quotes. Use the username and your email you used for the GitHub account. It will be
+            different for everyone.
+          </div>
+          <ol>
+            <li>Type in this command to set the global git username:
+              <pre><code class="cli">git config --global user.name "yourusername"</code></pre>
+              and click Enter. <strong>Nothing</strong> will happen if you did it right. If you
+              get an error, you
+              need to fix it.
+            </li>
+            <li>Enter this command to set the email:
+              <pre><code class="cli">git config --global user.email "youremail@"</code></pre>
+              <strong>Nothing</strong> will happen if you did it right. If you get an error, you
+              need to fix it.
+            </li>
+          </ol>
+
+        </li>
+      </ol>
+      <div class="callout info">
+        Demonstration: 🎦 <a href="https://youtu.be/3KpzB3ZZCZ4" target="_blank">Windows Git
+          Installation</a>
+      </div>
+    </details>
+    <details>
+      <summary><strong>macOS Users</strong></summary>
+      <ol>
+        <li>Before downloading <strong>Git</strong>, check to make sure you don't already have
+          Git installed on your computer.
+          <ol>
+            <li>Select the <strong>Search</strong> icon (it looks like an magnifying glass) on
+              your screen near the top right of your screen.
+            </li>
+            <li>Type in <code>"Terminal"</code> and open the Terminal application. It doesn't
+              matter what path our command prompt is showing. All the commands we type will work
+              anywhere.</li>
+            <li>Type in <code class="cli">git --version</code> at the prompt and click
+              <strong>Enter</strong>.
+            </li>
+            <li>You should now either see a git version number come up or a pop up window that
+              says something about
+              <code>'The git command requires the command line developer tools ...'</code>. If
+              you have a version number come up, you already have git installed and you don't
+              need to install it. (But you will want to set your config setting as shown below.)
+              If you get the pop-up message, click <strong>Install and Agree</strong>.
+            </li>
+            <li>The installation may take quite a few minutes. You will get a set of development
+              tools, which includes Git.</li>
+            <li>Type in <code class="cli">git --version</code> at the prompt and click
+              <strong>Enter</strong>. You should now see the version number.
+            </li>
+            <li>While we are still in the command prompt, we will type in two more commands to
+              configure our username and email that are associated with our GitHub account.
+              Again, it doesn't matter what the path prompt is. These are global settings so you can
+              type
+              them from any path prompt.
+              <div class="callout info">Make sure you use your own username and email between
+                the "" quotes. Use the username and your email you used for the GitHub account. It
+                will
+                be different for everyone.
+              </div>
+              <ol>
+                <li>Type in this command to set the global git username:
+                  <pre><code class="cli">git config --global user.name "yourusername"</code></pre>
+                  and click <strong>Enter</strong>. Nothing will happen if you did it right. If
+                  you get an error, you need to fix it.
+                </li>
+                <li>Enter this command to set the email:
+                  <pre><code class="cli">git config --global user.email "youremail@"</code></pre>
+                  <strong>Nothing</strong> will happen if you did it right. If you get an error,
+                  you
+                  need to fix it.
+                </li>
+              </ol>
+            <li>If you want to check the global configurations, you can always type
+              <pre><code class="cli">git config --list</code></pre>
+              and you can see the user.name and user.email should have your new username and
+              email values. Don't worry about all the other configurations.
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <div class="callout info">
+        Demonstration: 🎦 <a href="https://youtu.be/kJLYtoj4VpA" target="_blank">Git Install for
+          Mac</a>
+      </div>
+    </details>
+    <details>
+      <summary><strong>Linux Users</strong></summary>
+      <ol>
+        <li>Guide: <a href="https://github.com/git-guides/install-git#install-git-on-linux"
+            target="_blank">Linux Git Install</a></li>
+        <li>Install Git with the link above and then follow the last few steps from the Windows or
+          Mac instructions to set up your global config username and email settings to match your
+          GitHub account.</li>
+      </ol>
+    </details>
+    <hr>
+    <nav>
+      <span><a href="setup-github-pages.html">Next ➡️ GitHub Pages</a></span>
+    </nav>
+
+  </main>
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../scripts/preventCodeSelect.js"></script>
+</body>
+
+</html>
