@@ -21,4 +21,3 @@ This course introduces students to using JavaScript to solve discipline specific
 - Setup and be familiar with the development environment for JavaScript so you can write code to solve problems as part of courses in your discipline.
 - Write code using JavaScript specific syntax and style, including comments.
 - Find help for how to use JavaScript syntax.
-

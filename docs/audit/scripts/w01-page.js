@@ -71,7 +71,10 @@ function buildReport(data, url) {
   h = h.replace(/ {2,}/g, " "); // remove extra spaces
 
   return `<main>
-
+<h3>Page Rendering Check</h3>
+      <div class="label">URL:</div>
+      <div class="data">🔗</div>
+      <div class="standard"><a href="https://${student.value}.github.io/cse121b" target="_blank">https://${student.value}.github.io/cse121b</a></div>
       <h3>Required Elements</h3>
       <div class="label">Document Type:</div>
       <div class="data">${h.includes('<!DOCTYPE html>') || h.includes('<!doctype html>') ? '✔️' : '❌'}</div>
@@ -125,7 +128,7 @@ function buildReport(data, url) {
     h.indexOf('<hr>') < h.indexOf('</body>') &&
     h.indexOf('</body>') < h.indexOf('</html>') ? '✔️' : '❌'}
       </div>
-      <div class="standard">${getContent(h, /<footer>(.*?)<\/footer>/)}</div>
+      <div class="standard">per assignment requirements</div>
 
     </main>`;
 }
