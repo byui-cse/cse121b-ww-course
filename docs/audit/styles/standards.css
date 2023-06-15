@@ -1,0 +1,82 @@
+input,
+button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #bbb;
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+}
+
+#report {
+  margin: .5rem;
+  border-top: 1px solid #bbb;
+  display: flex;
+  flex-direction: column;
+}
+
+#report main {
+  display: grid;
+  margin: .25rem;
+}
+
+#report main h3 {
+  grid-column: 1/4;
+}
+
+.colhead {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: larger;
+  text-align: center;
+}
+
+.blue {
+  margin-left: 1rem;
+  padding: 0 .5rem;
+  color: darkblue;
+  background-color: rgba(255, 255, 225, .5);
+}
+
+#message {
+  font-size: smaller;
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  display: none;
+}
+
+.label,
+.data,
+.standard {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #bbb;
+  padding: 0.35rem 0.5rem;
+}
+
+.label {
+  justify-content: right;
+  background-color: #222;
+  color: #fff;
+}
+
+.data {
+  justify-content: center;
+}
+
+.standard {
+  justify-content: left;
+  font-size: smaller;
+}
+
+@media (min-width: 520px) {
+  #report main {
+    grid-template-columns: 210px 50px 1fr;
+  }
+}
