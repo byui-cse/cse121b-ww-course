@@ -37,29 +37,177 @@
     <h3>Overview</h3>
     <p>
       The purpose of this programming task is to:
-      <ul>
-        <li>become familiar with the <strong>Visual Studio Code</strong> development environment,</li>
-        <li>practice using the console and built-in stepwise debugger in a browser's <strong>DevTools</strong> environment,</li>
-        <li>work with JavaScript <strong>variables</strong>, and</li>
-        <li><strong>publish</strong> your local work to your cse121b GitHub Pages remote space.</li>
-      </ul>
+    <ul>
+      <li>become familiar with the <strong>Visual Studio Code</strong> development environment,</li>
+      <li>practice using the console and built-in stepwise debugger in a browser's
+        <strong>DevTools</strong> environment,
+      </li>
+      <li>work with JavaScript <strong>variables</strong>, and</li>
+      <li><strong>publish</strong> your local work to your cse121b GitHub Pages remote space.</li>
+    </ul>
     </p>
     <h3>Instructions</h3>
     <h4 class="step">Setup Files</h4>
-    <div class="callout info">All of the programming work for this class will be stored in your local <strong>cse121b</strong> repository folder established in the assigned <a href="index.html">setup activities</a> and then a copy will be pushed (uploaded) to your remote GitHub Pages cse121b repository.</div>
+    <div class="callout info">All of the programming work for this class will be stored in your
+      local <strong>cse121b</strong> repository folder established in the assigned <a
+        href="index.html">setup activities</a> and then a copy will be pushed (uploaded) to your
+      remote GitHub Pages cse121b repository.</div>
     <ol>
-      <li>Open Visual Studio Code (VS Code) and open your existing local <code>cse121b</code> repository/folder.</li>
+      <li>Open Visual Studio Code (VS Code) and open your existing local <code>cse121b</code>
+        repository/folder.</li>
       <li>Create a sub-folder within the cse121b folder named <code>w01-task</code>.</li>
-      <li>Download the <a href="https://byui-cse.github.io/cse121b-ww-course/taskfiles/w01-task,zip">starting files</a> and <a href="https://www.google.com/search?q=%how%20to%20unzip" target="_blank">unzip</a> them. This will be done outside of VS Code.</li>
-      <li>Move the two (2) unzipped files into the w01-task folder you created. Use your operating systems file/folder management tool to do this. The files will be viewable in VS Code once you move them into the project folder.</li>
+      <li>Download the <a
+          href="https://byui-cse.github.io/cse121b-ww-course/taskfiles/w01-task,zip">starting
+          files</a> and <a href="https://www.google.com/search?q=%how%20to%20unzip"
+          target="_blank">unzip</a> them. This will be done outside of VS Code.</li>
+      <li>Move the two (2) unzipped files into the w01-task folder you created. Use your operating
+        systems file/folder management tool to do this. The files will be viewable in VS Code once
+        you move them into the project folder.</li>
     </ol>
-    <h4 class="step">Using DevTools Console Window and Debugger</h4>
+    <h4 class="step">HTML</h4>
     <ol>
-      <li>In VS Code, right mouse click the w01-task.html file and click <strong>Open with Live Server</strong> to have it open in a default browser tab/window.</li>
+      <li>In VS Code, open the <code>w01-task.html</code> file.</li>
+      <li>Replace the <code>&lt;h1&gt;</code> content with your full name.</li>
+      <li>Save those changes. Get used to saving often.</li>
+    </ol>
+    <h4 class="step">Console</h4>
+    <div class="callout info">
+      The console is a tool that allows you to see what is going on in the code. It is a simple
+      output tool where you can see the values of variables and the results of calculations. It is
+      also a place where you can type in commands and see the results of those commands. Programmers
+      will often output to the console temporarily to debug issues in the code.
+
+    </div>
+    <ol>
+      <li>In VS Code, right mouse click the w01-task.html file and click <strong>Open with Live
+          Server</strong> to have it open in a default browser tab/window.</li>
       <li>Open the browser's <strong>DevTools</strong> (Inspect).</li>
-      <li>Click on the Sources panel and use the Page tab to find the w01-task.js file. Select it.</li>
-      <li></li>
-      <li>Click the <strong>Step Over</strong> button in the <strong>Debugger</strong> tab to run the code in the <code>learning.js</code> file.</li>
+      <li>Click on the <strong>Console</strong> tab.</li>
+      <li>✅Verify that you can see in the console that the program wrote one line of output and then
+        produced an error.</li>
+
+    </ol>
+    <div class="callout info">💡Alternatively, you can toggle the DevTools drawer view which can
+      contain the console panel by clicking <code>esc</code>. Specific tools can be added as panels
+      by using the + (More Tools) button.</div>
+
+    <h4 class="step">Stepwise Debugger</h4>
+    <h5>Part 1: Error - <code>Assignment to constant variable</code></h5>
+    <ol>
+      <li>Click on the <strong>Sources</strong> panel and use the Navigator tab to find the
+        w01-task.js file. Select it.</li>
+      <li>In the Debugger view panel, you will see a column of numbers indicating the line numbers
+        for each line in the JavaScript code file. This column is called the 'gutter'. Click on the
+        2. You will see an indicator show up in the gutter. This indicator is showing you where a
+        'break point' has just been set in the code. Breakpoints are how you temporarily pause the
+        code's execution so you can slow the program down and "step" through the program manually.
+        This is the stepwise debugger.</li>
+      <li>Click the browser's refresh button to render the page again. The browser will go into
+        debugger mode.</li>
+      <li>Line 2 of the code will be highlighted. It has not executed. To execute this one line of
+        code and only this one line of code, click the <strong>Step Over Next Function Call</strong>
+        button. <figure>
+          <img src="../images/debugger-step-over-button.png" alt="Debugger view">
+          <figcaption>Figure 1: Screenshot in DevTools Marking the 'Step Over' Button</figcaption>
+        </figure>
+        <div class="callout info">It is also OK to use the <strong>Step</strong> button (shown
+          highlighted in the image).</div>
+      </li>
+      <li>Now the variable <code>userName</code> was assigned the value Moroni. You can hover your
+        mouse pointer over the userName variable in the debugger and it will show you the assigned
+        value.</li>
+      <li>Click the <strong>Step Over ...</strong> button two (2) more times. This will produce an
+        error on Line 4 when the debugger tries to process that line of code. This is the part 1
+        error.</li>
+      <li>In the Console panel, note that line 3 produced output and an error was produced.<br>
+        ✅Verify that you see these two console output lines.
+        <figure>
+          <img src="../images/console-part1-error.png" alt="Console view">
+          <figcaption>Figure 2: Screenshot of Console Panel with Part 1 Error</figcaption>
+        </figure>
+      </li>
+      <li>You can then click on the linked line number in the error line or even view the ❌ at the
+        end of the line number in the debugger window. <br>❔How can you fix the
+        <code>Assignment to constant variable</code> error?
+        <div class="callout info">We will assume that we actually do want to reassign the
+          <code>userName</code> variable.</div>
+        <details>
+          <summary>Solution</summary>
+          <p>Declare the <code>userName</code> variable with <code>let</code> versus
+            <code>const</code>.</p>
+        </details>
+      </li>
+      <li>☑️In VS Code, with the w01-task.js file open in the editor, fix the 🔍 Part 1 error and
+        view the results in the browser's console panel.</li>
+    </ol>
+    <h5>Part 2: Error - <code>DateTime is not defined.</code></h5>
+    <ol>
+      <li>With the page running in the browser and DevTools open, click off the breakpoint on Line 2
+        and set a breakpoint on Line 8.
+      </li>
+      <li>Refresh the page to render the page again and it will stop on Line 8.</li>
+      <li>Click Step Over and view the error. <code>DateTime is not defined</code>. The program
+        thinks you are referencing a variable name since DateTime is not in its library.</li>
+      <li>Fix the problem by researching how to display the current Date and Time in JavaScript in
+        an easy way.</li>
+      <li>☑️In VS Code, with the w01-task.js file open in the editor, fix the 🔍 Part 2 error and
+        view the
+        results in the browser's console.
+        <details>
+          <summary>Solution</summary>
+          <p>One simple solution is to use the <code>Date()</code> object. <br>
+            <code>const currentDateAndTime = Date();</code>
+
+          </p>
+        </details>
+      </li>
+    </ol>
+    <h5>Part 3: Error</h5>
+    <div class="callout info">Remember that the intent of this assignment is NOT for you to be able
+      to solve all the errors with the JavaScript. Rather, it is to become familiar with debugging
+      using DevTools and to edit and publish the page with its referenced JavaScript.</div>
+    <ol>
+      <li>With the page running in the browser and DevTools open, remove all the breakpoints in the
+        debuggers gutter of line numbers.</li>
+      <li>The program does not produce any red-lined reference errors at this point.<br> ✅ Verify
+        that the console output looks like this:
+        <figure>
+          <img src="../images/console-part3.png" alt="Console view">
+          <figcaption>Figure 3: Screenshot of Console Panel with Part 3 Running</figcaption>
+        </figure>
+
+      </li>
+      <li>Add a breakpoint on Line 13.</li>
+      <li>Step through the program using <strong>Step</strong> not <kbd>Step Over</kbd>, identifying
+        the flow of the program step-by-step.</li>
+      <li>In the debugger, add a <strong>Watch</strong> value on the <code>aNumber</code> variable
+        by clicking the plus symbol on the Watch panel and entering "aNumber".</li>
+      <li>Keep stepping through the program and observe the flow and that "aNumber" watch value.
+      </li>
+      <li>✅Confirm that the first value assigned to it after being "undefined" is "0", a string.
+        <figure>
+          <img src="../images/debugger-watch.png" alt="Debugger Watch Panel">
+          <figcaption>Figure 4: Screenshot of Debugger Watch Panel</figcaption>
+        </figure>
+      </li>
+      <li>Try to determine the problem.</li>
+      <li>It is <strong>NOT</strong> required that you fix the code for this error.</li>
+      <details>
+        <summary>Solution</summary>
+        <p>In JavaScript, the <code>for ... in</code> loop is used to iterate over the properties of
+          an object, not for iterating over the elements of an array. When used with an array, it
+          iterates over the indices of
+          the array, not the actual elements. Thus returning 45 as the indices are 0 to 9. The
+          solution can be to change the for loop to a <code>for ... of</code> loop. The function
+          should return 55.
+        </p>
+      </details>
+    </ol>
+    <h3>Submission</h3>
+    <ol>
+      <li>Complete all the marked ☑️ fixes to the JavaScript code.</li>
+      <li>Commit your changes to your local repository.</li>
+      <li>Push your changes to the cse121b GitHub Pages enabled repository.</li>
     </ol>
 
     <hr>
