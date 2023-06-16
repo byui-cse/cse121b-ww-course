@@ -78,7 +78,7 @@ function buildReport(data, url) {
       <h3>Required Elements</h3>
       <div class="label">Document Type:</div>
       <div class="data">${h.includes('<!DOCTYPE html>') || h.includes('<!doctype html>') ? '✔️' : '❌'}</div>
-      <div class="standard">&lt;!DOCTYPE html&gt; or &lt;!doctype html&gt; <span class="blue">This should be on the first line.</span></div>
+      <div class="standard">&lt;!DOCTYPE html&gt; or &lt;!doctype html&gt; <span class="blue">❔This should be on the first line.</span></div>
 
       <div class="label">HTML Lang Attribute:</div>
       <div class="data">${h.includes('<html lang="') > 0 ? '✔️' : '❌'}</div>
@@ -105,12 +105,12 @@ function buildReport(data, url) {
       <div class="standard">&lt;body&gt; ... &lt;/body&gt;</div>
 
       <div class="label">h1 Heading:</div>
-      <div class="data">${h.includes('<h1') && h.includes('</h1>') ? '✔️' : '❌'}</div>
-      <div class="standard">${getContent(h, /<h1>(.*?)<\/h1>/)} <span class="blue">Must contain name and 'CSE 121B and BYU-Idaho'</span></div>
+      <div class="data">${h.includes('<h1') && h.includes('</h1>') ? '✔️❔' : '❌'}</div>
+      <div class="standard">${getContent(h, /<h1>(.*?)<\/h1>/)} <span class="blue">❔Must contain name and 'CSE 121B and BYU-Idaho'</span></div>
 
       <div class="label">h2 Heading:</div>
-      <div class="data">${h.includes('<h2') && h.includes('</h2>') ? '✔️' : '❌'}</div>
-      <div class="standard">${getContent(h, /<h2>(.*?)<\/h2>/)} <span class="blue">Must contain name location</span></div>
+      <div class="data">${h.includes('<h2') && h.includes('</h2>') ? '✔️❔' : '❌'}</div>
+      <div class="standard">${getContent(h, /<h2>(.*?)<\/h2>/)} <span class="blue">❔Must contain name location</span></div>
 
       <div class="label">hr Line:</div>
       <div class="data">${h.includes('<hr>') ? '✔️' : '❌'}</div>
