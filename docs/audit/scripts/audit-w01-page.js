@@ -1,10 +1,7 @@
-const student = document.querySelector('#student');
-const getReportButton = document.querySelector('#getReport');
-const report = document.querySelector('#report');
-const message = document.querySelector('#message');
+import { getElement, getContent } from './element-data.js';
+import { student, getReportButton, report, message } from './interface.js';
 
 getReportButton.addEventListener('click', getReport);
-
 document.addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
     getReport();
@@ -36,9 +33,7 @@ async function getReport() {
 async function cssstats(baseuri) {
   let url = `https://cssstats.com/api/stats?url=${baseuri}`;
   let response = await fetch(url);
-  let cssresult = await response.json();
-  // console.log(cssresult);
-  return cssresult;
+  return await response.json();
 }
 
 function resetReport() {
@@ -46,24 +41,6 @@ function resetReport() {
   message.style.display = 'none';
   report.textContent = '';
 }
-
-// #region Utility Functions ******************************************
-function getElement(html, element) {
-  let count = 0;
-  let i = 0;
-  while (true) {
-    let elementIndex = html.indexOf(element, i);
-    if (elementIndex === -1) break;
-    count++;
-    i = elementIndex + 1;
-  }
-  return count;
-}
-function getContent(html, regex) {
-  let match = html.match(regex);
-  return match ? match[1] : null;
-}
-// #endregion Utlity Functions ***************************************
 
 function buildReport(data, url) {
   let h = data.css.html;

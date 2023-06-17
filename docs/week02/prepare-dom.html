@@ -23,14 +23,26 @@
     </div>
   </header>
   <main class="page">
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span><a href="../week01/">W1</a></span>
+      <span class="active"><a href="../week02/">W2</a></span>
+      <span><a href="../week03/">W3</a></span>
+      <span><a href="../week04/">W4</a></span>
+      <span><a href="../week05/">W5</a></span>
+      <span><a href="../week06/">W6</a></span>
+      <span><a href="../week07/">W7</a></span>
+    </nav>
     <h2>Manipulating Documents using the DOM</h2>
     <h3>Overview</h3>
     <p>The Document Object Model or DOM represents the logical tree structure of a document. The DOM
       allows us to connect to the document through programming languages, including JavaScript.</p>
     <div class="callout info">
       "The DOM represents a document with a logical tree. Each branch of the tree ends in a node,
-      and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can
-      change the document's structure, style, or content. Nodes can also have event handlers attached to
+      and each node contains objects. DOM methods allow programmatic access to the tree. With them,
+      you can
+      change the document's structure, style, or content. Nodes can also have event handlers
+      attached to
       them. Once an event is triggered, the event handlers get executed." - MDN Web Docs
     </div>
 
@@ -40,54 +52,25 @@
           target="_blank">DOM (Document Object Model)</a> - javascript.info</li>
       <li>Read: 📃 <a href="https://javascript.info/dom-nodes" target="_blank">DOM tree</a> -
         javascript.info</li>
+      <li>Read: 📃 <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents"
+          target="_blank">Manipulating Documents</a> -
+        mdn web docs</li>
     </ul>
 
     <h3>Activity Instructions</h3>
 
     <ol>
-      <li>
-        Using the <a href="https://javascript.info/dom-navigation" target="_blank">Walking the
-          DOM</a> document from javascript.info, complete the three (3) <a
-          href="https://javascript.info/dom-navigation#tasks" target="_blank">Tasks</a> provided.
-      </li>
-      <li>Let us test the concept presented in the previous tasks about non-element nodes in the
-        DOM.
-        <ol>
-          <li>Navigate to the <a href="https://www.churchofjesuschrist.org" target="_blank">Church
-              website</a>.</li>
-          <li>Open up the browser's DevTools.</li>
-          <li>Go to the console tab and clear the contents Ø.</li>
-          <li>Write a for-of loop that will output to the console all the child nodes of the
-            document.body.
-            <details>
-              <summary>Hint</summary>
-              <p class="smaller">An example of how to do this is found in the Walking the DOM
-                article under DOM collections. Make sure to output to the console and not to pop-up,
-                alert boxes.
-              <details>
-                <summary>Code Hint - Try your own first</summary>
-                <pre>
-                    <code class="javascript">
-  for (let node of document.body.childNodes)  console.log(node)
-                    </code>
-                  </pre>
-              </details>
-              </p>
-            </details>
-          </li>
-          <li>Run this loop in the console. You should see over 25 child nodes being display.</li>
-          <li>Find the first non-element node (#text).
-            <details>
-              <summary>What node is this #text node's <code>nextSibling</code></summary>
-              <p class="smaller">&lt;div id="platform"&gt;&lt;div&gt;</p>
-            </details>
-          </li>
+      <li>Complete the <a href="https://byui-cit.github.io/learning-modules/modules/js/dom-basics/ponder1/" target="_blank">DOM Basics</a> activity.
 
-        </ol>
-        <div class="callout info">These #text nodes' content are not that interesting. Regardless,
-          you can use the console to view all sort of information about each child node.</div>
       </li>
+      <li>Upload your work to your GitHub repository.</li>
     </ol>
+
+    <hr>
+    <nav>
+      <span><a href="w02-assignment.html">On to the 👷🏽‍♀️ Task</a></span><span><a href="https://byui.instructure.com/calendar">Back to 💫 I-Learn</a></span>
+    </nav>
   </main>
 
   <footer>
