@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 121B | JavaScript Arrays</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>CSE 121B<span id="coursetitle">: JavaScript Language</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span><a href="../week01/">W1</a></span>
+      <span class="active"><a href="../week02/">W2</a></span>
+      <span><a href="../week03/">W3</a></span>
+      <span><a href="../week04/">W4</a></span>
+      <span><a href="../week05/">W5</a></span>
+      <span><a href="../week06/">W6</a></span>
+      <span><a href="../week07/">W7</a></span>
+    </nav>
+    <h2>JavaScript Arrays</h2>
+    <h3>Overview</h3>
+    <p>
+      Remember, an array is a data structure that contains a list of elements which store multiple
+      values in a
+      single variable. Arrays are used to store multiple values in a single variable, instead of
+      declaring separate
+      variables for each value.
+    </p>
+    <h3>Prepare</h3>
+    <p>In JavaScript, arrays can be declared like this:</p>
+    <pre><code class="language-javascript">let scores = [100, 72, 83, 94, 88, 87];</code></pre>
+    <pre><code class="language-javascript">let names = ['Nancy','Blessing','Jorge','Svetlana'];</code></pre>
+    <p>Given your prerequisite work and knowledge, these should look familiar to you.</p>
+    <p>Arrays are zero-indexed, meaning the first element is at index 0, the second element is at
+      index 1, and so
+      on.</p>
+    <p>Arrays can be accessed by index:</p>
+    <pre><code class="language-javascript">let aScore = scores[0];  // The aScore variable is assigned the value of 100</code></pre>
+    <p>Arrays values can be modified:</p>
+    <pre><code class="language-javascript">scores[0] = 99; // This assignment expression changed the first score in the array from 100 to 99.</code></pre>
+    <p>Arrays can be iterated over using a classic for loop:</p>
+    <pre><code class="language-javascript">for (let i = 0; i &lt; scores.length; i++) {
+  console.log(scores[i]);
+}</code></pre>
+    <p>Arrays can be iterated over using a forEach loop:</p>
+    <pre><code class="language-javascript">scores.forEach(function(score) {
+  console.log(score);
+});</code></pre>
+
+    <p>Arrays have a length property:</p>
+    <pre><code class="language-javascript">let numScores = scores.length; // The numScores variable is assigned the value of 6</code></pre>
+    <p>Arrays have a number of methods that can be used to manipulate them:</p>
+    <pre><code class="language-javascript">scores.push(100); // Adds a new element to the end of the array</code></pre>
+    <pre><code class="language-javascript">scores.pop(); // Removes the last element from the array</code></pre>
+    <pre><code class="language-javascript">scores.shift(); // Removes the first element from the array</code></pre>
+    <pre><code class="language-javascript">scores.unshift(100); // Adds a new element to the beginning of the array</code></pre>
+    <pre><code class="language-javascript">scores.splice(2, 1); // Removes 1 element from the array starting at index 2</code></pre>
+
+
+    <p>The following reference provides a complete list of array methods of which some will be used
+      extensively in this course.</p>
+    <ul>
+      <li>Reference 📑<a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+          target="_blank">JavaScript
+          Arrays Reference</a> - mdn web docs</li>
+    </ul>
+
+
+    <h3>Check Your Understanding</h3>
+    <p>Given this array declaration:</p>
+    <pre><code class="language-javascript">let names = ['Nancy','Blessing','Jorge','Svetlana'];</code></pre>
+    <p>What is the value of the following expression?</p>
+    <pre><code class="language-javascript">names[2];</code></pre>
+    <details>
+      <summary>Answer</summary>
+      <p>'Jorge'</p>
+    </details>
+    <p>What is the value of the following expression?</p>
+    <pre><code class="language-javascript">names.length;</code></pre>
+    <details>
+      <summary>Answer</summary>
+      <p>4</p>
+    </details>
+    <p>What does the following expression do?</p>
+    <pre><code class="language-javascript">names.push('Sally');</code></pre>
+    <details>
+      <summary>Answer</summary>
+      <p>Adds a new element to the end of the array</p>
+    </details>
+
+
+
+
+    <hr>
+    <nav>
+      <span><a href="prepare-branching.html">Next ➡️ Conditions and Branching Structures</a></span>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
