@@ -25,8 +25,60 @@
   <main class="page">
     <h2>W02: Programming Task</h2>
     <h3>Overview</h3>
+    <p>In this assignment you are going to replace your cse121b site home page with a biography page
+      with a menu. The responsive menu will be provided to you. The task is to complete the required
+      steps and supplement the content of the page using JavaScript.</p>
+    <p>Remember, that in order for us to talk to the HTML document, the HTML must reference the
+      source of the JavaScript so that the HTML DOM can be manipulated (edited). This JavaScript
+      file(s) will be external to the HTML document. The <code>&lt;script&gt;</code> element will be
+      used to reference the JS file.</p>
+
+
     <h3>Instructions</h3>
+    <h4 class="step">Setup</h4>
+    <ol>
+      <li>Download the starter files and place them in the root directory of your cse121b
+        repository.</li>
+      <li>In VS Code, delete the original rename the .html file to index.html</li>
+      <li>Note the folders which follow a common naming convention for the web.</li>
+    </ol>
+    <h4 class="step">Variables</h4>
+    <ol>
+      <li>Declare and instantiate a variable to hold your name. Identify the variable as "fullName".
+      </li>
+      <li>Declare and instantiate a variable to hold the current year. Identify the variable as
+        "currentYear".</li>
+      <li>Declare and instantiate a variable to hold the file path (location) and file name of a
+        profile picture of yourself.</li>
+
+    </ol>
+
+    <h4 class="step">Manipulating the Document</h4>
+    <ol>
+      <li>Use the <code>document.getElementById()</code> method to get the element with the id of
+        "fullName".</li>
+      <li>Use the <code>innerHTML</code> property to set the value of the element to the value of
+        the variable "fullName".</li>
+      <li>Use the <code>document.querySelector()</code> method to get the element with the id of
+        "currentYear".</li>
+      <li>Use the <code>textContent</code> property to set the value of the element to the value of
+        the variable "currentYear".</li>
+      <li>Use the <code>document.getElementById()</code> method to get the img element with the id
+        of "profilePicture".</li>
+      <li>Use the <code>src</code> property to set the value of the element to the value of the
+        variable "profilePicture".
+        <details>
+          <summary>Hint</summary>
+          Use <code>document.querySelector().setAttribute()</code>
+        </details>
+      </li>
+    </ol>
+
     <h3>Submission</h3>
+    <ol>
+      <li>Commit and push your changes to GitHub.</li>
+      <li>Submit the URL of your GitHub repository to I-Learn.</li>
+    </ol>
     <hr>
     <nav>
       <span><a href="https://byui.instructure.com/calendar">Back to 💫 I-Learn</a></span>
