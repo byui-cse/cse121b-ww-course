@@ -37,8 +37,8 @@
     <h3>Instructions</h3>
     <h4 class="step">Setup</h4>
     <figure style="float:right; margin: 0 0 15px 10px;">
-      <img src="../images/w02-task-files.png" alt="Screenshot of File and Folder Structure"
-        loading="lazy" width="300">
+      <img src="../images/w03-task-files.png" alt="Example File and Folder Structure" loading="lazy"
+        width="300">
       <figcaption>Figure 1: Example File and Folder Structure</figcaption>
     </figure>
     <ol>
@@ -47,8 +47,8 @@
         <code>w03-task.js</code> file in the <code>scripts</code> folder.
       </li>
     </ol>
-    <h4 class="step">Function <u>Declaration</u></h4>
-    <p>Create an <strong>addition</strong> feature.</p>
+
+    <h4 class="step">Function <u>Declaration</u>: Addition</h4>
     <ol>
       <li>Using <strong>function declaration</strong>, define a function named <code>add</code> that
         takes two arguments, <code>number1</code> and <code>number2</code>.
@@ -61,6 +61,10 @@
       </li>
       <li>In the function body, <code>return</code> the sum of the parameters <code>number1</code>
         and <code>number2</code>.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">return number1 + number2;</code></pre>
+        </details>
       </li>
       <li>Using a <strong>function declaration</strong>, define another function named
         <code>addNumbers</code> that gets the values of two HTML form controls with IDs of
@@ -71,94 +75,104 @@
           property and go ahead and convert those strings to numbers.
         </div>
         <details>
-        <summary>Check Your Understanding</summary>
-        <pre><code class="javascript">let add1 = Number(document.querySelector('#addend1').value);</code></pre>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">let add1 = Number(document.querySelector('#addend1').value);</code></pre>
         </details>
       </li>
-      <li>Call the <code>add</code> function using those two arguments and assign the return value
+      <li>Next, in the <code>addNumbers</code> function, call the <code>add</code> function using
+        those two arguments and assign the return value
         to an HTML form element with an ID of <code>sum</code>
-      <details>
-      <summary>Check Your Understanding</summary>
-      <pre><code class="javascript">document.querySelector('#sum').value = add(addend1, addend2);</code></pre>
-      </details>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">document.querySelector('#sum').value = add(add1, add2);</code></pre>
+        </details>
       </li>
       <li>Add a <strong>"click" event listener</strong> to the HTML button with an ID of
-        <code>addNumbers</code> that calls the <code>addNumbers</code> function.
+        <code>addNumbers</code> that calls the <code>addNumbers</code> function. This line of code
+        is NOT located inside a function. Why❔
         <details>
           <summary>Check Your Understanding</summary>
           <pre><code class="javascript">document.querySelector('#addNumbers').addEventListener('click', addNumbers);</code></pre>
         </details>
       </li>
     </ol>
-    <h4 class="step">Subtraction: Function <u>Expression</u></h4>
+
+    <h4 class="step">Function <u>Expression</u> - Subtraction</h4>
     <ol>
-      <li>Using <strong>function expressions</strong>, repeat Steps 1-5 with new functions named
-        <code>subtract</code>
-        and
-        <code>subtractNumbers</code> and HTML form controls with IDs of <code>minuend</code>,
-        <code>subtrahend</code>,
-        <code>difference</code> and <code>subtractNumbers</code>
+      <li>Using <strong>function expressions</strong>, repeat the items in Step 2 with new functions
+        named <code>subtract</code> and <code>subtractNumbers</code> and HTML form controls with IDs
+        of
+        <code>minuend</code>, <code>subtrahend</code>, <code>difference</code>, and
+        <code>subtractNumbers</code>.
       </li>
-      <li>Using arrow functions, repeat Steps 1-5 with new functions named <code>multiply</code> and
-        <code>multiplyNumbers</code> and HTML form controls with IDs of <code>factor1</code>,
-        <code>factor2</code>,
-        <code>product</code> and <code>multiplyNumbers</code>
-      </li>
-      <li>Using any of the three function declaration types, repeat Steps 1-5 with new functions
+    </ol>
+
+    <h4 class="step"><u>Arrow Functions</u>: Multiplication</h4>
+    <ol>
+      <li>Using <strong>arrow functions</strong>, repeat the items in Step 2 with new functions
         named
-        <code>divide</code> and <code>divideNumbers</code> and HTML form controls with IDs of
-        <code>dividend</code>,
-        <code>divisor</code>, <code>quotient</code> and <code>divideNumbers</code>
+        <code>multiply</code> and <code>multiplyNumbers</code> and HTML form controls with IDs of
+        <code>factor1</code>, <code>factor2</code>, <code>product</code>, and
+        <code>multiplyNumbers</code>.
       </li>
-      <li>Test all of the mathematical functionality of the <span
-          class="file_name">task3.html</span>
-        page.</li>
+    </ol>
+
+    <h4 class="step">Your Choice: Division</h4>
+    <ol>
+      <li>Using <strong>any</strong> of the three function declaration types, repeat the items Step
+        2 with new functions named <code>divide</code> and <code>divideNumbers</code> and HTML form
+        controls with IDs of <code>dividend</code>, <code>divisor</code>, <code>quotient</code>, and
+        <code>divideNumbers</code>.
+      </li>
+    </ol>
+
+    <h4 class="step">Testing</h4>
+    <ol>
+      <li>Run your page in Live Server, and test all of the mathematical functionality supported by
+        your functions.</li>
     </ol>
 
     <h4 class="step">Built-In Methods</h4>
     <ol>
-      <li>Declare and instantiate a variable of type Date to hold the current date</li>
-      <li>Declare a variable to hold the current year</li>
-      <li>Using the variable declared in Step 1, call the built-in <code>getFullYear()</code>
-        method/function
-        and assign it to the variable declared in Step 2</li>
-      <li>Assign the current year variable to an HTML form elcodeent with an ID of <code>year</code>
+      <li>Declare and instantiate a variable of to store the current date.</li>
+      <li>Declare a variable to hold the current year.</li>
+      <li>Using the variable declared in number 1, call the built-in <code>getFullYear()</code>
+        method/function and assign it to the variable declared in 2.</li>
+      <li>Assign the current year variable to an HTML form element with an ID of <code>year</code>.
       </li>
-
     </ol>
+
     <h4 class="step">Array Methods</h4>
     <ol>
-      <li>Declare and instantiate an array variable to hold the numbers 1 through 25</li>
+      <li>Declare and instantiate an array variable to hold the numbers 1 through 25.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];</code></pre>
+        </details>
+      </li>
       <li>Assign the value of the array variable to the HTML element with an ID of
-        <code>array</code>
+        <code>array</code>.
       </li>
       <li>Use the <code>filter()</code> array method to find all of the odd numbers of the array
-        variable and
-        assign the result to the HTML element with an ID of <code>odds</code> ( hint: % (modulus
-        operator) )
+        variable and assign the result to the HTML element with an ID of <code>odds</code>
+        <div class="callout info">
+          <strong>☝🏽Hint:</strong> Use the modulus operator <code>%</code> to find the remainder of
+          dividing a number by 2. If the remainder is 1, the number is odd. If the remainder is 0,
+          the number is even.
+        </div>
       </li>
       <li>Use the <code>filter()</code> array method to find all of the even numbers of the array
-        variable and
-        assign the result to the HTML element with an ID of <code>evens</code></li>
+        variable and assign the result to the HTML element with an ID of <code>evens</code>.</li>
       <li>Use the <code>reduce()</code> array method to sum the array variable elements and assign
-        the
-        result
-        to the HTML element with an ID of <code>sumOfArray</code></li>
+        the result to the HTML element with an ID of <code>sumOfArray</code>.</li>
       <li>Use the <code>map()</code> array method to multiple each element in the array variable by
-        2
-        and
-        assign the result to the HTML element with an ID of <code>multiplied</code></li>
+        2 and assign the result to the HTML element with an ID of <code>multiplied</code>.</li>
       <li>Use the <code>map()</code> and <code>reduce()</code> array methods to sum the array
-        elements after
-        multiplying each element by two. Assign the result to the HTML element with an ID of
-        <code>sumOfMultiplied</code>
+        elements after multiplying each element by two. Assign the result to the HTML element with
+        an ID of
+        <code>sumOfMultiplied</code>.
       </li>
-
-
-
     </ol>
-
-
 
     <h3>Testing</h3>
     <ol>
