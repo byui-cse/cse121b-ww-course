@@ -53,36 +53,51 @@
     </p>
     <h3>Instructions</h3>
     <div class="callout warning">🚑 If you get stuck or are confused by the overall workflow, there
-      is a
-      🎦video overview of this task provided at the end of this document. A wise student would work
+      is a 🎦video overview of this task provided at the end of this document. A wise student would
+      work
       through the written material first before viewing any detailed help resource.</div>
-    <h4 class="step">Setup Files</h4>
 
+    <h4 class="step">Setup</h4>
+    <figure style="float: right; margin: 0 0 10px 15px;">
+      <img src="../images/w01-task-file-structure-example.png"
+        alt="Example W01 File Structure after unzipping and moving the file into cse121b"
+        loading="lazy" width="300">
+      <figcaption>Figure 1: Example File Structure</figcaption>
+    </figure>
     <ol>
-      <li>Open Visual Studio Code (VS Code) and open your existing local <code>cse121b</code>
-        repository/folder.</li>
-      <li>Create a sub-folder within the cse121b folder named <code>w01-task</code>.</li>
+      <li>Open Visual Studio Code (VS Code) and open your existing, local <code>cse121b</code>
+        repository/folder that you established during the setup activities.</li>
       <li>Download the <a
           href="https://byui-cse.github.io/cse121b-ww-course/taskfiles/w01-task.zip">starting
           files</a> and <a href="https://www.google.com/search?q=%how%20to%20unzip"
           target="_blank">unzip</a> them. This will be done outside of VS Code.</li>
-      <li>Move the two (2) unzipped files into the w01-task folder you created. Use your operating
-        systems file/folder management tool to do this. The files will be viewable in VS Code once
-        you move them into the project folder.</li>
+      <li>Move the unzipped <code>w01-task.html</code> file into the <code>cse121b</code> folder.
+        Drag and drop using VS Code's Explorer panel or use your operating systems file/folder
+        management tool to do this. The file will be viewable in VS Code once you move them into the
+        folder.</li>
+        <li>Move the <code>w01-task.js</code> files into the <code>cse121b</code> folder as well.
+        <div class="callout info">
+          💡Normally, JavaScript files (.js) are stored in a folder named <code>scripts</code> or <code>js</code>, however, for this first assignment, we will store it in the same directory as the .html file.
+        </div>
+        </li>
     </ol>
+
     <h4 class="step">HTML</h4>
     <ol>
       <li>In VS Code, open the <code>w01-task.html</code> file.</li>
       <li>Replace the <code>&lt;h2&gt;</code> content with your full name.</li>
-      <li>Save those changes. Get used to saving often.</li>
+      <li>Save those changes.
+        <div class="callout info">
+          💡Saving often is a good idea or even better, set VS Code to <code>auto-save</code> under the
+          <code>File</code> menu.</div>
+      </li>
     </ol>
     <h4 class="step">Console</h4>
     <div class="callout info">
       The console is a tool that allows you to see what is going on in the code. It is a simple
-      output tool where you can see the values of variables and the results of calculations. It is
+      output mechanism where you can see the values of variables and the results of calculations. It is
       also a place where you can type in commands and see the results of those commands. Programmers
       will often output to the console temporarily to debug issues in the code.
-
     </div>
     <ol>
       <li>In VS Code, right mouse click the w01-task.html file and click <strong>Open with Live
@@ -101,7 +116,7 @@
     <h5>Part 1: Error - <code>Assignment to constant variable</code></h5>
     <ol>
       <li>Click on the <strong>Sources</strong> panel and use the Navigator tab to find the
-        w01-task.js file. Select it.</li>
+        w01-task.html file. Select it.</li>
       <li>In the Debugger view panel, you will see a column of numbers indicating the line numbers
         for each line in the JavaScript code file. This column is called the 'gutter'. Click on the
         2. You will see an indicator show up in the gutter. This indicator is showing you where a
@@ -148,6 +163,7 @@
       <li>☑️In VS Code, with the w01-task.js file open in the editor, fix the 🔍 Part 1 error and
         view the results in the browser's console panel.</li>
     </ol>
+
     <h5>Part 2: Error - <code>DateTime is not defined.</code></h5>
     <ol>
       <li>With the page running in the browser and DevTools open, click off the breakpoint on Line 2
@@ -159,17 +175,16 @@
       <li>Fix the problem by researching how to display the current Date and Time in JavaScript in
         an easy way.</li>
       <li>☑️In VS Code, with the w01-task.js file open in the editor, fix the 🔍 Part 2 error and
-        view the
-        results in the browser's console.
+        view the results in the browser's console.
         <details>
           <summary>Solution</summary>
           <p>One simple solution is to use the <code>Date()</code> object. <br>
             <code>const currentDateAndTime = Date();</code>
-
           </p>
         </details>
       </li>
     </ol>
+
     <h5>Part 3: Error</h5>
     <div class="callout info">Remember that the intent of this assignment is NOT for you to be able
       to solve all the errors with the JavaScript. Rather, it is to become familiar with debugging
@@ -239,4 +254,5 @@
   <script>hljs.highlightAll();</script>
   <script src="../scripts/preventCodeSelect.js"></script>
 </body>
+
 </html>

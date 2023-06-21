@@ -34,11 +34,6 @@
       <span><a href="../week07/">W7</a></span>
     </nav>
     <h2>W03: Programming Task</h2>
-    <h3>Overview</h3>
-    <p></p>
-    <div class="callout info"></div>
-
-
     <h3>Instructions</h3>
     <h4 class="step">Setup</h4>
     <figure style="float:right; margin: 0 0 15px 10px;">
@@ -47,143 +42,128 @@
       <figcaption>Figure 1: Example File and Folder Structure</figcaption>
     </figure>
     <ol>
-      <li>In VS Code with your cse121b local repository folder open, rename the existing
-        <code>index.html</code> file to <code>index-old.html</code>
-      </li>
-      <li>Download the <a href="taskfiles/">starter files</a> and place them in that cse121b
-        directory.
-      </li>
-      <li>Test the page in your local browser by using Open with Live Server on the
-        <code>index.html</code> file.
-      </li>
-      <li>Place an image of yourself into the images folder by dragging and dropping it into the
-        folder in VS Code or by using your operating system's file manager. The image should be at
-        least 300 pixels in width and at least 300 pixels in height but does not need to be a
-        square.</li>
-      <div class="callout info">
-        You can keep the <code>placeholder.png</code> file in the <code>images</code> folder or
-        delete it.
-      </div>
+      <li>Download the <a href="../taskfiles/w03-task.zip">starter files</a> (2). Place the
+        <code>w03-task.html</code> file on the root <code>cse121b</code> folder and the
+        <code>w03-task.js</code> file in the <code>scripts</code> folder.
       </li>
     </ol>
-    <h4 class="step">Variables</h4>
+    <h4 class="step">Function <u>Declaration</u></h4>
+    <p>Create an <strong>addition</strong> feature.</p>
     <ol>
-      <li>Declare and instantiate a variable to hold your name. Identify the variable as "fullName".
+      <li>Using <strong>function declaration</strong>, define a function named <code>add</code> that
+        takes two arguments, <code>number1</code> and <code>number2</code>.
         <details>
           <summary>Check Your Understanding</summary>
-          <pre>
-        <code class="javascript">let fullName = 'Patricia Juarez';</code></pre>
-          A <code>const</code> declaration is also OK because the value will not change in this
-          application.
+          <pre><code class="javascript">function add (number1, number2) {
+  // function body
+}</code></pre>
         </details>
       </li>
-      <li>Declare and instantiate a variable to hold the current year. Identify the variable as
-        "currentYear".</li>
-      <li>Declare and instantiate a variable to hold the file path (location) and file name of the
-        image that you placed in the images folder as a string. Identify the variable as
-        "profilePicture".
+      <li>In the function body, <code>return</code> the sum of the parameters <code>number1</code>
+        and <code>number2</code>.
+      </li>
+      <li>Using a <strong>function declaration</strong>, define another function named
+        <code>addNumbers</code> that gets the values of two HTML form controls with IDs of
+        <code>addend1</code> and <code>addend2</code>.
         <div class="callout info">
-          Example: <code>'images/yourprofileimagename.png'</code><br>The file path will be relative
-          to the location of the HTML document and the name and type of image is up to you.
+          <strong>☝🏽Hint:</strong> When getting the values of the HTML form controls (e.g., <code
+            class="html">&lt;input&gt;</code></pre>), use the <code>value</code>
+          property and go ahead and convert those strings to numbers.
         </div>
+        <details>
+        <summary>Check Your Understanding</summary>
+        <pre><code class="javascript">let add1 = Number(document.querySelector('#addend1').value);</code></pre>
+        </details>
       </li>
-    </ol>
-
-    <h4 class="step">Set the HTML Element Variables</h4>
-    <ol>
-
-      <li>Use the <code>document.getElementById()</code> method to get the HTML element with the
-        <code>id</code> of <code>name</code> and store it in a const variable named "nameElement".
+      <li>Call the <code>add</code> function using those two arguments and assign the return value
+        to an HTML form element with an ID of <code>sum</code>
+      <details>
+      <summary>Check Your Understanding</summary>
+      <pre><code class="javascript">document.querySelector('#sum').value = add(addend1, addend2);</code></pre>
+      </details>
+      </li>
+      <li>Add a <strong>"click" event listener</strong> to the HTML button with an ID of
+        <code>addNumbers</code> that calls the <code>addNumbers</code> function.
         <details>
           <summary>Check Your Understanding</summary>
-          <pre>
-      <code class="javascript">const nameElement = document.getElementById('name');</code></pre>
+          <pre><code class="javascript">document.querySelector('#addNumbers').addEventListener('click', addNumbers);</code></pre>
         </details>
       </li>
-      <li>Use the <code>document.getElementById()</code> method to get the HTML element with the
-        <code>id</code> of <code>food</code> and store it in a const variable named "foodElement".
-      </li>
-      <li>Use the <code>document.querySelector()</code> method to get the element with the
-        <code>id</code> of
-        "currentYear" and store it in a variable named "yearElement".
-      </li>
-      <li>Use any viable method to get the profile image element stored into a variable.
-        <div class="callout warning">
-          Do NOT change the HTML.
-        </div>
-      </li>
     </ol>
-    <h4 class="step">Adding Content to the Document</h4>
+    <h4 class="step">Subtraction: Function <u>Expression</u></h4>
     <ol>
-
-      <li>Assign the <code>nameElement</code>'s <code>innerHTML</code> property the
-        <code>fullName</code> variable value.<br> In addition, surround by a
-        <code>&ltstrong&gt</code> tag. Use a <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
-          target="_blank">template literal</a> to create the string with HTML tags.
-        <details>
-          <summary>Check Your Understanding</summary>
-          <pre><code class="javascript">nameElement.innerHTML = `&lt;strong&gt;${fullName}&lt;/strong&gt;`;</code></pre>
-          ☝🏽Note that using textContent in this example would not work because the expression
-          contains HTML markup that needs to be rendered. Using <code>textContent</code> will render
-          the HTML markup as text, which is not what is wanted.
-        </details>
+      <li>Using <strong>function expressions</strong>, repeat Steps 1-5 with new functions named
+        <code>subtract</code>
+        and
+        <code>subtractNumbers</code> and HTML form controls with IDs of <code>minuend</code>,
+        <code>subtrahend</code>,
+        <code>difference</code> and <code>subtractNumbers</code>
       </li>
-
-      <li>Use the <code>textContent</code> property to set the value of the element to the value of
-        the variable "<code>currentYear</code>".</li>
-
-      <li>Use the <a href="https://developer.mozilla.org/es/docs/Web/API/Element/setAttribute"
-          target="_blank">setAttribute</a> method to set the <code>src</code> property of the image
-        element and set its value to the file path variable set in Step 2.
-
+      <li>Using arrow functions, repeat Steps 1-5 with new functions named <code>multiply</code> and
+        <code>multiplyNumbers</code> and HTML form controls with IDs of <code>factor1</code>,
+        <code>factor2</code>,
+        <code>product</code> and <code>multiplyNumbers</code>
       </li>
-      <li>Use the setAttribute method to set the <code>alt</code> property of the image
-        element and set its value to equal <code>'Profile image of [Insert Name Variable]'</code>
-        where the name variable comes from Step 2. Always use a <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
-          target="_blank">template literal</a> to create the string.
-
+      <li>Using any of the three function declaration types, repeat Steps 1-5 with new functions
+        named
+        <code>divide</code> and <code>divideNumbers</code> and HTML form controls with IDs of
+        <code>dividend</code>,
+        <code>divisor</code>, <code>quotient</code> and <code>divideNumbers</code>
       </li>
+      <li>Test all of the mathematical functionality of the <span
+          class="file_name">task3.html</span>
+        page.</li>
     </ol>
-    <figure style="float:right; margin: 0 0 15px 10px;">
-      <img src="../images/w02-task-example.png" alt="Screenshot example of finished assignment."
-        loading="lazy" width="300">
-      <figcaption>Figure 2: Example Assignment in Mobile View</figcaption>
-    </figure>
-    <h4 class="step">Arrays</h4>
+
+    <h4 class="step">Built-In Methods</h4>
     <ol>
-      <li>Declare an array variable to hold your favorite foods.
-        <details>
-          <summary>Hint</summary>
-          Use <code>[]</code> and fill it with your favorite foods as strings.
-        </details>
+      <li>Declare and instantiate a variable of type Date to hold the current date</li>
+      <li>Declare a variable to hold the current year</li>
+      <li>Using the variable declared in Step 1, call the built-in <code>getFullYear()</code>
+        method/function
+        and assign it to the variable declared in Step 2</li>
+      <li>Assign the current year variable to an HTML form elcodeent with an ID of <code>year</code>
+      </li>
 
-        </div>
-      </li>
-      <li>Modify the HTML element with the id of <code>food</code> to display your favorite foods
-        array. Remember that you set a already set a variable in Step 3 to reference the element
-        with the <code>id</code> of <code>food</code>.</li>
-      <li>Declare and instantiate a variable to hold another single favorite food item.</li>
-      <li>Add the value stored in this new variable to your favorite food array.</li>
-      <li>Append the HTML element with the id of <code>food</code> using a <code>+=</code> a
-        <code>&lt;br&gt;</code> (line break character).
-        <details>
-          <summary>Check Your Understanding</summary>
-          <pre><code class="javascript">foodElement.innerHTML += `&lt;br&gt;${favFoods}`;</code></pre>
-        </details>
-      </li>
-      <li>Remove the first element in the favorite food array.</li>
-      <li>Append the HTML element with the id of <code>food</code> showing the modified array, using
-        a line break first.</li>
-      <li>Remove the last element in the favorite food array.</li>
-      <li>Append the HTML element with the id of <code>food</code> again with this final modified
-        favorite foods array.</li>
     </ol>
+    <h4 class="step">Array Methods</h4>
+    <ol>
+      <li>Declare and instantiate an array variable to hold the numbers 1 through 25</li>
+      <li>Assign the value of the array variable to the HTML element with an ID of
+        <code>array</code>
+      </li>
+      <li>Use the <code>filter()</code> array method to find all of the odd numbers of the array
+        variable and
+        assign the result to the HTML element with an ID of <code>odds</code> ( hint: % (modulus
+        operator) )
+      </li>
+      <li>Use the <code>filter()</code> array method to find all of the even numbers of the array
+        variable and
+        assign the result to the HTML element with an ID of <code>evens</code></li>
+      <li>Use the <code>reduce()</code> array method to sum the array variable elements and assign
+        the
+        result
+        to the HTML element with an ID of <code>sumOfArray</code></li>
+      <li>Use the <code>map()</code> array method to multiple each element in the array variable by
+        2
+        and
+        assign the result to the HTML element with an ID of <code>multiplied</code></li>
+      <li>Use the <code>map()</code> and <code>reduce()</code> array methods to sum the array
+        elements after
+        multiplying each element by two. Assign the result to the HTML element with an ID of
+        <code>sumOfMultiplied</code>
+      </li>
+
+
+
+    </ol>
+
+
 
     <h3>Testing</h3>
     <ol>
       <li>Test your work by using Live Server and debug as needed.</li>
+      <li>? Error checking add on</li>
     </ol>
 
     <h3>Submission</h3>
