@@ -4,14 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CSE 121B | JavaScript Operators</title>
+  <title>CSE 121B | JavaScript Event Handling</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/course.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
 
 </head>
 
@@ -26,74 +24,41 @@
     <nav>
       <span><a href="../">Home</a></span>
       <span><a href="../week01/">W1</a></span>
-      <span class="active"><a href="../week02/">W2</a></span>
-      <span><a href="../week03/">W3</a></span>
+      <span><a href="../week02/">W2</a></span>
+      <span class="active"><a href="../week03/">W3</a></span>
       <span><a href="../week04/">W4</a></span>
       <span><a href="../week05/">W5</a></span>
       <span><a href="../week06/">W6</a></span>
       <span><a href="../week07/">W7</a></span>
     </nav>
-    <h2>JavaScript Operators</h2>
+    <h2>Event Handling</h2>
     <h3>Overview</h3>
     <p>
-      In programming, operators are special symbols (characters) that are used to perform operations
-      on operands (variables and values). Most operators are used to perform mathematical operations
-      such as addition, subtraction, multiplication, etc. However, there are other operators that
-      are
-      used to perform other operations such as assignment, comparison, logical, string, conditional,
-      etc.
+      JavaScript event handling is the process of responding to user actions such as mouse clicks, form input, and
+      page navigation. Event handling is the foundation of interactive web applications. In this module, you will
+      learn how to respond to user actions using JavaScript event handlers.
     </p>
+    <div class="callout info">"Events are things that happen in the system you are programming — the system produces (or
+      "fires") a signal of some kind when an event occurs, and provides a mechanism by which an action can be
+      automatically taken (that is, some code running) when the event occurs. Events are fired inside the browser
+      window, and tend to be attached to a specific item that resides in it. " - <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">MDN</a>
+    </div>
     <h3>Prepare</h3>
-    <p>It is essential if fundamental programming that you understand the available operators.</p>
-    <ol>
-      <li>Reference 📑<a href="https://www.w3schools.com/jsref/jsref_operators.asp"
-          target="_blank">JavaScript
-          Operators Reference</a> - w3schools.com</li>
-      <li>Reference 📑<a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators"
-          target="_blank">More depth reference on Expressions and Operators</a></li>
 
+    <ol>
+      <li>Read 📝<a href="https://byui-cit.github.io/learning-modules/modules/js/dom-events/prepare1/"
+          target="_blank">JavaScript
+          Event Driven Programming</a> - WDD Learning Modules</li>
     </ol>
 
     <h3>Check Your Understanding</h3>
     <ol>
-      <li><a href="https://byui-cit.github.io/learning-modules/modules/js/operators/prepare1/"
-          target="_blank">Operators and Comparisons</a> - practice answering the questions and
-        reviewing the examples.</li>
+      <li>Complete the following tutorial: <a
+          href="https://byui-cit.github.io/learning-modules/modules/js/dom-events/ponder1/" target="_blank">
+          DOM Events</a></li>
 
     </ol>
-    <hr>
-    <h4>🤿Optional Resources</h4>
-    <ul>
-      <li>Self Check: Using this article, 📑<a
-          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math"
-          target="_blank">Numbers, Operators, and Comparisons</a>, can you complete the <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Math"
-          target="_blank">Test your skills: Math</a>?</li>
-      <li>Self Check: Using this article, 📑<a
-          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings"
-          target="_blank">Strings and Numbers</a>, can you complete the <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings"
-          target="_blank">Test your skills: Strings</a>?</li>
-    </ul>
-    <p><strong>TYPES of Operators</strong>:</p>
-    <ul>
-      <li><strong>Assignment</strong> - used to assign values to variables.
-        <a href="https://www.w3schools.com/js/js_assignment.asp" target="_blank">Tutorial</a>
-      </li>
-      <li><strong>Arithmetic</strong> - used to preform arithmetic. <a
-          href="https://www.w3schools.com/js/js_arithmetic.asp" target="_blank">Tutorial</a></li>
-      <li><strong>Comparison</strong> - <a href="https://www.w3schools.com/js/js_comparisons.asp"
-          target="_blank">Tutorial</a></li>
-      <li><strong>Logical</strong> - important to create compound conditions as they determine the
-        logic between expressions/values.</li>
-      <li><strong>Conditional</strong> (ternary) - alternative to if...else statement. <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
-          target="_blank">Reference</a></li>
-      <li><strong>Spread</strong> (...) - this was used in the task last week. <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax"
-          target="_blank">Reference</a></li>
-    </ul>
 
     <hr>
     <nav>
@@ -104,8 +69,7 @@
   <footer>
     <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
   </footer>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 
 </body>
