@@ -12,7 +12,6 @@ This course introduces students to using JavaScript to solve discipline specific
 ### Prerequisites (Worldwide Block Focus)
 
 - CSE 111
-- CSE 121b
 
 ### Course Learning Outcomes (CLOs)
 
