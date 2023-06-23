@@ -50,14 +50,19 @@
     <h3>Instructions</h3>
     <h4 class="step">Create a Local Repository Folder and Add a Basic HTML Home Page</h4>
     <ol>
-      <li>Add a new folder on your computer in your desired location named "<strong>cse121b</strong>" (lower case, no spaces).</li>
-      <li>In Visual Studio Code, open that new cse121b folder using <strong>File -> Open Folder</strong>.
+      <li>Add a new folder on your computer in your desired location named
+        "<strong>cse121b</strong>" (lower case, no spaces).</li>
+      <li>In Visual Studio Code, open that new cse121b folder using <strong>File -> Open
+          Folder</strong>.
       </li>
       <li>Create a new file in that cse121b folder named <strong>index.html</strong>.</li>
-      <li>With the index.html file open in VS Code, type the snippet <code>html:5</code> into the editor and click enter or tab to automatically generate a basic HTML5 document structure.</li>
-        <pre><code class="html">html:5</code></pre>
-        <div class="callout info">The automatically generated HTML markup should look something like this:
-          <pre><code class="html">&lt;!DOCTYPE html&gt;
+      <li>With the index.html file open in VS Code, type the snippet <code>html:5</code> into the
+        editor and click enter or tab to automatically generate a basic HTML5 document structure.
+      </li>
+      <pre><code class="html">html:5</code></pre>
+      <div class="callout info">The automatically generated HTML markup should look something like
+        this:
+        <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -68,22 +73,33 @@
 
 &lt;/body&gt;
 &lt;/html></code></pre>
-        </div>
+      </div>
       </li>
       <li>Change the <code>&lt;title&gt;</code> element text content from "Document" to
         "<strong>Your Full Name | CSE 121B | BYU-Idaho</strong>"</li>
-      <li>Add that same text content in the title element to a first level heading element <code>&lt;h1&gt;</code> within the <code>body</code> opening and closing tags.
-      <div class="callout info">
-        Note that you can just type <code>h1</code> and then click tab.<br> The opening and closing element will be created automatically.
-      </div></li>
-      <li>Next, add your general location, e.g., <code>Bahia Blanca, Argentina</code>, as a second level heading element <code>&lt;h2&gt;</code>.</li>
-        <li>Now, add a horizontal rule void (no closing tag necessary) element <code>&lt;hr&gt;</code>.</li>
+      <li>Add that same text content in the title element to a first level heading element
+        <code>&lt;h1&gt;</code> within the <code>body</code> opening and closing tags.
+        <div class="callout info">
+          Note that you can just type <code>h1</code> and then click tab.<br> The opening and
+          closing element will be created automatically.
+        </div>
+      </li>
+      <li>Next, add your general location, e.g., <code>Bahia Blanca, Argentina</code>, as a second
+        level heading element <code>&lt;h2&gt;</code>.</li>
+      <li>Now, add a horizontal rule void (no closing tag necessary) element
+        <code>&lt;hr&gt;</code>.</li>
       <li>Save the file.</li>
-      <li>Right mouse click on the file name in the <strong>Explorer</strong> panel within VS Code. Select <strong>Open with Live Server</strong>. This will automatically open your default browser with a localhost rendering of the page.<div class="callout warning">If you do not see this option in the context-specific menu that appears, then you need to revisit the <a href="setup-visual-studio-code.html">setup instructions</a> for adding the <strong>Live Server</strong> extension in VS Code.</div></li>
+      <li>Right mouse click on the file name in the <strong>Explorer</strong> panel within VS Code.
+        Select <strong>Open with Live Server</strong>. This will automatically open your default
+        browser with a localhost rendering of the page.<div class="callout warning">If you do not
+          see this option in the context-specific menu that appears, then you need to revisit the <a
+            href="setup-visual-studio-code.html">setup instructions</a> for adding the <strong>Live
+            Server</strong> extension in VS Code.</div>
+      </li>
     </ol>
     <details>
       <summary>Check Your Work</summary>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
+      <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -96,10 +112,12 @@
   &lt;hr&gt;
 &lt;/body&gt;
 &lt;/html></code></pre>
-<figure>
-  <img src="../images/index-screenshot-w01.png" alt="Example screenshot of basic page rendering." loading="lazy" width="360" style="border:1px solid #ccc;">
-  <figcaption>Example screenshot of basic page rendering in the browser.</figcaption>
-</figure>
+      <figure>
+        <img src="../images/index-screenshot-w01.png"
+          alt="Example screenshot of basic page rendering." loading="lazy" width="360"
+          style="border:1px solid #ccc;">
+        <figcaption>Example screenshot of basic page rendering in the browser.</figcaption>
+      </figure>
     </details>
     <h4 class="step">Publish the cse121b folder to GitHub</h4>
     <ol>
@@ -158,13 +176,15 @@
         <div class="callout info">
           If you look at your GitHub account on github.com, a new repository named cse121b will be
           there along with any files or folders that were in your local cse121b folder. This local
-          folder is now a repository and is connected to the remote repository on GitHub. This means that it will be tracked for additions, deletions, and changes.
+          folder is now a repository and is connected to the remote repository on GitHub. This means
+          that it will be tracked for additions, deletions, and changes.
         </div>
       </li>
     </ol>
     <div class="callout info">
       Demonstration: 🎦 <a href="https://youtu.be/mrGMxZkkIzg" target="_blank">Setting up VSCode to
-        push to a GitHub repository</a>.<br> <em>This example shows WDD 130 as the repository name, however, that does not matter as the principles and procedures are the same.</em>
+        push to a GitHub repository</a>.<br> <em>This example shows WDD 130 as the repository name,
+        however, that does not matter as the principles and procedures are the same.</em>
     </div>
     <h4 class="step">Enable GitHub Pages</h4>
     <ol>
@@ -177,10 +197,17 @@
       <li>Under the <strong>Build and deployment</strong> section of GitHub Pages, select the
         <strong>main</strong> branch. Leave the next pull down menu with the default value of
         <strong>📁 / root</strong>.<br>
-        <div class="callout warning"><strong>IF</strong> your branch is named <strong>master</strong> instead of main, that is OK. Select that branch named master.</div>
+        <div class="callout warning"><strong>IF</strong> your branch is named
+          <strong>master</strong> instead of main, that is OK. Select that branch named master.
+        </div>
       </li>
       <li>In the top section, a message should display something like <strong>"Your site is live at
-          https://<em>your-github-username</em>your-.githu-b.io/cse121b"</strong>. <div class="callout info"><strong>https://<em>your-github-username</em>.github.io/cse121b</strong> is your base URL. You can share it with others and they will be able to navigate to your published page and it will render in their browser.</div></li>
+          https://<em>your-github-username</em>your-.githu-b.io/cse121b"</strong>. <div
+          class="callout info">
+          <strong>https://<em>your-github-username</em>.github.io/cse121b</strong> is your base URL.
+          You can share it with others and they will be able to navigate to your published page and
+          it will render in their browser.</div>
+      </li>
       <li>That is all that needs to be done to enable GitHub Pages site publishing. After a few
         minutes, <strong>test</strong> the URL in your browser.</li>
     </ol>
@@ -197,13 +224,15 @@
         will have the following format:
         <pre><code class="text">https://your-github-username.github.io/cse121b</code></pre>
       </li>
-      <li>Test your submission by running the <a href="../audit/audit-w01-page.html" target="_blank">Audit</a> tool.</li>
+      <li>Test your submission by running the <a href="../audit/audit-w01-page.html"
+          target="_blank">Audit</a> tool.</li>
       <li>If there are issues, fix the issues and republish.
         <div class="callout warning">You do NOT need to resubmit the assignment in I-Learn.</div>
       </li>
     </ol>
     <hr>
     <nav>
+      <span><a href="index.html">↪️ W1 Content</a></span>
       <span><a href="https://byui.instructure.com/calendar">Back to 💫 I-Learn</a></span>
     </nav>
   </main>
