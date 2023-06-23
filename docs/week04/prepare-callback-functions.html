@@ -49,21 +49,30 @@
     <h3>Prepare</h3>
     <ul>
       <li>Read 📄<a
-          href="https://byui-cit.github.io/learning-modules/modules/js/array-methods/prepare1/"
-          target="_blank">Array Methods - Core Concepts</a> - WDD Learning Modules</li>
+          href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function"
+          target="_blank">Callback Functions</a> - MDN web docs</li>
     </ul>
 
     <h3>Check Your Understanding</h3>
-    <p>Given this array declaration:</p>
-    <pre><code class="javascript">let names = ['Nancy','Blessing','Jorge','Svetlana'];</code></pre>
+    <p>Given these function declarations:</p>
+    <pre><code class="javascript">function calculate(a, b, callback) {
+  callback(a + b);
+}
+
+function displayResult(result) {
+  console.log('The result is: ' + result);
+}</code></pre>
     <ul class="check">
 
 
-      <li>What is the value of the following expression?
-        <pre><code class="javascript">names[2];</code></pre>
+      <li>Call a function named <code>calculate</code> and pass it the arguments to support the console output of the following equation: <code>2 + 3</code>.
+        <div class="callout info">
+          ☝🏽Hint: You need to pass three arguments to the <code>calculate</code> function.
+        </div>
+
         <details>
           <summary>Answer</summary>
-          <p>Jorge</p>
+          <pre><code class="javascript">calculate(2, 3, displayResult)</code></pre>
         </details>
       </li>
 
