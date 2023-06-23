@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 121B | JavaScript Functions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>CSE 121B<span id="coursetitle">: JavaScript Language</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span><a href="../week01/">W1</a></span>
+      <span><a href="../week02/">W2</a></span>
+      <span class="active"><a href="../week03/">W3</a></span>
+      <span><a href="../week04/">W4</a></span>
+      <span><a href="../week05/">W5</a></span>
+      <span><a href="../week06/">W6</a></span>
+      <span><a href="../week07/">W7</a></span>
+    </nav>
+    <h2>Functions</h2>
+    <h3>Overview</h3>
+    <p>
+      Functions in JavaScript are common control structures in programming. They are blocks of code
+      that can be called by name to perform a specific task. Functions can be called multiple times
+      throughout a program. Functions can also be passed data to work with, and can return data back
+      to the caller.
+    <div class="callout info">
+      "Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript
+      is
+      similar to a procedure—a set of statements that performs a task or calculates a value, but for
+      a
+      procedure to qualify as a function, it should take some input and return an output where there
+      is
+      some obvious relationship between the input and the output. To use a function, you must define
+      it
+      somewhere in the scope from which you wish to call it. - <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"
+        target="_blank">MDN web docs</a>"
+    </div>
+
+    <h3>Prepare</h3>
+    <ul>
+      <li>Read 📄<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"
+          target="_blank">Functions</a> - MDN web docs
+        <p>Focus on how to define functions and how to call functions:
+        <ul class="check">
+          <li>Function declaration</li>
+          <li>Function expression</li>
+          <li>Arrow function expression</li>
+          <li>Calling Functions</li>
+        </ul>
+        </p>
+      </li>
+    </ul>
+
+    <h3>Check Your Understanding</h3>
+    <p>Given the following code snippet:</p>
+    <pre><code class="javascript">let firstName = 'Antonia';
+let lastName = 'Francesca';</code></pre>
+
+    <ul class="check">
+      <li>Write a <strong>function declaration / definition</strong> named <code>fullName</code> that has two
+        parameters named <code>first</code> and <code>last</code>. The function's purpose is to
+        combine those two string parameters together to return one combined string (a 'full' name)
+        with a space between the <code>first</code> and <code>last</code> variables.
+        <details>
+          <summary>Answer</summary>
+          <pre><code class="javascript">function fullName(first, last) {
+  return `${first} ${last}`;   // or use string concatenation first + ' ' + last (not preferred)
+}</code></pre>
+        </details>
+      </li>
+
+      <li>Now use an anonymous <strong>function expression</strong> to do the same thing where the
+        function is assigned to a variable named <code>fullName</code>.
+        <details>
+          <summary>Answer</summary>
+          <pre><code class="javascript">const fullName = function (first, last) {
+  return `${first} ${last}`;
+}</code></pre>
+        </details>
+      </li>
+
+      <li>Now use an <strong><a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"
+            target="_blank">arrow function expression</a></strong> to do the same thing where the
+        function is assigned to a variable named <code>fullName</code>.
+        <details>
+          <summary>Answer</summary>
+          <pre><code class="javascript">const fullName = (firstName, lastName) => `${firstName} ${lastName}`;</code></pre>
+        </details>
+      </li>
+      <li>Write an expression that calls the <code>fullName</code> function declaration and writes the result to an existing HTML element's text node with the ID of
+        <code>fullName</code>
+
+        <details>
+          <summary>Answer</summary>
+          <pre><code class="javascript">document.querySelector('#fullName').innerHTML = fullName(firstName, lastName);</code></pre>
+        </details>
+      </li>
+
+    </ul>
+    <hr>
+    <h3>Additional Resources</h3>
+    <ul>
+      <li><a
+          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
+          target="_blank">Functions-reusable blocks of code</a> - MDN JavaScript Tutorial</li>
+      <li><a
+          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function"
+          target="_blank">Build your own function</a> - MDN JavaScript Tutorial</li>
+      <li><a
+          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">Test
+          Your Skills: Functions</a> - MDN JavaScript Building Blocks</li>
+    </ul>
+
+    <hr>
+    <nav>
+      <span><a href="prepare-callback-functions.html">Next ➡️ Callback Functions</a></span>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
