@@ -7,11 +7,9 @@
   <title>CSE 121B | W03: Programming Task</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/course.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
 
 </head>
 
@@ -37,8 +35,7 @@
     <h3>Instructions</h3>
     <h4 class="step">Setup</h4>
     <figure style="float:right; margin: 0 0 15px 10px;">
-      <img src="../images/w03-task-files.png" alt="Example File and Folder Structure" loading="lazy"
-        width="300">
+      <img src="../images/w03-task-files.png" alt="Example File and Folder Structure" loading="lazy" width="300">
       <figcaption>Figure 1: Example File and Folder Structure</figcaption>
     </figure>
     <ol>
@@ -49,6 +46,7 @@
     </ol>
 
     <h4 class="step">Function <u>Declaration</u></h4>
+    <p>For Steps 2 through 5, use VS Code to edit the <code>w03-task.js</code> file.</p>
     <h5>Addition Feature</h5>
     <ol>
       <li>Using <strong>function declaration</strong>, define a function named <code>add</code> that
@@ -88,9 +86,8 @@
           <pre><code class="javascript">document.querySelector('#sum').value = add(add1, add2);</code></pre>
         </details>
       </li>
-      <li>Add a <strong>"click" event listener</strong> to the HTML button with an ID of
-        <code>addNumbers</code> that calls the <code>addNumbers</code> function. This line of code
-        is NOT located inside a function. Why❔
+      <li>Add a <strong>"click" event listener</strong> to the HTML button with an ID of <code>addNumbers</code> that
+        calls the <code>addNumbers</code> function. This line of code is NOT located inside a function. Why❔
         <details>
           <summary>Check Your Understanding</summary>
           <pre><code class="javascript">document.querySelector('#addNumbers').addEventListener('click', addNumbers);</code></pre>
@@ -123,25 +120,27 @@
     <h4 class="step">Your Choice</h4>
     <h5>Division Feature</h5>
     <ol>
-      <li>Using <strong>any</strong> of the three function declaration types, repeat the items Step
-        2 with new functions named <code>divide</code> and <code>divideNumbers</code> and HTML form
-        controls with IDs of <code>dividend</code>, <code>divisor</code>, <code>quotient</code>, and
-        <code>divideNumbers</code>.
+      <li>Using <strong>any</strong> of the three function declaration types, repeat the items in Step 2 with new
+        functions named <code>divide</code> and <code>divideNumbers</code> and HTML form controls with IDs of
+        <code>dividend</code>, <code>divisor</code>, <code>quotient</code>, and <code>divideNumbers</code>.
+        <div class="callout info">
+          Remember that you can view the provided HTML file to see the structure and IDs of the HTML elements on the
+          page to gain reference and context.
+        </div>
       </li>
     </ol>
 
     <h4 class="step">Testing</h4>
     <ol>
-      <li>Run your page in Live Server, and test all of the mathematical functionality supported by
-        your functions.</li>
+      <li>Run your page in Live Server, and test all of the mathematical functionality supported by your functions.</li>
     </ol>
 
     <h4 class="step">Built-In Methods</h4>
     <ol>
       <li>Declare and instantiate a variable of to store the current date.</li>
       <li>Declare a variable to hold the current year.</li>
-      <li>Using the variable declared in number 1, call the built-in <code>getFullYear()</code>
-        method/function and assign it to the variable declared in 2.</li>
+      <li>Using the variable declared in number 1, call the built-in <code>getFullYear()</code> method/function and
+        assign it to the variable declared in 2.</li>
       <li>Assign the current year variable to an HTML form element with an ID of <code>year</code>.
       </li>
     </ol>
@@ -167,17 +166,17 @@
       </li>
       <li>Use the <code>filter()</code> array method to find all of the even numbers of the array
         variable and assign the result to the HTML element with an ID of <code>evens</code>.
-      <details>
-        <summary>Check Your Understanding</summary>
-        <pre><code class="javascript">let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];</code></pre>
-      </details>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];</code></pre>
+        </details>
       </li>
       <li>Use the <code>reduce()</code> array method to sum the array variable elements and assign
         the result to the HTML element with an ID of <code>sumOfArray</code>
-      <details>
-        <summary>Check Your Understanding</summary>
-        <pre><code class="javascript">let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];</code></pre>
-      </details>
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];</code></pre>
+        </details>
       </li>
       <li>Use the <code>map()</code> array method to multiple each element in the array variable by
         2 and assign the result to the HTML element with an ID of <code>multiplied</code>.</li>
@@ -208,8 +207,7 @@
   <footer>
     <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
   </footer>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
   <script src="../scripts/preventCodeSelect.js"></script>
 </body>
