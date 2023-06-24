@@ -17,8 +17,8 @@ async function getReport() {
     student.focus();
     return;
   }
-  let uri = `${studentgh}.github.io/cse121b/w01-task/w01-task.html`;
-  let jsfile = `${studentgh}.github.io/cse121b/w01-task/w01-task.js`;
+  let uri = `${studentgh}.github.io/cse121b/w01-task.html`;
+  let jsfile = `${studentgh}.github.io/cse121b/w01-task.js`;
   let js = await getJavaScriptText(`https://${jsfile}`);
 
   let response = await fetch(`https://${uri}`);
@@ -27,7 +27,7 @@ async function getReport() {
     const cssStats = await cssstats(uri);
     report.innerHTML += buildReport(cssStats, js);
   } else {
-    message.textContent = "The w01-task.html page was not found in the w01-task folder within the cse121b repository folder."
+    message.textContent = "The w01-task.html page was not found in the cse121b repository folder."
     message.style.display = 'block';
     return;
   }
@@ -58,7 +58,7 @@ function buildReport(data, js) {
       <h3>Page Rendering Check</h3>
       <div class="label">URL:</div>
       <div class="data">🔗</div>
-      <div class="standard"><a href="https://${student.value}.github.io/cse121b/w01-task/w01-task.html" target="_blank">https://${student.value}.github.io/cse121b/w01-task/w01-task.html</a></div>
+      <div class="standard"><a href="https://${student.value}.github.io/cse121b/w01-task.html" target="_blank">https://${student.value}.github.io/cse121b/w01-task.html</a></div>
 
       <h3>HTML</h3>
       <div class="label">h2 Heading:</div>
