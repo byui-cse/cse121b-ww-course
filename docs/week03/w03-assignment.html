@@ -147,15 +147,13 @@
 
     <h4 class="step">Array Methods - Functional Programming</h4>
     <ol>
-      <li>Declare and instantiate an array variable to hold the numbers 1 through 25.
+      <li>Declare and instantiate an array variable to hold the numbers 1 through 13.
         <details>
           <summary>Check Your Understanding</summary>
-          <pre><code class="javascript">let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];</code></pre>
+          <pre><code class="javascript">let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];</code></pre>
         </details>
       </li>
-      <li>Assign the value of the array variable to the HTML element with an ID of
-        <code>array</code>.
-      </li>
+      <li>Assign the value of the array variable to the HTML element with an ID of <code>array</code>.</li>
       <li>Use the <code>filter()</code> array method to find all of the odd numbers of the array
         variable and assign the result to the HTML element with an ID of <code>odds</code>
         <div class="callout info">
@@ -168,18 +166,24 @@
         variable and assign the result to the HTML element with an ID of <code>evens</code>.
         <details>
           <summary>Check Your Understanding</summary>
-          <pre><code class="javascript">let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];</code></pre>
+          <pre><code class="javascript">document.querySelector('#evens').innerHTML = numbersArray.filter(number => number % 2 === 0);</code></pre>
         </details>
       </li>
-      <li>Use the <code>reduce()</code> array method to sum the array variable elements and assign
-        the result to the HTML element with an ID of <code>sumOfArray</code>
+      <li>Use the <code>reduce()</code> array method to sum the array variable elements and assign the result to the HTML element with an ID of <code>sumOfArray</code>
         <details>
           <summary>Check Your Understanding</summary>
-          <pre><code class="javascript">let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];</code></pre>
+          <p>expression example only</p>
+          <pre><code class="javascript">numbersArray.reduce((sum, number) => sum + number)</code></pre>
         </details>
       </li>
       <li>Use the <code>map()</code> array method to multiple each element in the array variable by
-        2 and assign the result to the HTML element with an ID of <code>multiplied</code>.</li>
+        2 and assign the result to the HTML element with an ID of <code>multiplied</code>.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <p>expression example only</p>
+          <pre><code class="javascript">numbersArray.map(number => number * 2)</code></pre>
+        </details>     
+      </li>
       <li>Use the <code>map()</code> and <code>reduce()</code> array methods to sum the array
         elements after multiplying each element by two. Assign the result to the HTML element with
         an ID of
@@ -190,7 +194,7 @@
     <h3>Testing</h3>
     <ol>
       <li>Test your work by using Live Server and debug as needed.</li>
-      <li>? Error checking add on</li>
+      <li>Audit</li>
     </ol>
 
     <h3>Submission</h3>
