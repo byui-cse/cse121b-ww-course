@@ -36,7 +36,8 @@
     <p>
       Repeating code is a common task in programming. JavaScript provides several ways to repeat code including
       <code>for</code>, <code>while</code>, <code>do...while</code>, and <code>for...in</code> statements. Each of these
-      statements has a specific use case and syntax. <code>forEach</code> is a method that can be used on arrays to iterate over each item in the array.
+      statements has a specific use case and syntax. <code>forEach</code> is a method that can be used on arrays to
+      iterate over each item in the array.
     </p>
 
     <h3>Prepare</h3>
@@ -50,10 +51,58 @@
       <li>Complete the activities presented in this resource: <a
           href="https://byui-cit.github.io/learning-modules/modules/js/loops/ponder1/">JavaScript Loops</a> - WDD
         Learning Modules</li>
-      <li>Given the following code initializations:
-        <pre><code class="javascript">const records = 100;
-  const pages = 10;
-  let array = [1, 2, 3, 4, 5];</code></pre>
+      <li>Given the following variable declarations:
+        <pre><code class="javascript">const DAYS = 6;
+  const LIMIT = 30;
+  let studentReport = [11, 42, 33, 64, 29, 37, 44];</code></pre>
+        <ul class="check">
+          <li>Write a <code>for</code> loop that will iterate through the <code>studentReport</code> array and print to
+            the console the current array value if it is below 30.</li>
+          <li>Repeat the previous programming snippet by using a <code>while</code> loop.</li>
+          <li>Repeat the previous programming snippet by using a <code>forEach</code> loop.</li>
+          <li>Repeat the previous programming snippet by using a <code>for...in</code> loop.</li>
+          <li>Use any type of repetition (looping) statement to dynamically produce the day names (Monday, Tuesday,
+            Wednesday, etc.) of the next number of DAYS from today's date.</li>
+        </ul>
+        <details>
+          <summary>Example Answers</summary>
+          <p>These answers are certainly not exhaustive.</p>
+          <pre><code>
+  // for loop
+  for (let i = 0; i &lt; studentReport.length; i++) {
+    if (studentReport[i] &lt; LIMIT) {
+      console.log(studentReport[i]);
+    }
+  }
+  
+  // while loop
+  let i = 0;
+  while (i &lt; studentReport.length) {
+    if (studentReport[i] &lt; LIMIT) {
+      console.log(studentReport[i]);
+    }
+    i++;
+  }
+  
+  // forEach loop
+  studentReport.forEach(function (item) {
+    if (item &lt; LIMIT) {
+      console.log(item);
+    }
+  });
+  
+  // for...in loop
+  for (let i in studentReport) {
+    if (studentReport[i] &lt; LIMIT) {
+      console.log(studentReport[i]);
+    }
+  }</code></pre>
+  <p>Use this CodePen to guide you in a solution to the last question. This requires you to sift through the example code to find what is applicable.</p>
+          <div class="callout info">
+            ⚙️ CodePen: <a href="https://codepen.io/blazzard-jason/pen/wLmeXj" target="_blank">JavaScript - Get Future
+              Days from Today</a>
+          </div>
+        </details>
 
 
       </li>
