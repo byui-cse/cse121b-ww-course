@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CSE 121B | JavaScript Objects</title>
+  <title>CSE 121B | JavaScript JSON</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
@@ -31,59 +31,74 @@
       <span><a href="../week06/">W6</a></span>
       <span><a href="../week07/">W7</a></span>
     </nav>
-    <h2>Objects</h2>
+    <h2>JSON</h2>
     <h3>Overview</h3>
-    <p>
-      JavaScript objects are a way to group related data and functions together. Objects are a core concept in
-      JavaScript and are used extensively in the language. In this learning activity, you will learn how to create and
-      use objects in JavaScript.
-
-    </p>
+    <p>JSON stands for JavaScript Object Notation. It is a lightweight data-interchange format that is easy for humans
+      to
+      read and write and easy for machines to parse and generate. JSON is a text format that is completely language
+      independent but uses conventions that are familiar to programmers of the C-family of languages, including C,
+      C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange
+      language.</p>
     <div class="callout info">
-      "An object is a collection of related data and/or functionality. These usually consist of several
-      variables and functions (which are called properties and methods when they are inside objects)." - <a
-        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics" target="_blank">MDN Web Docs</a>
+      "JSON is a text-based data format following JavaScript object syntax, which was popularized by Douglas Crockford.
+      Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript,
+      and many programming environments feature the ability to read (parse) and generate JSON." - <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON" target="_blank">MDN Web Docs</a>
     </div>
     <h3>Prepare</h3>
-    <p>Here's an example of a JavaScript object representing a person:
-    <pre><code class="javascript">let person = {
-  name: "Antonia Francesca",
-  age: 30,
-  profession: "Software Engineer",
-  hobbies: ["reading", "playing guitar", "hiking"],
-  address: {
-    street: "123 Camino Real",
-    city: "Santa Rosa",
-    country: "Honduras"
-  },
-  isEmployed: true,
-  greet: function() {
-    console.log(`Hello, my name is ${this.name}.`);
-  }
-};</code></pre>
-    </p>
-    <p>In this example, the person object has various properties such as name, age, profession, hobbies, address, and
-      isEmployed. It also includes a greet method that logs a greeting message to the console using the person's name.
-    </p>
-    <p>The address property is an object itself, containing nested properties such as street, city, and country.</p>
-    <p>You can access and modify the properties and invoke the methods of the person object using dot notation or
-      bracket notation. For example:</p>
-    <pre><code class="javascript">console.log(person.hobbies[0]); // Output: reading</code></pre>
-    <ul>
-      <li>Read 📝 <a href="https://byui-cit.github.io/learning-modules/modules/js/objects/prepare1/"
-          target="_blank">Objects -
-          Representing Data</a> - WDD Learning Modules</li>
-      <li>Reference 📑 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics"
-          target="_blank">Object Basics</a> - MDN web docs</li>
-    </ul>
+    <p>Reference 📑 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">Working with
+        JSON</a></p>
 
     <h3>Check Your Understanding</h3>
-    <ul>
-      <li>Complete the following Ponder activity: <a
-          href="https://byui-cit.github.io/learning-modules/modules/js/objects/ponder1/">JS Objects</a> - WDD Learning
-        Modules
+    <p>The following JSON example data set was provided in the MDN article:</p>
+    <pre><code class="json">{
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}</code></pre>
+    <p>Suppose that data has been parsed into a variable called <code>superHeroes</code>.</p>
+    <ul class="check">
+      <li>What does the following expression produce:
+        <pre><code class="javascript">superHeroes["members"][1]["powers"][2];</code></pre>
+        <details>
+          <summary>Answer</summary>
+          <p>Superhuman reflexes</p>
+        </details>
       </li>
     </ul>
+
 
     <hr>
     <nav>
