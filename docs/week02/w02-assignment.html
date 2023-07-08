@@ -36,14 +36,12 @@
 
     <h2>W02: Programming Task</h2>
     <h3>Overview</h3>
-    <p>You will replace your cse121b site home page (<code>index.html</code>) with a biography page.
+    <p>You will replace your cse121b site home page (<code>index.html</code>) with new content.
       The structure, style, and some of the responsive menu programming will be provided. The task
       is to complete a series of programming enhancements to supply content to the page.</p>
     <div class="callout info">💡 Remember, that in order for the script to affect the HTML document,
-      the HTML must reference the
-      source of the JavaScript so that the HTML DOM can be manipulated (edited). This JavaScript
-      file(s) will be external to the HTML document. The <code>&lt;script&gt;</code> element will be
-      used to reference the JS file.</div>
+      the HTML must reference the source of the JavaScript so that the HTML DOM can be manipulated (edited). This JavaScript file(s) will be external to the HTML document. The <code>&lt;script&gt;</code> element will be
+      used to reference the external mJS file.</div>
 
 
     <h3>Instructions</h3>
@@ -57,19 +55,18 @@
       <li>In VS Code with your cse121b local repository folder open, rename the existing
         <code>index.html</code> file to <code>index-old.html</code>
       </li>
-      <li>Download the <a href="../taskfiles/w02-task.zip">starter files</a>, unzip the files, and place those unzipped files and folders as is into your cse121b repo folder locally.
+      <li>Download the <a href="../taskfiles/w02-task.zip">starter files</a>, unzip the files, and place those unzipped files and folders as is into the cse121b folder.
         <div class="callout info">
-          There is an <code>index.html</code> file and three folders named <code>scripts</code>,
+          The starter files contain an <code>index.html</code> file and three folders named <code>scripts</code>,
           <code>styles</code>, and <code>images</code>. There are two .js files in scripts, one image file in
-          images, and one css file in styles. The only file you will be modifying to complete this assignment is named <strong>w02-task.js</strong> in the scripts folder. You will be adding one image file to the <strong>images</strong> folder</li>
+          images, and one css file in styles. The only file you will be modifying to complete this assignment is named <code>w02-task.js</code> in the scripts folder. You will be adding one (1) image file to the <code>images</code> folder</li>
         </div>
 
       </li>
       <li>Test the page in your local browser by using Open with Live Server on the
         <code>index.html</code> file.
       </li>
-      <li>Place an image of yourself into the images folder by dragging and dropping it into the
-        folder in VS Code or by using your operating system's file manager. The image should be at
+      <li>Place an image of yourself into the <code>images</code> folder by dragging and dropping the image file into the images folder in VS Code or by using your operating system's file manager. The image should be at
         least 300 pixels in width and at least 300 pixels in height but does not need to be a
         square.</li>
       <div class="callout info">
@@ -80,26 +77,27 @@
     </ol>
     <h4 class="step">Variables</h4>
     <div class="callout info">
-      Use the <strong>w02-task.js</strong> file to complete the following steps.
+      Open the <strong>w02-task.js</strong> file in VS Code for editing to complete the rest of these activity steps.
     </div>
     <ol>
-      <li>Declare and instantiate a variable to hold your name. Identify the variable as "fullName".
+      <li>Declare and instantiate a variable to hold your name. Identify the variable as "<code>fullName</code>".
         <details>
           <summary>Check Your Understanding</summary>
           <pre>
         <code class="javascript">let fullName = 'Patricia Juarez';</code></pre>
-          A <code>const</code> declaration is also OK because the value will not change in this
-          application.
+          💡A <code>const</code> declaration is OK to use to declare this variable because the value will not change in this application.<br>
+          💡You can use single quotes ('), double quotes ("), or backticks (`) to
+          surround the string (sequence of characters) data type value.
         </details>
       </li>
       <li>Declare and instantiate a variable to hold the current year. Identify the variable as
-        "currentYear".</li>
+        "<code>currentYear</code>".</li>
       <li>Declare and instantiate a variable to hold the file path (location) and file name of the
         image that you placed in the images folder as a string. Identify the variable as
-        "profilePicture".
+        "<code>profilePicture</code>".
         <div class="callout info">
-          Example: <code>'images/yourprofileimagename.png'</code><br>The file path will be relative
-          to the location of the HTML document and the name and type of image is up to you.
+          Example path: <code>'images/yourprofileimagename.png'</code><br>The file path will be relative
+          to the location of the HTML document and the name and type of image matches your own image.
         </div>
       </li>
     </ol>
@@ -108,23 +106,25 @@
     <ol>
 
       <li>Use the <code>document.getElementById()</code> method to get the HTML element with the
-        <code>id</code> of <code>name</code> and store it in a const variable named "nameElement".
+        <code>id</code> of <code>name</code> and store it in a const variable named "<code>nameElement</code>".
         <details>
           <summary>Check Your Understanding</summary>
-          <pre>
-      <code class="javascript">const nameElement = document.getElementById('name');</code></pre>
+          <pre><code class="javascript">const nameElement = document.getElementById('name');</code></pre>
         </details>
       </li>
       <li>Use the <code>document.getElementById()</code> method to get the HTML element with the
-        <code>id</code> of <code>food</code> and store it in a const variable named "foodElement".
+        <code>id</code> of <code>food</code> and store it in a const variable named "<code>foodElement</code>".
       </li>
       <li>Use the <code>document.querySelector()</code> method to get the element with the
-        <code>id</code> of
-        "currentYear" and store it in a variable named "yearElement".
+        id of "<code>currentYear</code>" and store it in a variable named "<code>yearElement</code>".
+        <details>
+        <summary>Check Your Understanding</summary>
+        <pre><code class="javascript">const yearElement = document.querySelector('#currentYear');</code></pre>
+        </details>
       </li>
       <li>Use any viable method to get the profile image element stored into a variable.
         <div class="callout warning">
-          Do NOT change the HTML.
+          Remember, You do NOT need to change the HTML.
         </div>
       </li>
     </ol>
