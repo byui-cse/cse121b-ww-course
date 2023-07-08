@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSE 121B | W04: Programming Task</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/course.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="page">
+      <h1>CSE 121B<span id="coursetitle">: JavaScript Language</span></h1>
+      <img src="../images/byui-logo.svg" alt="BYU-I logo" class="logo">
+    </div>
+  </header>
+  <main class="page">
+    <nav>
+      <span><a href="../">Home</a></span>
+      <span><a href="../week01/">W1</a></span>
+      <span><a href="../week02/">W2</a></span>
+      <span><a href="../week03/">W3</a></span>
+      <span class="active"><a href="../week04/">W4</a></span>
+      <span><a href="../week05/">W5</a></span>
+      <span><a href="../week06/">W6</a></span>
+      <span><a href="../week07/">W7</a></span>
+    </nav>
+    <h2>W04: Programming Task</h2>
+    <p>In your previous weeks' tasks, you declared and used individual variables. In this task, you are to rework the
+      home page biography task from week 02 using <strong>object literals</strong>.</p>
+    <h3>Instructions</h3>
+    <h4 class="step">Setup</h4>
+    <figure style="float:right; margin: 0 0 15px 10px;">
+      <img src="../images/w04-task-files.png" alt="Example File and Folder Structure" loading="lazy" width="300">
+      <figcaption>Figure 1: Example File and Folder Structure</figcaption>
+    </figure>
+    <ol>
+      <li>Download the <a href="../taskfiles/w04-task.zip">starter files</a> (2). Place the
+        <code>w04-task.html</code> file on the root <code>cse121b</code> folder and the
+        <code>w04-task.js</code> file in the <code>scripts</code> folder.
+      </li>
+    </ol>
+
+    <h4 class="step">Data Changes</h4>
+    <ol>
+      <li>
+        Declare a new variable to hold information about yourself and assign an empty object to the variable ( hint:
+        <code>{}</code> )
+      </li>
+      <li>
+        Add a property to this object literal named <code>name</code> and set its value to be your name as a string.
+      </li>
+      <li>
+        Add a property named <code>photo</code>. Set its value to be an image's path and name (one used in Programming
+        Task 2) as a string.
+      </li>
+      <li>
+        Add a property named <code>favoriteFoods</code>. Set its value to be an array of your favorite foods as strings
+        ( hint: <code>[]</code> ).
+      </li>
+      <li>
+        Add a property named <code>hobbies</code>. Set its value to be an array of your hobbies as strings.
+      </li>
+      <li>
+        Add a property named <code>placesLived</code>. Set its value to be an empty array.
+      </li>
+      <li>
+        Add an item to the placesLived array that is new object literal with two properties: <code>place</code> and
+        <code>length</code>
+      </li>
+      <ul>
+        <li>
+          For each of these properties, add appropriate values as strings.
+        </li>
+      </ul>
+      <li>
+        Add additional object literals with appropriate values to the <code>placesLived</code> array for each place
+        you have lived.
+      </li>
+    </ol>
+    <h4>Output Changes</h3>
+
+      <ol>
+        <li>
+          Assign the value of the <code>name</code> property (of the object
+          declared above) to the HTML element with an ID of <code>name</code>.
+        </li>
+        <li>
+          Assign the value of the <code>photo</code> property as the <code>src</code> attribute of the HTML
+          <code>&lt;img&gt;</code> with an ID of <code>photo</code>.
+        </li>
+        <li>
+          Assign the value of the <code>name</code> property as the <code>alt</code> attribute of the HTML
+          <code>&lt;img&gt;</code> with an ID of <code>photo</code>.
+        </li>
+        <li>
+          For each favorite food in the <code>favoriteFoods</code> property, create an HTML <code>&lt;li&gt;</code>
+          element and place its value in the <code>&lt;ul&gt;</code> element.
+        </li>
+        <li>
+          Append the <code>&lt;li&gt;</code> elements created above as children of the HTML <code>&lt;ul&gt;</code>
+          element with an ID of <code>favorite-foods</code>.
+        </li>
+        <li>
+          Repeat for each hobby in the <code>hobbies</code> property
+        </li>
+        <li>
+          Repeat using the HTML <code>&lt;ul&gt;</code> element with an ID of <code>hobbies</code>
+        </li>
+        <li>
+          For each object in the <code>placesLived</code> property:
+          <ul>
+            <li>Create an HTML &lt;dt&gt; element and put its <code>place</code> property in the &lt;dt&gt;
+              element.</li>
+            <li>Create an HTML &lt;dd&gt; element and put its <code>length</code> property in the &lt;dd&gt;
+              element</li>
+          </ul>
+        </li>
+        <li>
+          Append the HTML <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements created above to the HTML
+          <code>&lt;dl&gt;</code> element with an ID of <code>places-lived</code>
+        </li>
+      </ol>
+
+      <h3>Testing</h3>
+      <ol>
+        <li>Test your work by using Live Server and debug as needed.</li>
+      </ol>
+
+      <h3>Submission</h3>
+      <ol>
+        <li>Commit and push your work to GitHub.</li>
+        <li>Submit the URL of your GitHub repository to I-Learn.</li>
+      </ol>
+      <hr>
+      <nav>
+        <span><a href="https://byui.instructure.com/calendar">Back to 💫 I-Learn</a></span>
+      </nav>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../scripts/preventCodeSelect.js"></script>
+</body>
+
+</html>

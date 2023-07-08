@@ -7,11 +7,9 @@
   <title>CSE 121B | JavaScript Objects</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/course.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
 
 </head>
 
@@ -36,42 +34,55 @@
     <h2>Objects</h2>
     <h3>Overview</h3>
     <p>
-      JavaScript objects are a way to group related data and functions together. Objects are a core concept in JavaScript and are used extensively in the language. In this learning activity, you will learn how to create and use objects in JavaScript.
+      JavaScript objects are a way to group related data and functions together. Objects are a core concept in
+      JavaScript and are used extensively in the language. In this learning activity, you will learn how to create and
+      use objects in JavaScript.
 
     </p>
     <div class="callout info">
       "An object is a collection of related data and/or functionality. These usually consist of several
       variables and functions (which are called properties and methods when they are inside objects)." - <a
-        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics"
-        target="_blank">MDN Web Docs</a>
+        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics" target="_blank">MDN Web Docs</a>
     </div>
     <h3>Prepare</h3>
+    <p>Here's an example of a JavaScript object representing a person:
+    <pre><code class="javascript">let person = {
+  name: "Antonia Francesca",
+  age: 30,
+  profession: "Software Engineer",
+  hobbies: ["reading", "playing guitar", "hiking"],
+  address: {
+    street: "123 Camino Real",
+    city: "Santa Rosa",
+    country: "Honduras"
+  },
+  isEmployed: true,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}.`);
+  }
+};</code></pre>
+    </p>
+    <p>In this example, the person object has various properties such as name, age, profession, hobbies, address, and
+      isEmployed. It also includes a greet method that logs a greeting message to the console using the person's name.
+    </p>
+    <p>The address property is an object itself, containing nested properties such as street, city, and country.</p>
+    <p>You can access and modify the properties and invoke the methods of the person object using dot notation or
+      bracket notation. For example:</p>
+    <pre><code class="javascript">console.log(person.hobbies[0]); // Output: reading</code></pre>
     <ul>
-      <li>Read 📄<a
-          href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics"
+      <li>Read 📝 <a href="https://byui-cit.github.io/learning-modules/modules/js/objects/prepare1/"
+          target="_blank">Objects -
+          Representing Data</a> - WDD Learning Modules</li>
+      <li>Reference 📑 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics"
           target="_blank">Object Basics</a> - MDN web docs</li>
     </ul>
 
     <h3>Check Your Understanding</h3>
-    <p>Given these function declarations:</p>
-
-
-
-    <ul class="check">
-
-
-      <li>Call a function named <code>calculate</code> and pass it the arguments to support the console output of the following equation: <code>2 + 3</code>.
-        <div class="callout info">
-          ☝🏽Hint: You need to pass three arguments to the <code>calculate</code> function.
-        </div>
-
-        <details>
-          <summary>Answer</summary>
-          <pre><code class="javascript">calculate(2, 3, displayResult)</code></pre>
-        </details>
+    <ul>
+      <li>Complete the following Ponder activity: <a
+          href="https://byui-cit.github.io/learning-modules/modules/js/objects/ponder1/">JS Objects</a> - WDD Learning
+        Modules
       </li>
-
-
     </ul>
 
     <hr>
@@ -83,8 +94,7 @@
   <footer>
     <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
   </footer>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 
 </body>
