@@ -322,6 +322,7 @@ td {
   float: right;
   margin: 0 0 0.5rem 0.5rem;
   border: var(--bord);
+  padding: 1rem;
 }
 
 .step-reset {

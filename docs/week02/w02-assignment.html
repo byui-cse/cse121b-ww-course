@@ -36,17 +36,20 @@
 
     <h2>W02: Programming Task</h2>
     <h3>Overview</h3>
-    <p>You will replace your cse121b site home page (<code>index.html</code>) with new content.
+    <p>You will replace your cse121b site home page (<code>index.html</code>) with a new page.
       The structure, style, and some of the responsive menu programming will be provided. The task
-      is to complete a series of programming enhancements to supply content to the page.</p>
-    <div class="callout info">💡 Remember, that in order for the script to affect the HTML document,
-      the HTML must reference the source of the JavaScript so that the HTML DOM can be manipulated (edited). This JavaScript file(s) will be external to the HTML document. The <code>&lt;script&gt;</code> element will be
-      used to reference the external mJS file.</div>
+      is to complete a series of programming enhancements to supply content to this new page.</p>
+    <div class="callout info">💡 In order for the script to affect the HTML document,
+      the HTML must reference the source of the JavaScript so that the HTML DOM can be manipulated
+      (edited). This JavaScript file(s) will be external to the HTML document. The
+      <code>&lt;script&gt;</code> element will be
+      used to reference the external mJS file.
+    </div>
 
 
     <h3>Instructions</h3>
     <h4 class="step">Setup</h4>
-    <figure style="float:right; margin: 0 0 15px 10px;">
+    <figure class="floatright">
       <img src="../images/w02-task-files.png" alt="Screenshot of File and Folder Structure"
         loading="lazy" width="300">
       <figcaption>Figure 1: Example File and Folder Structure</figcaption>
@@ -55,18 +58,26 @@
       <li>In VS Code with your cse121b local repository folder open, rename the existing
         <code>index.html</code> file to <code>index-old.html</code>
       </li>
-      <li>Download the <a href="../taskfiles/w02-task.zip">starter files</a>, unzip the files, and place those unzipped files and folders as is into the cse121b folder.
+      <li>Download the <a href="../taskfiles/w02-task.zip">starter files</a>, unzip the files, and
+        place those unzipped files and folders as given into the cse121b folder.
         <div class="callout info">
-          The starter files contain an <code>index.html</code> file and three folders named <code>scripts</code>,
-          <code>styles</code>, and <code>images</code>. There are two .js files in scripts, one image file in
-          images, and one css file in styles. The only file you will be modifying to complete this assignment is named <code>w02-task.js</code> in the scripts folder. You will be adding one (1) image file to the <code>images</code> folder</li>
-        </div>
+          The starter files contain an <code>index.html</code> file and three folders named
+          <code>scripts</code>,
+          <code>styles</code>, and <code>images</code>. There are two .js files in scripts, one
+          image file in
+          images, and one css file in styles. The only file you will be modifying to complete this
+          assignment is named <code>w02-task.js</code> in the scripts folder. You will be adding one
+          (1) image file to the <code>images</code> folder
+      </li>
+      </div>
 
       </li>
       <li>Test the page in your local browser by using Open with Live Server on the
         <code>index.html</code> file.
       </li>
-      <li>Place an image of yourself into the <code>images</code> folder by dragging and dropping the image file into the images folder in VS Code or by using your operating system's file manager. The image should be at
+      <li>Place an image of yourself into the <code>images</code> folder by dragging and dropping
+        the image file into the images folder in VS Code or by using your operating system's file
+        manager. The image should be at
         least 300 pixels in width and at least 300 pixels in height but does not need to be a
         square.</li>
       <div class="callout info">
@@ -75,17 +86,21 @@
       </div>
       </li>
     </ol>
+
     <h4 class="step">Variables</h4>
     <div class="callout info">
-      Open the <strong>w02-task.js</strong> file in VS Code for editing to complete the rest of these activity steps.
+      Open the <strong>w02-task.js</strong> file in VS Code for editing to complete the rest of
+      these activity steps.
     </div>
     <ol>
-      <li>Declare and instantiate a variable to hold your name. Identify the variable as "<code>fullName</code>".
+      <li>Declare and instantiate a variable to hold your name. Identify the variable as
+        "<code>fullName</code>".
         <details>
           <summary>Check Your Understanding</summary>
           <pre>
         <code class="javascript">let fullName = 'Patricia Juarez';</code></pre>
-          💡A <code>const</code> declaration is OK to use to declare this variable because the value will not change in this application.<br>
+          💡A <code>const</code> declaration is OK to use to declare this variable because the value
+          will not change in this application.<br>
           💡You can use single quotes ('), double quotes ("), or backticks (`) to
           surround the string (sequence of characters) data type value.
         </details>
@@ -96,8 +111,10 @@
         image that you placed in the images folder as a string. Identify the variable as
         "<code>profilePicture</code>".
         <div class="callout info">
-          Example path: <code>'images/yourprofileimagename.png'</code><br>The file path will be relative
-          to the location of the HTML document and the name and type of image matches your own image.
+          Example path: <code>'images/yourprofileimagename.png'</code><br>The file path will be
+          relative
+          to the location of the HTML document and the name and type of image matches your own
+          image.
         </div>
       </li>
     </ol>
@@ -106,91 +123,130 @@
     <ol>
 
       <li>Use the <code>document.getElementById()</code> method to get the HTML element with the
-        <code>id</code> of <code>name</code> and store it in a const variable named "<code>nameElement</code>".
+        <code>id</code> of <code>name</code> and store it in a const variable named
+        "<code>nameElement</code>".
         <details>
           <summary>Check Your Understanding</summary>
           <pre><code class="javascript">const nameElement = document.getElementById('name');</code></pre>
+          <div class="callout info">
+            🚑 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"
+              target="_blank">getElementById</a> - MDN Web Docs
+          </div>
         </details>
       </li>
       <li>Use the <code>document.getElementById()</code> method to get the HTML element with the
-        <code>id</code> of <code>food</code> and store it in a const variable named "<code>foodElement</code>".
+        <code>id</code> of <code>food</code> and store it in a const variable named
+        "<code>foodElement</code>".
       </li>
       <li>Use the <code>document.querySelector()</code> method to get the element with the
-        id of "<code>currentYear</code>" and store it in a variable named "<code>yearElement</code>".
+        id of "<code>currentYear</code>" and store it in a variable named
+        "<code>yearElement</code>".
         <details>
-        <summary>Check Your Understanding</summary>
-        <pre><code class="javascript">const yearElement = document.querySelector('#currentYear');</code></pre>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">const yearElement = document.querySelector('#currentYear');</code></pre>
+          <div class="callout info">
+            🚑 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+              target="_blank">querySelector</a> - MDN Web Docs<br>Note the <code>#</code> in the
+            selector string to indicate the id attribute value. 🪲This syntax detail is often
+            missed.
+          </div>
         </details>
       </li>
-      <li>Use any viable method to get the profile image element stored into a variable.
+      <li>Use any viable method to get the profile image element stored into a variable named
+        "<code>imageElement</code>".
         <div class="callout warning">
-          Remember, You do NOT need to change the HTML.
+          🚫Remember, do <strong>NOT</strong> edit the HTML markup in the HTML page.
         </div>
       </li>
     </ol>
+
     <h4 class="step">Adding Content to the Document</h4>
     <ol>
 
       <li>Assign the <code>nameElement</code>'s <code>innerHTML</code> property the
-        <code>fullName</code> variable value.<br> In addition, surround by a
-        <code>&ltstrong&gt</code> tag. Use a <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
-          target="_blank">template literal</a> to create the string with HTML tags.
+        <code>fullName</code> variable value.
+      </li>
+      <li>Surround the <code>fullName</code> value with <code>&ltstrong&gt</code> tags.
+        <div class="callout info">
+          💡Use a <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+            target="_blank">template literal</a> to create the string with HTML tags.
+        </div>
         <details>
           <summary>Check Your Understanding</summary>
           <pre><code class="javascript">nameElement.innerHTML = `&lt;strong&gt;${fullName}&lt;/strong&gt;`;</code></pre>
-          ☝🏽Note that using textContent in this example would not work because the expression
-          contains HTML markup that needs to be rendered. Using <code>textContent</code> will render
+          ☝🏽Note that using the <code>textContent</code> property instead of <code>innerHTML</code>
+          in this example would not work because the expression contains HTML markup that needs to
+          be rendered. Using <code>textContent</code> will render
           the HTML markup as text, which is not what is wanted.
         </details>
       </li>
 
       <li>Use the <code>textContent</code> property to set the value of the element to the value of
-        the variable "<code>currentYear</code>".</li>
+        the variable <code>currentYear</code>.</li>
 
       <li>Use the <a href="https://developer.mozilla.org/es/docs/Web/API/Element/setAttribute"
           target="_blank">setAttribute</a> method to set the <code>src</code> property of the image
         element and set its value to the file path variable set in Step 2.
-
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">imageElement.setAttribute('src', profilePicture);</code></pre>
+          <div class="callout info">
+            Alternatively, you can use the <code>src</code> property directly to set the value of
+            the
+            image element's <code>src</code> property.
+          </div>
+        </details>
       </li>
-      <li>Use the setAttribute method to set the <code>alt</code> property of the image
+
+      <li>Use the <code>setAttribute</code> method to set the <code>alt</code> property of the image
         element and set its value to equal <code>'Profile image of [Insert Name Variable]'</code>
         where the name variable comes from Step 2. Always use a <a
           href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
           target="_blank">template literal</a> to create the string.
-
       </li>
+
     </ol>
-    <figure style="float:right; margin: 0 0 15px 10px;">
+
+    <figure class="floatright">
       <img src="../images/w02-task-example.png" alt="Screenshot example of finished assignment."
         loading="lazy" width="300">
       <figcaption>Figure 2: Example Assignment in Mobile View</figcaption>
     </figure>
+
     <h4 class="step">Arrays</h4>
     <ol>
       <li>Declare an array variable to hold your favorite foods.
         <details>
           <summary>Hint</summary>
-          Use <code>[]</code> and fill it with your favorite foods as strings.
+          Use <code>[]</code> and fill it with your favorite foods as strings. What you name the
+          array variable is up to you.
         </details>
-
-        </div>
       </li>
+
       <li>Modify the HTML element with the id of <code>food</code> to display your favorite foods
-        array. Remember that you set a already set a variable in Step 3 to reference the element
-        with the <code>id</code> of <code>food</code>.</li>
+        array. 💡Remember that you set a variable named <code>foodElement</code> in Step 3 to
+        reference the element with the <code>id</code> of <code>food</code>.</li>
       <li>Declare and instantiate a variable to hold another single favorite food item.</li>
-      <li>Add the value stored in this new variable to your favorite food array.</li>
-      <li>Append the HTML element with the id of <code>food</code> using a <code>+=</code> a
-        <code>&lt;br&gt;</code> (line break character).
+      <li>Add the value stored in this new variable to your favorite food array.
+        <details>
+          <summary>Hint</summary>
+          Use the array <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"
+            target="_blank"><code>push()</code></a> method to add the new item to the array.
+        </details>
+      </li>
+      <li>Append the new array values onto the displayed content of the HTML element with the id of
+        <code>food</code> using a <code>+=</code> operator and a <code>&lt;br&gt;</code> (line break
+        character) to provide a line break as shown in Figure 2.
         <details>
           <summary>Check Your Understanding</summary>
           <pre><code class="javascript">foodElement.innerHTML += `&lt;br&gt;${favFoods}`;</code></pre>
         </details>
       </li>
       <li>Remove the first element in the favorite food array.</li>
-      <li>Append the HTML element with the id of <code>food</code> showing the modified array, using
-        a line break first.</li>
+      <li>Again, append the array output showing the modified array, using a line break as shown in
+        step 5.5.</li>
       <li>Remove the last element in the favorite food array.</li>
       <li>Append the HTML element with the id of <code>food</code> again with this final modified
         favorite foods array.</li>
@@ -208,7 +264,7 @@
     </ol>
     <hr>
     <nav>
-      <span><a href="index.html">↪️ w02-task Content</a></span>
+      <span><a href="index.html">↪️ W02 Content</a></span>
       <span><a href="https://byui.instructure.com/calendar">Back to 💫 I-Learn</a></span>
     </nav>
   </main>
