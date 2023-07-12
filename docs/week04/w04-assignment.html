@@ -32,13 +32,12 @@
       <span><a href="../week07/">W7</a></span>
     </nav>
     <h2>W04: Programming Task</h2>
-    <p>In your previous weeks' tasks, you declared and used individual variables. In this task, you are to rework the
-      home page biography task from week 02 using <strong>object literals</strong>.</p>
+    <p>In your previous weeks' tasks, you declared and used individual variables. In this task, you are to rework the home page biography task from week 02 using <strong>object literals</strong>.</p>
     <h3>Instructions</h3>
     <h4 class="step">Setup</h4>
-    <figure style="float:right; margin: 0 0 15px 10px;">
-      <img src="../images/w04-task-files.png" alt="Example File and Folder Structure" loading="lazy" width="300">
-      <figcaption>Figure 1: Example File and Folder Structure</figcaption>
+    <figure class="floatright">
+      <img src="../images/w04-task-files.png" alt="Example File and Folder Structure" width="300">
+      <figcaption>Figure 1: Example File and Folder Structure - W04</figcaption>
     </figure>
     <ol>
       <li>Download the <a href="../taskfiles/w04-task.zip">starter files</a> (2). Place the
@@ -47,49 +46,70 @@
       </li>
     </ol>
 
-    <h4 class="step">Data Changes</h4>
+    <h4 class="step">Object Literal</h4>
+    <div class="callout info">
+      Do the following work in the <code>w04-task.js</code> file which is linked to the <code>w04-task.html</code> file.<br> Do 🚫<strong>not</strong> alter your index.html file.
+    </div>
     <ol>
       <li>
-        Declare a new variable to hold information about yourself and assign an empty object to the variable ( hint:
-        <code>{}</code> )
+        Declare a new object literal variable named <code>myProfile</code> to hold information about yourself and assign an empty object to the variable.
+        <details>
+        <summary>Check Your Understanding</summary>
+        <pre>
+        <code class="javascript">let myProfile = {};</code></pre>
+        </details>
       </li>
       <li>
-        Add a property to this object literal named <code>name</code> and set its value to be your name as a string.
+        Add a property to this object literal named <code>name</code> and set its value to be your name as a <strong>string</strong>.
       </li>
       <li>
-        Add a property named <code>photo</code>. Set its value to be an image's path and name (one used in Programming
-        Task 2) as a string.
+        Add a property named <code>photo</code>. Set its value to be an image's path and name (one used in Programming Task 2) as a <strong>string</strong>.
       </li>
       <li>
-        Add a property named <code>favoriteFoods</code>. Set its value to be an array of your favorite foods as strings
-        ( hint: <code>[]</code> ).
+        Add a property named <code>favoriteFoods</code>. Set its value to be an <strong>array</strong> of your favorite foods as strings
+        <details>
+          <summary>Check Your Understanding - Example</summary>
+          <pre><code class="javascript">    favoriteFoods: [
+      'Fettucini',
+      'Steak',
+      'Chicken',
+      'Shrimp',
+      'Baked Potato'
+    ],</code></pre>
+        </details>
       </li>
       <li>
-        Add a property named <code>hobbies</code>. Set its value to be an array of your hobbies as strings.
+        Add a property named <code>hobbies</code>. Set its value to be an <strong>array</strong> of your hobbies as strings.
       </li>
       <li>
-        Add a property named <code>placesLived</code>. Set its value to be an empty array.
+        Add a property named <code>placesLived</code>. Set its value to be an empty <strong>array</strong>.
       </li>
-      <li>
-        Add an item to the placesLived array that is new object literal with two properties: <code>place</code> and
-        <code>length</code>
+      <li>Using code outside of the <code>myProfile</code> definition, add an item to the <code>placesLived</code> <strong>array</strong> where this new item itself is <strong>object</strong> with two properties: <code>place</code> and <code>length</code> and for each of these properties, add appropriate values as strings.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">// This occurs outside of the object definition.
+myProfile.placesLived.push(
+  {
+    place: 'San Francisco, CA',
+    length: '1 year'
+  }
+);</code></pre>
+        </details>
       </li>
-      <ul>
-        <li>
-          For each of these properties, add appropriate values as strings.
-        </li>
-      </ul>
+
       <li>
-        Add additional object literals with appropriate values to the <code>placesLived</code> array for each place
-        you have lived.
+        Add additional object literals with appropriate values to the <code>placesLived</code> <strong>array</strong> for each place you have lived.
       </li>
     </ol>
-    <h4>Output Changes</h3>
+    <h4>DOM Manipulation (Output)</h3>
 
       <ol>
         <li>
-          Assign the value of the <code>name</code> property (of the object
-          declared above) to the HTML element with an ID of <code>name</code>.
+          Assign the value of the <code>name</code> property of the <code>myProfile</code> object to the HTML element with an ID of <code>name</code>.
+          <details>
+            <summary>Check Your Understanding</summary>
+            <pre><code class="javascript">document.querySelector('#name').textContent = myProfile.name;</code></pre>
+          </details>
         </li>
         <li>
           Assign the value of the <code>photo</code> property as the <code>src</code> attribute of the HTML
@@ -100,19 +120,32 @@
           <code>&lt;img&gt;</code> with an ID of <code>photo</code>.
         </li>
         <li>
-          For each favorite food in the <code>favoriteFoods</code> property, create an HTML <code>&lt;li&gt;</code>
-          element and place its value in the <code>&lt;ul&gt;</code> element.
+          For each favorite food in the <code>favoriteFoods</code> property,
+          <div class="callout info">
+            💡Use a forEach loop to iterate over the <code>favoriteFoods</code> array.
+          </div>
+          <ol>
+            <li>create an HTML <code>&lt;li&gt;</code> element (💡<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">createElement</a></code>),</li>
+            <li>place the value of the <code>favoriteFoods</code> array element into the <code>textContent</code> of this new <code>li</code> element, and then</li>
+            <li>append this new <code>&lt;li&gt;</code> element with content as a child of the HTML
+            <code>&lt;ul&gt;</code> element with an ID of <code>favorite-foods</code>.</li>
+          </ol>
+
+          <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">myProfile.favoriteFoods.forEach(food => {
+  let li = document.createElement('li');
+  li.textContent = food;
+  document.querySelector('#favorite-foods').appendChild(li);
+});</code></pre>
+💡What is the difference between <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append" target="_blank">append</a> method and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank">appendChild()</a> method when it comes to manipulating the DOM and adding elements to a parent element?
+          </details>
         </li>
+
         <li>
-          Append the <code>&lt;li&gt;</code> elements created above as children of the HTML <code>&lt;ul&gt;</code>
-          element with an ID of <code>favorite-foods</code>.
+          Repeat the previous process of creating a list of items for each hobby in the <code>hobbies</code> property of the object and appending each item to the HTML <code>&lt;ul&gt;</code> element with an ID of <code>hobbies</code>.
         </li>
-        <li>
-          Repeat for each hobby in the <code>hobbies</code> property
-        </li>
-        <li>
-          Repeat using the HTML <code>&lt;ul&gt;</code> element with an ID of <code>hobbies</code>
-        </li>
+
         <li>
           For each object in the <code>placesLived</code> property:
           <ul>
@@ -124,19 +157,24 @@
         </li>
         <li>
           Append the HTML <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements created above to the HTML
-          <code>&lt;dl&gt;</code> element with an ID of <code>places-lived</code>
+          <code>&lt;dl&gt;</code> element with an ID of <code>places-lived</code>.
         </li>
       </ol>
 
       <h3>Testing</h3>
-      <ol>
+      <ul>
         <li>Test your work by using Live Server and debug as needed.</li>
-      </ol>
+      </ul>
+
+      <figure>
+        <img src="../images/w04-task-example-wide.png" alt="Screenshot Example of Programming Task Output" loading="lazy" width="544" height="684">
+        <figcaption>Figure 2: Example Output</figcaption>
+      </figure>
 
       <h3>Submission</h3>
       <ol>
-        <li>Commit and push your work to GitHub.</li>
-        <li>Submit the URL of your GitHub repository to I-Learn.</li>
+        <li>Commit and push your programming task work to your cse121b GitHub Pages enabled repo.</li>
+        <li>Submit the URL of your rendered page on GitHub to I-Learn.</li>
       </ol>
       <hr>
       <nav>
