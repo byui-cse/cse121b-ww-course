@@ -1,24 +1,17 @@
 [
   {
+    "templeName": "Aba Nigeria Temple",
+    "location": "Aba, Nigeria",
+    "dedicated": "7 August 2005",
+    "area": 11500,
+    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+  },
+  {
     "templeName": "Cedar City Utah Temple",
     "location": "Cedar City, Utah, United States",
     "dedicated": "10 December 2017",
     "area": 42657,
     "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/cedar-city-utah/400x225/Cedar-City-1978603.jpg"
-  },
-  {
-    "templeName": "Jordan River Utah Temple",
-    "location": "South Jordan, Utah, United States",
-    "dedicated": "16 November 1981",
-    "area": 148236,
-    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/jordan-river-utah/400x250/CWD_f5579d41-7344-4498-a589-4017ba5fcc91.jpg"
-  },
-  {
-    "templeName": "Logan Utah Temple",
-    "location": "Logan, Utah, United States",
-    "dedicated": "17 May 1884",
-    "area": 119619,
-    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/logan-utah/400x250/logan-temple-768119-wallpaper.jpg"
   },
   {
     "templeName": "Manti Utah Temple",
@@ -35,6 +28,13 @@
     "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
   },
   {
+    "templeName": "Yigo Guam Temple",
+    "location": "Yigo, Guam",
+    "dedicated": "22 May 2022",
+    "area": 6861,
+    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+  },
+  {
     "templeName": "Provo City Center Temple",
     "location": "Provo, Utah, United States",
     "dedicated": "20 March 2016",
@@ -49,11 +49,25 @@
     "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-utah/400x250/provo-temple-lds-890642-wallpaper.jpg"
   },
   {
+    "templeName": "Winter Quarters Nebraska Temple",
+    "location": "Florence, Nebraska, United States",
+    "dedicated": "22 April 2001",
+    "area": 16000,
+    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/winter-quarters-nebraska/400x250/winter-quarters-nebraska-temple-detail-772766.jpg"
+  },
+  {
     "templeName": "Salt Lake Temple",
     "location": "Salt Lake City, Utah, United States",
     "dedicated": "6 April 1893",
     "area": 403000,
     "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/2018/400x250/slctemple5.jpg"
+  },
+  {
+    "templeName": "The Hague Netherlands Temple",
+    "location": "Zoetermeer, Netherlands",
+    "dedicated": "8 September 2002",
+    "area": 10500,
+    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/the-hague-netherlands/2019/400x250/3-hague-netherlands-temple-1088316.jpg"
   },
   {
     "templeName": "St. George Utah Temple",
@@ -63,13 +77,6 @@
     "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/st-george-utah/1280x800/st-george-temple-lds-149536-wallpaper.jpg"
   },
   {
-    "templeName": "Vernal Utah Temple",
-    "location": "Vernal, Utah, United States",
-    "dedicated": "2 November 1997",
-    "area": 38771,
-    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/vernal-utah/400x250/vernal-temple-lds-82531-wallpaper.jpg"
-  },
-  {
     "templeName": "Washington D.C. Temple",
     "location": "Kensington, Maryland, United States",
     "dedicated": "19 November 1974",
@@ -77,19 +84,45 @@
     "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington-dc-temple-lds-890643-wallpaper.jpg"
   },
   {
-    "templeName": "Winter Quarters Nebraska Temple",
-    "location": "Florence, Nebraska, United States",
-    "dedicated": "22 April 2001",
-    "area": 16000,
-    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/winter-quarters-nebraska/400x250/winter-quarters-nebraska-temple-lds-890644-wallpaper.jpg"
+    "templeName": "Jordan River Utah Temple",
+    "location": "South Jordan, Utah, United States",
+    "dedicated": "16 November 1981",
+    "area": 148236,
+    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/jordan-river-utah/400x250/CWD_f5579d41-7344-4498-a589-4017ba5fcc91.jpg"
   },
   {
-    "templeName":"Aba Nigeria Temple",
-    "location":"Aba, Nigeria",
-    "dedicated":"7 August 2005",
-    "area": 11500,
-    "imageUrl":"https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    "templeName": "Barranquilla Colombia Temple",
+    "location": "Barranquilla, Colombia",
+    "dedicated": "9 December 2018",
+    "area": 25300,
+    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/barranquilla-colombia/400x250/2-Barranquilla-Columblia-Temple-2135201.jpg"
+  },
+  {
+    "templeName": "Lima Perú Temple",
+    "location": "Lima, Perú",
+    "dedicated": "10 January 1986",
+    "area": 9600,
+    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+  },
+  {
+    "templeName": "Logan Utah Temple",
+    "location": "Logan, Utah, United States",
+    "dedicated": "17 May 1884",
+    "area": 119619,
+    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/logan-utah/400x250/logan-temple-768119-wallpaper.jpg"
+  },
+  {
+    "templeName": "Vernal Utah Temple",
+    "location": "Vernal, Utah, United States",
+    "dedicated": "2 November 1997",
+    "area": 38771,
+    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/vernal-utah/400x250/vernal-temple-lds-82531-wallpaper.jpg"
+  },
+  {
+    "templeName": "Mexico City Mexico Temple",
+    "location": "Mexico City, Mexico",
+    "dedicated": "2 December 1983",
+    "area": 116642,
+    "imageUrl": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   }
-
-
 ]
