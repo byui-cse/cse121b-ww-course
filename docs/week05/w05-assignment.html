@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CSE 121B | W05: Programming Task</title>
+  <title>CSE 121B | W05: Programming Tasks</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
@@ -33,8 +33,8 @@
       <span><a href="../week06/">W6</a></span>
       <span><a href="../week07/">W7</a></span>
     </nav>
-    <h2>W05: Programming Task</h2>
-    <p>foods</p>
+    <h2>W05: Programming Tasks</h2>
+    <p></p>
     <h3>Instructions</h3>
     <h4 class="step">Setup</h4>
     <ol>
@@ -43,71 +43,154 @@
         <code>w05-task.js</code> file in the <code>scripts</code> folder.
       </li>
     </ol>
+    <h4 class="step">Review the Public Temple Data</h4>
+    <ol>
+      <li>Navigate to this <a
+          href="https://byui-cse.github.io/cse121b-ww-course/resources/temples.json"
+          target="_blank">temple JSON file</a> by clicking on the link.</li>
+      <li>Quickly Review and become familiar with the temple data format.</li>
+    </ol>
+    <div class="callout info">
+      Complete the following steps in the w05-task.js file. Do <strong>not</strong> alter the
+      w05-task.html file.
+    </div>
+    <h4 class="step">Declare Global Variables</h4>
 
-    <h4 class="step">Fetch</h4>
+    <ol>
+      <li>Declare a <code>const</code> variable named <code>templesElement</code> that references
+        the HTML div element that eventually will be populated with temple data.</li>
+      <li>Declare a global empty array variable to store a list of temples named
+        <code>templeList</code>.
+      </li>
+    </ol>
+
+    <h4 class="step">Function: displayTemples()</h4>
+    <p class="callout info">This function will build a temple display "card" for each item in the
+      temple list passed to the function.</p>
     <ol>
       <li>
-        Declare a global empty array variable to store a list of temples.
+        Declare a function expression using <code>const</code> named <code>displayTemples</code>
+        that uses an arrow function to accept a list of temples as an array argument.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">const displayTemples = (temples) => {</code></pre>
+        </details>
       </li>
-      <li>
-        Declare a function named <code>output</code> that accepts a list of temples as an array
-        argument and does the following for each temple:
+      <li>Process each temple in the temple array using a <strong>forEach</strong> method and do the
+        following for each temple item:
         <ol>
-          <li>Creates an HTML <code>&lt;article&gt;</code> element.</li>
-          <li>Creates an HTML <code>&lt;h3&gt;</code> element and add the temple's templeName
-            property to it.</li>
-          <li>Creates an HTML <code>&lt;h4&gt;</code> element and add the temple's location property
-            to it.</li>
-          <li>Creates an HTML <code>&lt;h4&gt;</code> element and add the temple's dedicated
-            property to it.</li>
-          <li>Creates an HTML <code>&lt;img&gt;</code> element and add the temple's
-            <code>imageUrl</code> property to the <code>src</code> attribute and the temple's
-            <code>templeName</code> property to the <code>alt</code> attribute.</li>
-          <li>Appends the <code>&lt;h3&gt;</code> element, the two <code>&lt;h4&gt;</code> elements,
-            and the <code>&lt;img&gt;</code> element to the <code>&lt;article&gt;</code> element as
-            children.</li>
-          <li>Appends the <code>&lt;article&gt;</code> element to the HTML element with an ID of
-            temples.</li>
+          <li>Create an HTML <code>&lt;article&gt;</code> element (<code>createElement</code>).</li>
+          <li>Create an HTML <code>&lt;h3&gt;</code> element <strong>and</strong> add the temple's
+            <code>templeName</code> property to this new element.
+          </li>
+          <li>Create an HTML <code>&lt;img&gt;</code> element <strong>and</strong> add the temple's
+            <code>imageUrl</code> property to the <code>src</code> attribute <strong>and</strong>
+            the temple's
+            <code>location</code> property to the <code>alt</code> attribute.
+          </li>
+          <li>Append the <code>&lt;h3&gt;</code> element and the <code>&lt;img&gt;</code> element to
+            the <code>&lt;article&gt;</code> element as children. (<code>appendChild</code>)</li>
+          <li>Append the <code>&lt;article&gt;</code> element to the global
+            <code>templesElement</code> variable declared in Step 2.
+            <details>
+              <summary>Check Your Understanding</summary>
+              <pre><code class="javascript">templesElement.appendChild(article);</code></pre>
+            </details>
+          </li>
         </ol>
       </li>
-      <li>Create another function called <code>getTemples</code>. Make it an <code>async</code>
-        function.</li>
-      <li>In the function, using the built-in <code>fetch</code> method, call this absolute URL:
-        <pre><code class="javascript">https://byui-cse.github.io/cse121b-ww-course/resources/temples.json</code></pre>
-        . Create a variable to hold the response from your fetch. You should have the program
-        <strong>wait</strong> on this line until it finishes.
-      </li>
-      <li>Convert your fetch response into a JavaScript object ( hint: .json()). Store this in the
-        <code>templeList</code> variable you declared earlier. Make sure the the execution of the
-        code <strong>waits</strong> here as well until it finishes.</li>
-      <li>Finally, call the output function and pass it the list of temples.
-        Execute your <code>getTemples</code> function to make sure it works
-        correctly.
-      </li>
-      <li>Declare a function named <code>reset</code> that clears all of the <code>&lt;article&gt;</code>
-        elements from the HTML element with an ID of <code>temples</code>.</li>
-      <li>
-        Declare a function named <code>sortBy</code> that:
-        <ul>
-          <li>calls the <code>reset</code> function,</li>
-          <li>
-            sorts the global temple list by the currently selected value of
-            the HTML element with an ID of <code>sortBy</code>, and
-          </li>
-          <li>
-            calls the <code>output</code> function passing in the sorted list of temples.
-          </li>
-        </ul>
-      </li>
-      <li>
-        Add a <code>change</code> event listener to the HTML element with an ID of <code>sortBy</code>
-        that calls the <code>sortBy</code> function.
-      </li>
-      <li>Filter the list of temples </li>
     </ol>
+    <h4 class="step">Function: getTemples()</h4>
+    <p class="callout info">Get JSON temple data using fetch().</p>
+    <ol>
+      <li>Create another function expression called <code>getTemples</code>. Make it an
+        <code>async</code> anonymous, arrow function.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">const getTemples = async () => {</code></pre>
+        </details>
+      </li>
+      <li>In the function, declare a <code>const</code> variable named <code>response</code> that
+        <code>await</code>s the built-in <code>fetch</code> method calling the temple data, absolute
+        URL given in Step 2 above.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre><code class="javascript">const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");</code></pre>
+        </details>
+      </li>
+      <li>Convert your fetch response into a JavaScript object (<code>.json</code>). Store this in
+        the
+        <code>templeList</code> global array variable you declared in Step 3 above. Make sure the
+        the execution of the code <strong>waits</strong> here as well until it finishes.
+      </li>
+
+      <li>The last statement in the <code>getTemples</code> function calls the
+        <code>displayTemples</code> function and passes it the list of temples
+        (<code>templeList</code>).
+        <div class="callout info">
+          A good idea here is to test your code by calling the <code>getTemples</code> function at
+          the end of your JavaScript file. This will make sure that your code works before you move
+          on to the next step. You can <code>console.log(templeList)</code> to review the results.
+        </div>
+      </li>
+    </ol>
+    <h4 class="step">Function: reset()</h4>
+    <p class="callout info">Clear the displayed list of temples.</p>
+    <ol>
+      <li>Declare a function expression named <code>reset</code> that clears all of the
+        <code>&lt;article&gt;</code> elements from the <code>templesElement</code>.
+      </li>
+    </ol>
+    <h4 class="step">Function: sortBy()</h4>
+    <p class="callout info">Sort the list of temples by the selected value of the HTML select
+      element with an ID of <code>sortBy</code>. The preset selections include temples located in
+      the state of Utah, those outside the state of Utah, and temples built before 1950 on the list.
+    </p>
+    <ol>
+      <li>Declare a function expression named <code>sortBy</code>.</li>
+      <li>The function should accept a argument in a parameter named <code>temples</code>.</li>
+      <li>In the function, first call the <code>reset</code> function.</li>
+      <li>Define a variable named <code>filter</code> that obtains the value of the HTML element
+        with the ID of <code>sortBy</code>.</li>
+      <li>Use a <code>switch</code> statement that uses the <code>filter</code> value as the four
+        (4) cases.</li>
+      <li>For each case, call the <code>displayTemples</code> function using an filter statement
+        that filters the <code>temples</code> parameter for the four options provided.
+        <ol>
+          <li>"utah": filter for temples where the <code>location</code> contains "Utah" as a
+            string.</li>
+          <li>"nonutah": filter for temples where the <code>location</code> does not contain "Utah"
+            as a string.</li>
+          <li>"older": filter for temples where the <code>dedicated</code> date is before 1950.
+            (compare versus <code class="javascript">new Date(1950, 0, 1)</code></pre>).
+          </li>
+          <li>"all": no filter. Just use <code>temples as the argument.</code></li>
+        </ol>
+      </li>
+    </ol>
+    <h4 class="step">Event Listener: sortBy Element change</h4>
+    <ol>
+      <li>Add a <code>change</code> event listener to the HTML element with an ID of
+        <code>sortBy</code> that calls the <code>sortBy</code> function and sends a arrow function
+        result with the <code>templeList</code> as the argument.
+        <details>
+          <summary>Check Your Understanding</summary>
+          <pre>
+    <code class="javascript">document.querySelector("#sortBy").addEventListener("change", () => { sortBy(templeList) });</code></pre>
+        </details>
+      </li>
+    </ol>
+
+    <figure>
+      <img src="../images/w05-task-example-wide.png" alt="W05 Programming Tasks Example Output"
+        loading="lazy" width="500">
+      <figcaption>Figure 1: Example Output</figcaption>
+    </figure>
 
     <h3>Testing</h3>
     <ol>
+      <li>Verify that you are calling <code>getTemples()</code> at the bottom of the JavaScript
+        file.</li>
       <li>Test your work by using Live Server and debug as needed.</li>
     </ol>
 
