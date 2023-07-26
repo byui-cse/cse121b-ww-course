@@ -65,6 +65,10 @@
     </ol>
 
     <h4 class="step">Function: displayTemples()</h4>
+    <figure class="floatright">
+      <img src="../images/w05-task-card-example.png" alt="Example Temple Card Output">
+      <figcaption>Figure 1: Example screenshot of temple card.</figcaption>
+    </figure>
     <p class="callout info">This function will build a temple display "card" for each item in the
       temple list passed to the function.</p>
     <ol>
@@ -118,17 +122,21 @@
           <pre><code class="javascript">const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");</code></pre>
         </details>
       </li>
-      <li>Convert your fetch response into a JavaScript object (<code>.json</code>). Store this in
-        the
-        <code>templeList</code> global array variable you declared in Step 3 above. Make sure the
+      <li>Convert your fetch response into a JavaScript object (<code>.json</code>) and assign the
+        result to the <code>templeList</code> global array variable you declared in Step 3 above.
+        Make sure the
         the execution of the code <strong>waits</strong> here as well until it finishes.
+        <div class="callout info">
+          💡If you are stuck with any of these steps, consider using the learning activity materials
+          provided.
+        </div>
       </li>
 
       <li>The last statement in the <code>getTemples</code> function calls the
         <code>displayTemples</code> function and passes it the list of temples
         (<code>templeList</code>).
         <div class="callout info">
-          A good idea here is to test your code by calling the <code>getTemples</code> function at
+          💡A good idea here is to test your code by calling the <code>getTemples</code> function at
           the end of your JavaScript file. This will make sure that your code works before you move
           on to the next step. You can <code>console.log(templeList)</code> to review the results.
         </div>
@@ -149,11 +157,12 @@
     <ol>
       <li>Declare a function expression named <code>sortBy</code>.</li>
       <li>The function should accept a argument in a parameter named <code>temples</code>.</li>
-      <li>In the function, first call the <code>reset</code> function.</li>
-      <li>Define a variable named <code>filter</code> that obtains the value of the HTML element
-        with the ID of <code>sortBy</code>.</li>
-      <li>Use a <code>switch</code> statement that uses the <code>filter</code> value as the four
-        (4) cases.</li>
+      <li>In this function, first call the <code>reset</code> function to clear the output.</li>
+      <li>Define a variable named <code>filter</code> that obtains the <code>value</code> of the
+        HTML element
+        with the ID of <code>sortBy</code> (The pull-down menu).</li>
+      <li>Use a <code>switch</code> statement that uses the <code>filter</code> value as the
+        selector responding to four (4) cases.</li>
       <li>For each case, call the <code>displayTemples</code> function using an filter statement
         that filters the <code>temples</code> parameter for the four options provided.
         <ol>
@@ -184,7 +193,7 @@
     <figure>
       <img src="../images/w05-task-example-wide.png" alt="W05 Programming Tasks Example Output"
         loading="lazy" width="500">
-      <figcaption>Figure 1: Example Output</figcaption>
+      <figcaption>Figure 2: Example Output</figcaption>
     </figure>
 
     <h3>Testing</h3>
@@ -199,6 +208,8 @@
       <li>Commit and push your work to GitHub.</li>
       <li>Submit the URL of your GitHub repository to I-Learn.</li>
     </ol>
+    <h3>Stretch</h3>
+    <p>Add additional sorting options such as sorting the temples alphabetically.</p>
     <hr>
     <nav>
       <span><a href="index.html">↪️ W05 Content</a></span>
