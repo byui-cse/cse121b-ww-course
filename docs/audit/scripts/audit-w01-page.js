@@ -91,7 +91,7 @@ function buildReport(data, url) {
       <div class="standard">${getContent(h, /<h2>(.*?)<\/h2>/)} <span class="blue">❔Must contain name location</span></div>
 
       <div class="label">hr Line:</div>
-      <div class="data">${h.includes('<hr>') ? '✔️' : '❌'}</div>
+      <div class="data">${h.includes('<hr>') || h.includes('<hr/>') ? '✔️' : '❌'}</div>
       <div class="standard"></div>
 
       <h3>Proper HTML Document Structure</h3>
