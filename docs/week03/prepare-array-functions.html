@@ -85,7 +85,7 @@
 
       <li>Using the <em><code>array.map()</code></em> method, create a new array named <code>namesLength</code> that
         contains the length of each name in the <code>names</code> array. Expected output is
-        <code>[6, 8, 5, 9, 3]</code>.
+        <code>[5, 8, 5, 8, 3]</code>.
         <details>
           <summary>Answer</summary>
           <pre><code class="javascript">let nameLengths = names.map((name) => name.length);</code></pre>
@@ -93,7 +93,7 @@
       </li>
 
       <li>Using the <em><code>names.reduce()</code></em> method, create an expression that returns the <strong>average
-          string length</strong> of the names in the <code>names</code> array. Expected output is <code>6.2</code>.
+          string length</strong> of the names in the <code>names</code> array. Expected output is <code>5.8</code>.
         <details>
           <summary>Answer</summary>
           <pre><code class="javascript">names.reduce((total, name) => total + name.length, 0) / names.length;</code></pre>
