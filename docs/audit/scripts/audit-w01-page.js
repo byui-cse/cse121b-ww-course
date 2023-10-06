@@ -16,7 +16,7 @@ async function getReport() {
     student.focus();
     return;
   }
-  let uri = `${studentgh}.github.io/cse121b/`;
+  let uri = `${studentgh}.github.io/cse121b/test.html`;
 
   let response = await fetch(`https://${uri}`);
   if (response.status === 200) {
@@ -24,7 +24,7 @@ async function getReport() {
     const cssStats = await cssstats(uri);
     report.innerHTML += buildReport(cssStats, uri);
   } else {
-    message.textContent = "The index.html page was not found in the cse121b repository folder."
+    message.textContent = "The test.html page was not found in the cse121b repository folder."
     message.style.display = 'block';
     return;
   }
