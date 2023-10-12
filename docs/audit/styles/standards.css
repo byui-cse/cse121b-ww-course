@@ -13,7 +13,7 @@ button {
 
 #report {
   margin: .5rem;
-  border-top: 1px solid #bbb;
+  border-top: 1px solid #ddd;
   display: flex;
   flex-direction: column;
 }
@@ -55,14 +55,13 @@ button {
 .standard {
   display: flex;
   align-items: center;
-
-  border: 1px solid #bbb;
+  border-top: 1px solid #ddd;
   padding: 0.35rem 0.5rem;
 }
 
 .label {
   justify-content: right;
-  background-color: #222;
+  background-color: #444;
   color: #fff;
 }
 
