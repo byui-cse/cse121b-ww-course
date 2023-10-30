@@ -7,9 +7,11 @@
   <title>CSE 121B | W04: Programming Task</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../styles/course.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
 
 </head>
 
@@ -32,7 +34,9 @@
       <span><a href="../week07/">W7</a></span>
     </nav>
     <h2>W04: Programming Task</h2>
-    <p>In your previous weeks' tasks, you declared and used individual variables. In this task, you are to rework the home page biography task from week 02 using <strong>object literals</strong>.</p>
+    <p>In your previous weeks' tasks, you declared and used individual variables. In this task, you
+      are to rework the home page biography task from week 02 using <strong>object
+        literals</strong>.</p>
     <h3>Instructions</h3>
     <h4 class="step">Setup</h4>
     <ol>
@@ -44,19 +48,22 @@
 
     <h4 class="step">Object Literal</h4>
     <div class="callout info">
-      Do the following work in the <code>w04-task.js</code> file which is linked to the <code>w04-task.html</code> file.<br> Do 🚫<strong>not</strong> alter your index.html file.
+      Do the following work in the <code>w04-task.js</code> file which is linked to the
+      <code>w04-task.html</code> file.<br> Do 🚫<strong>not</strong> alter your index.html file.
     </div>
     <ol>
       <li>
-        Declare a new object literal variable named <code>myProfile</code> to hold information about yourself and assign an empty object to the variable.
+        Declare a new object literal variable named <code>myProfile</code> to hold information about
+        yourself and assign an empty object to the variable.
         <details>
-        <summary>Check Your Understanding</summary>
-        <pre>
+          <summary>Check Your Understanding</summary>
+          <pre>
         <code class="javascript">let myProfile = {};</code></pre>
         </details>
       </li>
       <li>
-        Add a property to this object literal named <code>name</code> and set its value to be your name as a <strong>string</strong>.
+        Add a property to this object literal named <code>name</code> and set its value to be your
+        name as a <strong>string</strong>.
         <details>
           <summary>Check Your Understanding</summary>
           <pre>
@@ -66,10 +73,12 @@
         </details>
       </li>
       <li>
-        Add a property named <code>photo</code>. Set its value to be an image's path and name (one used in Programming Task 2) as a <strong>string</strong>.
+        Add a property named <code>photo</code>. Set its value to be an image's path and name (one
+        used in Programming Task 2) as a <strong>string</strong>.
       </li>
       <li>
-        Add a property named <code>favoriteFoods</code>. Set its value to be an <strong>array</strong> of your favorite foods as strings
+        Add a property named <code>favoriteFoods</code>. Set its value to be an
+        <strong>array</strong> of your favorite foods as strings
         <details>
           <summary>Check Your Understanding - Example</summary>
           <pre><code class="javascript">    favoriteFoods: [
@@ -82,12 +91,17 @@
         </details>
       </li>
       <li>
-        Add a property named <code>hobbies</code>. Set its value to be an <strong>array</strong> of your hobbies as strings.
+        Add a property named <code>hobbies</code>. Set its value to be an <strong>array</strong> of
+        your hobbies as strings.
       </li>
       <li>
-        Add a property named <code>placesLived</code>. Set its value to be an empty <strong>array</strong>.
+        Add a property named <code>placesLived</code>. Set its value to be an empty
+        <strong>array</strong>.
       </li>
-      <li>Using code outside of the <code>myProfile</code> definition, add an item to the <code>placesLived</code> <strong>array</strong> where this new item itself is <strong>object</strong> with two properties: <code>place</code> and <code>length</code> and for each of these properties, add appropriate values as strings.
+      <li>Using code outside of the <code>myProfile</code> definition, add an item to the
+        <code>placesLived</code> <strong>array</strong> where this new item itself is
+        <strong>object</strong> with two properties: <code>place</code> and <code>length</code> and
+        for each of these properties, add appropriate values as strings.
         <details>
           <summary>Check Your Understanding</summary>
           <pre><code class="javascript">// This occurs outside of the object definition.
@@ -101,25 +115,29 @@ myProfile.placesLived.push(
       </li>
 
       <li>
-        Add additional object literals with appropriate values to the <code>placesLived</code> <strong>array</strong> for each place you have lived.
+        Add additional object literals with appropriate values to the <code>placesLived</code>
+        <strong>array</strong> for each place you have lived.
       </li>
     </ol>
     <h4>DOM Manipulation (Output)</h3>
 
       <ol>
         <li>
-          Assign the value of the <code>name</code> property of the <code>myProfile</code> object to the HTML element with an ID of <code>name</code>.
+          Assign the value of the <code>name</code> property of the <code>myProfile</code> object to
+          the HTML element with an ID of <code>name</code>.
           <details>
             <summary>Check Your Understanding</summary>
             <pre><code class="javascript">document.querySelector('#name').textContent = myProfile.name;</code></pre>
           </details>
         </li>
         <li>
-          Assign the value of the <code>photo</code> property as the <code>src</code> attribute of the HTML
+          Assign the value of the <code>photo</code> property as the <code>src</code> attribute of
+          the HTML
           <code>&lt;img&gt;</code> with an ID of <code>photo</code>.
         </li>
         <li>
-          Assign the value of the <code>name</code> property as the <code>alt</code> attribute of the HTML
+          Assign the value of the <code>name</code> property as the <code>alt</code> attribute of
+          the HTML
           <code>&lt;img&gt;</code> with an ID of <code>photo</code>.
         </li>
         <li>
@@ -128,38 +146,52 @@ myProfile.placesLived.push(
             💡Use a forEach loop to iterate over the <code>favoriteFoods</code> array.
           </div>
           <ol>
-            <li>create an HTML <code>&lt;li&gt;</code> element (💡<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">createElement</a></code>),</li>
-            <li>place the value of the <code>favoriteFoods</code> array element into the <code>textContent</code> of this new <code>li</code> element, and then</li>
+            <li>create an HTML <code>&lt;li&gt;</code> element
+              (💡<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">createElement</a></code>),
+            </li>
+            <li>place the value of the <code>favoriteFoods</code> array element into the
+              <code>textContent</code> of this new <code>li</code> element, and then</li>
             <li>append this new <code>&lt;li&gt;</code> element with content as a child of the HTML
-            <code>&lt;ul&gt;</code> element with an ID of <code>favorite-foods</code>.</li>
+              <code>&lt;ul&gt;</code> element with an ID of <code>favorite-foods</code>.
+            </li>
           </ol>
 
           <details>
-          <summary>Check Your Understanding</summary>
-          <pre><code class="javascript">myProfile.favoriteFoods.forEach(food => {
+            <summary>Check Your Understanding</summary>
+            <pre><code class="javascript">myProfile.favoriteFoods.forEach(food => {
   let li = document.createElement('li');
   li.textContent = food;
   document.querySelector('#favorite-foods').appendChild(li);
 });</code></pre>
-💡What is the difference between <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append" target="_blank">append</a> method and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank">appendChild()</a> method when it comes to manipulating the DOM and adding elements to a parent element?
+            💡What is the difference between <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Element/append"
+              target="_blank">append</a> method and the <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"
+              target="_blank">appendChild()</a> method when it comes to manipulating the DOM and
+            adding elements to a parent element?
           </details>
         </li>
 
         <li>
-          Repeat the previous process of creating a list of items for each hobby in the <code>hobbies</code> property of the object and appending each item to the HTML <code>&lt;ul&gt;</code> element with an ID of <code>hobbies</code>.
+          Repeat the previous process of creating a list of items for each hobby in the
+          <code>hobbies</code> property of the object and appending each item to the HTML
+          <code>&lt;ul&gt;</code> element with an ID of <code>hobbies</code>.
         </li>
 
         <li>
           For each object in the <code>placesLived</code> property:
           <ul>
-            <li>Create an HTML &lt;dt&gt; element and put its <code>place</code> property in the &lt;dt&gt;
+            <li>Create an HTML &lt;dt&gt; element and put its <code>place</code> property in the
+              &lt;dt&gt;
               element.</li>
-            <li>Create an HTML &lt;dd&gt; element and put its <code>length</code> property in the &lt;dd&gt;
+            <li>Create an HTML &lt;dd&gt; element and put its <code>length</code> property in the
+              &lt;dd&gt;
               element</li>
           </ul>
         </li>
         <li>
-          Append the HTML <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements created above to the HTML
+          Append the HTML <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code> elements created above
+          to the HTML
           <code>&lt;dl&gt;</code> element with an ID of <code>places-lived</code>.
         </li>
       </ol>
@@ -170,26 +202,30 @@ myProfile.placesLived.push(
       </ul>
 
       <figure>
-        <img src="../images/w04-task-example-wide.png" alt="Screenshot Example of Programming Task Output" loading="lazy" width="544" height="684">
+        <img src="../images/w04-task-example-wide.png"
+          alt="Screenshot Example of Programming Task Output" loading="lazy" width="544"
+          height="684">
         <figcaption>Figure 2: Example Output</figcaption>
       </figure>
 
       <h3>Submission</h3>
       <ol>
-        <li>Commit and push your programming task work to your cse121b GitHub Pages enabled repo.</li>
-        <li>Submit the URL of your rendered page on GitHub to I-Learn.</li>
+        <li>Commit and push your programming task work to your cse121b GitHub Pages enabled repo.
+        </li>
+        <li>Submit the URL of your rendered page on GitHub to Canvas.</li>
       </ol>
       <hr>
       <nav>
         <span><a href="index.html">↪️ W04 Content</a></span>
-        <span><a href="https://byui.instructure.com/calendar">Back to 💫 I-Learn</a></span>
+        <span><a href="https://byui.instructure.com/calendar">Back to 💫 Canvas</a></span>
       </nav>
   </main>
 
   <footer>
     <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
   <script src="../scripts/preventCodeSelect.js"></script>
 </body>

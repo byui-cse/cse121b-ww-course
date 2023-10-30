@@ -7,9 +7,11 @@
   <title>CSE 121B | JavaScript Looping and Iteration</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../styles/course.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
 
 </head>
 
@@ -34,34 +36,42 @@
     <h2>Loops and Iteration</h2>
     <h3>Overview</h3>
     <p>
-      Repeating code is a common task in programming. JavaScript provides several ways to repeat code including
-      <code>for</code>, <code>while</code>, <code>do...while</code>, and <code>for...in</code> statements. Each of these
-      statements has a specific use case and syntax. <code>forEach</code> is a method that can be used on arrays to
+      Repeating code is a common task in programming. JavaScript provides several ways to repeat
+      code including
+      <code>for</code>, <code>while</code>, <code>do...while</code>, and <code>for...in</code>
+      statements. Each of these
+      statements has a specific use case and syntax. <code>forEach</code> is a method that can be
+      used on arrays to
       iterate over each item in the array.
     </p>
 
     <h3>Prepare</h3>
     <ul>
-      <li>Read 📝 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops and
+      <li>Read 📝 <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">Loops
+          and
           Iteration</a> - MDN web docs</li>
     </ul>
 
     <h3>Check Your Understanding</h3>
     <ol>
       <li>Complete the activities presented in this resource: <a
-          href="https://byui-cit.github.io/learning-modules/modules/js/loops/ponder1/">JavaScript Loops</a> - WDD
+          href="https://byui-cit.github.io/learning-modules/modules/js/loops/ponder1/">JavaScript
+          Loops</a> - WDD
         Learning Modules</li>
       <li>Given the following variable declarations:
         <pre><code class="javascript">const DAYS = 6;
 const LIMIT = 30;
 let studentReport = [11, 42, 33, 64, 29, 37, 44];</code></pre>
         <ul class="check">
-          <li>Write a <code>for</code> loop that will iterate through the <code>studentReport</code> array and print to
+          <li>Write a <code>for</code> loop that will iterate through the <code>studentReport</code>
+            array and print to
             the console the current array value if it is below 30.</li>
           <li>Repeat the previous programming snippet by using a <code>while</code> loop.</li>
           <li>Repeat the previous programming snippet by using a <code>forEach</code> loop.</li>
           <li>Repeat the previous programming snippet by using a <code>for...in</code> loop.</li>
-          <li>Use any type of repetition (looping) statement to dynamically produce the day names (Monday, Tuesday,
+          <li>Use any type of repetition (looping) statement to dynamically produce the day names
+            (Monday, Tuesday,
             Wednesday, etc.) of the next number of DAYS from today's date.</li>
         </ul>
         <details>
@@ -74,7 +84,7 @@ let studentReport = [11, 42, 33, 64, 29, 37, 44];</code></pre>
       console.log(studentReport[i]);
     }
   }
-  
+
   // while loop
   let i = 0;
   while (i &lt; studentReport.length) {
@@ -83,24 +93,26 @@ let studentReport = [11, 42, 33, 64, 29, 37, 44];</code></pre>
     }
     i++;
   }
-  
+
   // forEach loop
   studentReport.forEach(function (item) {
     if (item &lt; LIMIT) {
       console.log(item);
     }
   });
-  
+
   // for...in loop
   for (let i in studentReport) {
     if (studentReport[i] &lt; LIMIT) {
       console.log(studentReport[i]);
     }
   }</code></pre>
-          <p>Use this CodePen to guide you in a solution to the last question. This requires you to sift through the
+          <p>Use this CodePen to guide you in a solution to the last question. This requires you to
+            sift through the
             example code to find what is applicable.</p>
           <div class="callout info">
-            ⚙️ CodePen: <a href="https://codepen.io/blazzard-jason/pen/wLmeXj" target="_blank">JavaScript - Get Future
+            ⚙️ CodePen: <a href="https://codepen.io/blazzard-jason/pen/wLmeXj"
+              target="_blank">JavaScript - Get Future
               Days from Today</a>
           </div>
         </details>
@@ -111,15 +123,17 @@ let studentReport = [11, 42, 33, 64, 29, 37, 44];</code></pre>
 
     <hr>
     <nav>
-      <span><a href="final-project-checkpoint.html">On to the 👷🏽‍♀️ Final Project Checkpoint</a></span>
-      <span><a href="https://byui.instructure.com/calendar">Back to 💫 I-Learn</a></span>
+      <span><a href="final-project-checkpoint.html">On to the 👷🏽‍♀️ Final Project
+          Checkpoint</a></span>
+      <span><a href="https://byui.instructure.com/calendar">Back to 💫 Canvas</a></span>
     </nav>
   </main>
 
   <footer>
     <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 
 </body>
