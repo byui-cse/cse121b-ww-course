@@ -19,7 +19,7 @@ async function getReport() {
     student.focus();
     return;
   }
-  let uri = `${studentgh}.github.io/wdd130/quiz.html`;
+  let uri = `${studentgh}.github.io//quiz.html`;
 
   let response = await fetch(`https://${uri}`);
   if (response.status === 200) {
@@ -27,7 +27,7 @@ async function getReport() {
     const cssStats = await cssstats(uri);
     report.innerHTML += buildReport(cssStats, uri);
   } else {
-    message.textContent = "The quiz.html page was not found in the wdd130 folder."
+    message.textContent = "The quiz.html page was not found in the  folder."
     message.style.display = 'block';
     return;
   }

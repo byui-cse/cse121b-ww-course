@@ -19,7 +19,7 @@ async function getReport() {
     student.focus();
     return;
   }
-  let uri = `${studentgh}.github.io/wdd130/wwr/about.html`;
+  let uri = `${studentgh}.github.io//wwr/about.html`;
 
   let response = await fetch(`https://${uri}`);
   if (response.status === 200) {
