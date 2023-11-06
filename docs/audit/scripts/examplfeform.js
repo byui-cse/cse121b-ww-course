@@ -92,8 +92,8 @@ function buildReport(data, url) {
 
       <div class="label">Meta Charset:</div>
       <div class="data">${h.includes('<meta charset="utf-8"') > 0 ||
-      h.includes('<meta charset="UTF-8"') ? '✔️' : '❌'}</div>
-      <div class="standard"><span class="blue">&lt;meta charset="UTF-8"&gt;</span></div>
+      h.includes('<meta charset="utf-8"') ? '✔️' : '❌'}</div>
+      <div class="standard"><span class="blue">&lt;meta charset="utf-8"&gt;</span></div>
 
       <div class="label">Meta Viewport:</div>
       <div class="data">${h.includes('<meta name="viewport"') > 0 ? '✔️' : '❌'
