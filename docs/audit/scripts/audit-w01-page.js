@@ -66,14 +66,6 @@ function buildReport(data, url) {
       <div class="data">${h.includes('<head') && h.includes('</head>') ? '✔️' : '❌'}</div>
       <div class="standard">&lt;head&gt; ... &lt;/head&gt;</div>
 
-      <div class="label">Meta Charset:</div>
-      <div class="data">${h.includes('<meta charset="utf-8"') > 0 || h.includes('<meta charset="UTF-8"') ? '✔️' : '❌'}</div>
-      <div class="standard">&lt;meta charset="utf-8"&gt;</div>
-
-      <div class="label">Meta Viewport:</div>
-      <div class="data">${h.includes('<meta name="viewport"') > 0 ? '✔️' : '❌'}</div>
-      <div class="standard">&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;</div>
-
       <div class="label">Title:</div>
       <div class="data">${data.css.pageTitle.includes('CSE 121B') && data.css.pageTitle.includes('BYU-Idaho') && data.css.pageTitle.length > 25 ? '✔️' : '❓'}</div>
       <div class="standard">"${data.css.pageTitle}" <span class="blue">Must contain the student name, CSE 121B, and BYU-Idaho</span></div>
