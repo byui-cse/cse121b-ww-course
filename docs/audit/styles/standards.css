@@ -75,7 +75,7 @@ button {
 dialog {
   position: relative;
   max-width: 60ch;
-  background-color: rgba(225, 155, 155, .97);
+  background-color: rgba(225, 180, 180, 0.965);
   border: 1px solid rgba(0, 0, 0, .5);
   box-shadow: 0 0 2rem #777;
 
@@ -98,6 +98,10 @@ dialog .close-button {
 
 dialog>* {
   padding: .25rem;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.4);
 }
 
 @media (min-width: 520px) {
