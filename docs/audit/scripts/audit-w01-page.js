@@ -150,7 +150,7 @@ function buildReport(data, url) {
       h.indexOf('<hr>') < h.indexOf('</body>') &&
       h.indexOf('</body>') < h.indexOf('</html>') ? '✅' : '❌'}
       </div>
-      <div class="standard">Per assignment &nbsp;<a href="https://byui-cse.github.io/cse121b-ww-course/week01/setup-github-pages.html#check" target="_blank">specifications</a>.</div>
+      <div class="standard">Per assignment &nbsp;<a href="https://byui-cse.github.io/cse121b-ww-course/week01/setup-github-pages.html#check" target="_blank">specifications</a>. Click "Check Your Work" to compare.</div>
 
     </main>`;
 }
