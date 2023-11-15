@@ -13,7 +13,6 @@ button {
 
 #report {
   margin: .5rem;
-  border-top: 1px solid #ddd;
   display: flex;
   flex-direction: column;
 }
@@ -44,7 +43,6 @@ button {
 
 #message {
   font-size: smaller;
-  text-align: center;
   width: 75%;
   margin: 0 auto;
   display: none;
@@ -72,6 +70,34 @@ button {
 .standard {
   justify-content: left;
   font-size: smaller;
+}
+
+dialog {
+  position: relative;
+  max-width: 60ch;
+  background-color: rgba(225, 155, 155, .97);
+  border: 1px solid rgba(0, 0, 0, .5);
+  box-shadow: 0 0 2rem #777;
+
+}
+
+dialog .dtitle {
+  font-weight: 700;
+  border-bottom: 1px solid #777;
+}
+
+dialog .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+dialog>* {
+  padding: .25rem;
 }
 
 @media (min-width: 520px) {

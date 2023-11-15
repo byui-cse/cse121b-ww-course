@@ -32,18 +32,24 @@
       <span><a href="https://byui-cse.github.io/cse121b-ww-course/week06">W6</a></span>
       <span><a href="https://byui-cse.github.io/cse121b-ww-course/week07">W7</a></span>
     </nav>
-    <h2>W01: Page Audit</h2>
+    <h2>W01: Test Page Audit</h2>
     <div class="callout reference">
       <label for="student">Enter your GitHub Username:</label>
       <input type="text" id="student" placeholder="GitHub Username ONLY" required
         title="GitHub Username Required">
       <button type="submit" id="getReport">Run Report</button>
     </div>
-    <div class="callout error" id="message">A valid GitHub username and cse121b directory is
-      required!</div>
+
+    <dialog id="modal">
+      <div class="dtitle">HTML Validation Error Messages</div>
+      <div class="modal-content"></div>
+      <button class="close-button">✖️</button>
+    </dialog>
 
     <div id="report"></div>
-    <span class="smaller">If you do not get a report, there may be something wrong with your
+
+    <div class="callout error smaller" id="message">
+      If you do not get a report, there may be something wrong with your
       repository structure. Check:
       <ul class="check">
         <li>That you have a repo named "<code>cse121b</code>" on GitHub. Note the lowercase.</li>
@@ -52,7 +58,7 @@
       </ul>
       Here is an example of what your structure should look like as a reference:<br>
       <code class="plaintext">https://<em>githubusername</em>.github.io/cse121b/test.html</code>
-    </span>
+    </div>
   </main>
 
   <footer>

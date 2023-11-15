@@ -1,6 +1,13 @@
 import { getElement, getContent } from './element-data.js';
 import { student, getReportButton, report, message } from './interface.js';
 
+const modal = document.querySelector("#modal");
+const modalContent = document.querySelector(".modal-content");
+const closeModal = document.querySelector(".close-button");
+closeModal.addEventListener("click", () => {
+  modal.close();
+});
+
 getReportButton.addEventListener('click', getReport);
 document.addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
@@ -8,27 +15,32 @@ document.addEventListener('keypress', function (e) {
   }
 });
 
+function checkURL(url) {
+  return fetch(url)
+    .then(res => res.ok)
+    .catch(err => false);
+}
+
 async function getReport() {
+  resetReport();
   let studentgh = student.value;
-  if (studentgh === '') {
-    message.textContent = "A valid GitHub username is required."
-    message.style.display = 'block';
+  if (studentgh === "") {
     student.focus();
     return;
   }
-  let uri = `${studentgh}.github.io/cse121b/test.html`;
-
-  let response = await fetch(`https://${uri}`);
-  if (response.status === 200) {
-    resetReport();
-    const cssStats = await cssstats(uri);
-    report.innerHTML += buildReport(cssStats, uri);
-  } else {
-    message.textContent = "The test.html page was not found in the cse121b repository folder."
-    message.style.display = 'block';
-    return;
+  else {
+    let uri = `${studentgh}.github.io/cse121b/test.html`;
+    let url = `https://${uri}`;
+    let rescheck = await checkURL(url);
+    if (rescheck) {
+      const cssStats = await cssstats(uri);
+      report.innerHTML += buildReport(cssStats, uri);
+    } else {
+      message.style.display = "block";
+      return;
+    }
   }
-};
+}
 
 async function cssstats(baseuri) {
   let url = `https://cssstats.com/api/stats?url=${baseuri}`;
@@ -37,68 +49,107 @@ async function cssstats(baseuri) {
 }
 
 function resetReport() {
-  message.innerHTML = '';
   message.style.display = 'none';
   report.textContent = '';
+}
+
+async function validateHTML(h) {
+  let url = `https://validator.w3.org/nu/?out=json`;
+  let response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'text/html'
+    },
+    body: h
+  });
+  if (response.status !== 200 || !response.ok) {
+    throw new Error(`Validation failed with status code ${response.status}`);
+  }
+  let hResult = await response.json();
+
+  // build error message list in dialog modal
+  let htmlErrorMessages = hResult.messages;
+  if (htmlErrorMessages.length > 0) {
+    modalContent.innerHTML = '';
+    htmlErrorMessages.forEach((message) => {
+      modalContent.innerHTML += `<p>▶ ${message.message}</p>`;
+    });
+    modal.showModal();
+  }
+
+  let htmlErrorCount = hResult.messages.reduce((count, message) => {
+    return message.type === 'error' ? count + 1 : count;
+  }, 0);
+
+  return htmlErrorCount;
 }
 
 function buildReport(data, url) {
   let h = data.css.html;
   h = h.replace(/[\n\r]/g, ""); // remove line breaks
   h = h.replace(/ {2,}/g, " "); // remove extra spaces
+  h = h.replace(/<!--[\s\S]*?-->/g, ''); // remove comments
+
+  validateHTML(h)
+    .then((htmlErrorCount) => {
+      document.getElementById('hvalid').innerHTML = (htmlErrorCount === 0) ? '✅' : '❌';
+      document.getElementById('htmlerrorscount').innerHTML = `Errors: ${htmlErrorCount}`;
+    })
+    .catch((error) => {
+      document.getElementById('htmlerrorscount').innerHTML = `${error}`;
+    });
 
   return `<main>
-      <h3>Page Rendering Check</h3>
-      <div class="label">URL:</div>
-      <div class="data">🔗</div>
-      <div class="standard"><a href="https://${student.value}.github.io/cse121b" target="_blank">https://${student.value}.github.io/cse121b</a></div>
+      <div class="label">HTML Validator:</div>
+      <div class="data" id="hvalid"></div>
+      <div class="standard"> <span class="blue" id="htmlerrorscount"></span> 🔗<a href="https://validator.w3.org/check?verbose=1&uri=${url}" target="_blank">w3.org HTML Validation Report</a>
+      </div>
 
       <h3>Required Elements</h3>
       <div class="label">Document Type:</div>
-      <div class="data">${h.includes('<!DOCTYPE html>') || h.includes('<!doctype html>') ? '✔️' : '❌'}</div>
-      <div class="standard">&lt;!DOCTYPE html&gt; or &lt;!doctype html&gt; <span class="blue">❔This should be on the first line.</span></div>
-
-      <div class="label">HTML Lang Attribute:</div>
-      <div class="data">${h.includes('<html lang="') > 0 ? '✔️' : '❌'}</div>
-      <div class="standard">&lt;html lang="en"&gt; <span class="blue">or equivalent language</span></div>
-
-      <div class="label">Head:</div>
-      <div class="data">${h.includes('<head') && h.includes('</head>') ? '✔️' : '❌'}</div>
-      <div class="standard">&lt;head&gt; ... &lt;/head&gt;</div>
-
-      <div class="label">Title:</div>
-      <div class="data">${data.css.pageTitle.includes('CSE 121B') && data.css.pageTitle.includes('BYU-Idaho') && data.css.pageTitle.length > 25 ? '✔️' : '❓'}</div>
-      <div class="standard">"${data.css.pageTitle}" <span class="blue">Must contain the student name, CSE 121B, and BYU-Idaho</span></div>
-
-      <div class="label">Body:</div>
-      <div class="data">${h.includes('<body') && h.includes('</body>') ? '✔️' : '❌'}</div>
-      <div class="standard">&lt;body&gt; ... &lt;/body&gt;</div>
-
-      <div class="label">h1 Heading:</div>
-      <div class="data">${h.includes('<h1') && h.includes('</h1>') ? '✔️❔' : '❌'}</div>
-      <div class="standard">${getContent(h, /<h1>(.*?)<\/h1>/)} <span class="blue">❔Must contain name and 'CSE 121B and BYU-Idaho'</span></div>
-
-      <div class="label">h2 Heading:</div>
-      <div class="data">${h.includes('<h2') && h.includes('</h2>') ? '✔️❔' : '❌'}</div>
-      <div class="standard">${getContent(h, /<h2>(.*?)<\/h2>/)} <span class="blue">❔Must contain name location</span></div>
-
-      <div class="label">hr Line:</div>
-      <div class="data">${h.includes('<hr>') || h.includes('<hr/>') ? '✔️' : '❌'}</div>
+      <div class="data">${h.includes('<!DOCTYPE html>') || h.includes('<!doctype html>') ? '✅' : '❌'}</div>
       <div class="standard"></div>
 
-      <h3>Proper HTML Document Structure</h3>
-      <div class="label">Structure:</div>
+      <div class="label">HTML Lang Attribute:</div>
+      <div class="data">${h.includes('<html lang="') > 0 ? '✅' : '❌'}</div>
+      <div class="standard">&lt;html lang="en"&gt;</div>
+
+      <div class="label">&lt;head&gt;</div>
+      <div class="data">${h.includes('<head') && h.includes('</head>') ? '✅' : '❌'}</div>
+      <div class="standard"></div>
+
+      <div class="label">&lt;title&gt;</div>
+      <div class="data">${data.css.pageTitle.includes('CSE 121B') && data.css.pageTitle.includes('BYU-Idaho') && data.css.pageTitle.length > 25 ? '✅' : '❓'}</div>
+      <div class="standard">"${data.css.pageTitle}" <span class="blue">Student name, CSE 121B, BYU-Idaho</span></div>
+
+      <div class="label">&lt;body&gt;</div>
+      <div class="data">${h.includes('<body') && h.includes('</body>') ? '✅' : '❌'}</div>
+      <div class="standard"></div>
+
+      <div class="label">&lt;h1&gt; heading</div>
+      <div class="data">${h.includes('<h1') && h.includes('</h1>') ? '👀' : '❌'}</div>
+      <div class="standard">${getContent(h, /<h1>(.*?)<\/h1>/)} <span class="blue">👀Name, CSE 121B, BYU-Idaho</span></div>
+
+      <div class="label">&lt;h2&gt; heading</div>
+      <div class="data">${h.includes('<h2') && h.includes('</h2>') ? '👀' : '❌'}</div>
+      <div class="standard">${getContent(h, /<h2>(.*?)<\/h2>/)} <span class="blue">👀Location</span></div>
+
+      <div class="label">&lt;hr&gt;</div>
+      <div class="data">${h.includes('<hr>') || h.includes('<hr/>') ? '✅' : '❌'}</div>
+      <div class="standard"></div>
+
+      <div class="label">Document Structure</div>
       <div class="data">
         ${h.indexOf('<html') < h.indexOf('<head>') &&
-    h.indexOf('<head>') < h.indexOf('</head>') &&
-    h.indexOf('</head>') < h.indexOf('<body>') &&
-    h.indexOf('<body>') < h.indexOf('</h1>') &&
-    h.indexOf('</h1>') < h.indexOf('</h2>') &&
-    h.indexOf('</h2>') < h.indexOf('<hr>') &&
-    h.indexOf('<hr>') < h.indexOf('</body>') &&
-    h.indexOf('</body>') < h.indexOf('</html>') ? '✔️' : '❌'}
+      h.indexOf('<head>') < h.indexOf('</head>') &&
+      h.indexOf('</head>') < h.indexOf('<body>') &&
+      h.indexOf('<body>') < h.indexOf('</h1>') &&
+      h.indexOf('</h1>') < h.indexOf('</h2>') &&
+      h.indexOf('</h2>') < h.indexOf('<hr>') &&
+      h.indexOf('<hr>') < h.indexOf('</body>') &&
+      h.indexOf('</body>') < h.indexOf('</html>') ? '✅' : '❌'}
       </div>
-      <div class="standard">per assignment requirements</div>
+      <div class="standard">Per assignment &nbsp;<a href="https://byui-cse.github.io/cse121b-ww-course/week01/setup-github-pages.html" target="_blank">specifications</a>.</div>
 
     </main>`;
 }
