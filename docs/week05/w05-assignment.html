@@ -47,8 +47,9 @@
     <ol>
       <li>Navigate to this <a
           href="https://byui-cse.github.io/cse121b-ww-course/resources/temples.json"
-          target="_blank">temple JSON file</a> by clicking on the link.</li>
-      <li>Quickly Review and become familiar with the temple data format.</li>
+          target="_blank">temple JSON file</a> by clicking on the link. Your browser will handle the
+        parsing of the data to make it readable.</li>
+      <li>Review the temple data format and naming structure.</li>
     </ol>
     <div class="callout info">
       Complete the following steps in the w05-task.js file. Do <strong>not</strong> alter the
@@ -149,18 +150,17 @@
         <code>&lt;article&gt;</code> elements from the <code>templesElement</code>.
       </li>
     </ol>
-    <h4 class="step">Function: sortBy()</h4>
+    <h4 class="step">Function: filterTemples()</h4>
     <p class="callout info">Sort the list of temples by the selected value of the HTML select
-      element with an ID of <code>sortBy</code>. The preset selections include temples located in
+      element with an ID of <code>filtered</code>. The preset selections include temples located in
       the state of Utah, those outside the state of Utah, and temples built before 1950 on the list.
     </p>
     <ol>
-      <li>Declare a function expression named <code>sortBy</code>.</li>
+      <li>Declare a function expression named <code>filterTemples</code>.</li>
       <li>The function should accept a argument in a parameter named <code>temples</code>.</li>
       <li>In this function, first call the <code>reset</code> function to clear the output.</li>
       <li>Define a variable named <code>filter</code> that obtains the <code>value</code> of the
-        HTML element
-        with the ID of <code>sortBy</code> (The pull-down menu).</li>
+        HTML element with the ID of <code>filtered</code> (The pull-down menu).</li>
       <li>Use a <code>switch</code> statement that uses the <code>filter</code> value as the
         selector responding to four (4) cases.</li>
       <li>For each case, call the <code>displayTemples</code> function using an filter statement
@@ -177,15 +177,16 @@
         </ol>
       </li>
     </ol>
-    <h4 class="step">Event Listener: sortBy Element change</h4>
+    <h4 class="step">Event Listener: filterTemples Element change</h4>
     <ol>
       <li>Add a <code>change</code> event listener to the HTML element with an ID of
-        <code>sortBy</code> that calls the <code>sortBy</code> function and sends a arrow function
+        <code>filtered</code> that calls the <code>filterTemples</code> function and sends a arrow
+        function
         result with the <code>templeList</code> as the argument.
         <details>
           <summary>Check Your Understanding</summary>
           <pre>
-    <code class="javascript">document.querySelector("#sortBy").addEventListener("change", () => { sortBy(templeList) });</code></pre>
+    <code class="javascript">document.querySelector("#filtered").addEventListener("change", () => { filterTemples(templeList) });</code></pre>
         </details>
       </li>
     </ol>
@@ -209,7 +210,7 @@
       <li>Submit the GitHub Pages rendered URL in Canvas..</li>
     </ol>
     <h3>Stretch</h3>
-    <p>Add additional sorting options such as sorting the temples alphabetically.</p>
+    <p>Add additional options such as sorting the temples alphabetically.</p>
     <hr>
     <nav>
       <span><a href="index.html">↪️ W05 Content</a></span>
