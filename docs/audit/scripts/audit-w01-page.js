@@ -120,7 +120,7 @@ function buildReport(data, url) {
       <div class="standard"></div>
 
       <div class="label">&lt;title&gt;</div>
-      <div class="data">${data.css.pageTitle.includes('CSE 121B') && data.css.pageTitle.includes('BYU-Idaho') && data.css.pageTitle.length > 25 ? '✅' : '❓'}</div>
+      <div class="data">${data.css.pageTitle.includes('CSE 121B') && data.css.pageTitle.includes('BYU-Idaho') && data.css.pageTitle.length > 25 ? '✅' : '👀'}</div>
       <div class="standard">"${data.css.pageTitle}" <span class="blue">Student name, CSE 121B, BYU-Idaho</span></div>
 
       <div class="label">&lt;body&gt;</div>
@@ -129,11 +129,11 @@ function buildReport(data, url) {
 
       <div class="label">&lt;h1&gt; heading</div>
       <div class="data">${h.includes('<h1') && h.includes('</h1>') ? '👀' : '❌'}</div>
-      <div class="standard">${getContent(h, /<h1>(.*?)<\/h1>/)} <span class="blue">👀Name, CSE 121B, BYU-Idaho</span></div>
+      <div class="standard">${getContent(h, /<h1>(.*?)<\/h1>/)} <span class="blue">👀 Student Name, CSE 121B, BYU-Idaho</span></div>
 
       <div class="label">&lt;h2&gt; heading</div>
       <div class="data">${h.includes('<h2') && h.includes('</h2>') ? '👀' : '❌'}</div>
-      <div class="standard">${getContent(h, /<h2>(.*?)<\/h2>/)} <span class="blue">👀Location</span></div>
+      <div class="standard">${getContent(h, /<h2>(.*?)<\/h2>/)} <span class="blue">👀 Student Location</span></div>
 
       <div class="label">&lt;hr&gt;</div>
       <div class="data">${h.includes('<hr>') || h.includes('<hr/>') ? '✅' : '❌'}</div>
