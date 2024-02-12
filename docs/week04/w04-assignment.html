@@ -119,7 +119,7 @@ myProfile.placesLived.push(
         <strong>array</strong> for each place you have lived.
       </li>
     </ol>
-    <h4>DOM Manipulation (Output)</h3>
+    <h4>DOM Manipulation (Output)</h4>
 
       <ol>
         <li>
@@ -150,7 +150,8 @@ myProfile.placesLived.push(
               (💡<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank">createElement</a></code>),
             </li>
             <li>place the value of the <code>favoriteFoods</code> array element into the
-              <code>textContent</code> of this new <code>li</code> element, and then</li>
+              <code>textContent</code> of this new <code>li</code> element, and then
+            </li>
             <li>append this new <code>&lt;li&gt;</code> element with content as a child of the HTML
               <code>&lt;ul&gt;</code> element with an ID of <code>favorite-foods</code>.
             </li>
@@ -158,7 +159,7 @@ myProfile.placesLived.push(
 
           <details>
             <summary>Check Your Understanding</summary>
-            <pre><code class="javascript">myProfile.favoriteFoods.forEach(food => {
+            <pre><code class="javascript">myProfile.favoriteFoods.forEach(food =&gt; {
   let li = document.createElement('li');
   li.textContent = food;
   document.querySelector('#favorite-foods').appendChild(li);

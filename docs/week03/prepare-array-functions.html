@@ -7,9 +7,11 @@
   <title>CSE 121B | JavaScript Array Functions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="../styles/course.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
 
 </head>
 
@@ -33,36 +35,47 @@
     </nav>
     <h2>Array Methods for Functional Programming</h2>
     <h3>Overview</h3>
-    <p>Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of statements. Array methods that support functional programming include <code>filter()</code>, <code>map()</code>, and <code>reduce()</code>. There are other array methods that support functional programming, but this learning activity dives into these three common and useful methods.</p>
-    </p>
+    <p>Functional programming is a programming paradigm that treats computation as the evaluation of
+      mathematical functions and avoids changing-state and mutable data. It is a declarative
+      programming paradigm, which means programming is done with expressions or declarations instead
+      of statements. Array methods that support functional programming include
+      <code>filter()</code>, <code>map()</code>, and <code>reduce()</code>. There are other array
+      methods that support functional programming, but this learning activity dives into these three
+      common and useful methods.</p>
     <h3>Prepare</h3>
     <h4>array.filter()</h4>
-    <p>The array.filter() method creates a filtered array from the original array using the condition from the provided
+    <p>The array.filter() method creates a filtered array from the original array using the
+      condition from the provided
       function.</p>
     <ul>
-      <li>Read 📝<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+      <li>Read 📝<a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
           target="_blank">Array.filter()</a> - MDN Web Docs</li>
     </ul>
 
     <h4>array.map()</h4>
-    <p>The array.map() method iterates through each element of the original array using a given function and produces a
-      new array.
-      The original array is not modified. The new array is returned by the map() method. The new array
-      will have the same number of elements as the original array.</p>
-    </p>
+    <p>The array.map() method iterates through each element of the original array using a given
+      function and produces a new array. The original array is not modified. The new array is returned by the map() method. The new array will have the same number of elements as the original array.</p>
+
     <ul>
-      <li>Read 📝<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+      <li>Read 📝<a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
           target="_blank">Array.map()</a> - MDN Web Docs</li>
     </ul>
 
     <h4>array.reduce()</h4>
-    <p>The array.reduce() method is used to reduce the array to a single value. It executes a reducer function on each
-      element of the array, resulting in a single output value. The reducer function takes four arguments: Accumulator,
-      Current Value, Current Index, Source Array. The reducer function's returned value is assigned to the accumulator,
-      whose value is remembered across each iteration throughout the array and ultimately becomes the final, single
+    <p>The array.reduce() method is used to reduce the array to a single value. It executes a
+      reducer function on each
+      element of the array, resulting in a single output value. The reducer function takes four
+      arguments: Accumulator,
+      Current Value, Current Index, Source Array. The reducer function's returned value is assigned
+      to the accumulator,
+      whose value is remembered across each iteration throughout the array and ultimately becomes
+      the final, single
       resulting value.</p>
     <ul>
-      <li>Read 📝<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"
+      <li>Read 📝<a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"
           target="_blank">Array.reduce()</a> - MDN Web Docs</li>
     </ul>
 
@@ -70,36 +83,45 @@
     <p>For all of these exercises, use this array declaration:</p>
     <pre><code class="javascript">let names = ['Nancy','Blessing','Jorge','Svetlana','Bob'];</code></pre>
     <ul class="check">
-      <li>Using the <em><code>array.filter()</code></em> method, create an array named <code>namesB</code> with
-        <strong>only</strong> those names from the <code>name</code> array that start with the character 'B'.
+      <li>Using the <em><code>array.filter()</code></em> method, create an array named
+        <code>namesB</code> with
+        <strong>only</strong> those names from the <code>name</code> array that start with the
+        character 'B'.
         <details>
           <summary>Answer</summary>
-          <pre><code class="javascript">let namesB = names.filter(name => name.charAt(0) === 'B');</code></pre>
+          <pre><code class="javascript">let namesB = names.filter(name =&gt; name.charAt(0) === 'B');</code></pre>
         </details>
       </li>
 
-      <li>Using the <em><code>array.map()</code></em> method, create a new array named <code>namesLength</code> that
+      <li>Using the <em><code>array.map()</code></em> method, create a new array named
+        <code>namesLength</code> that
         contains the length of each name in the <code>names</code> array. Expected output is
         <code>[5, 8, 5, 8, 3]</code>.
         <details>
           <summary>Answer</summary>
-          <pre><code class="javascript">let nameLengths = names.map((name) => name.length);</code></pre>
+          <pre><code class="javascript">let nameLengths = names.map((name) =&gt; name.length);</code></pre>
         </details>
       </li>
 
-      <li>Using the <em><code>names.reduce()</code></em> method, create an expression that returns the <strong>average
-          string length</strong> of the names in the <code>names</code> array. Expected output is <code>5.8</code>.
+      <li>Using the <em><code>names.reduce()</code></em> method, create an expression that returns
+        the <strong>average
+          string length</strong> of the names in the <code>names</code> array. Expected output is
+        <code>5.8</code>.
         <details>
           <summary>Answer</summary>
-          <pre><code class="javascript">names.reduce((total, name) => total + name.length, 0) / names.length;</code></pre>
-          <p>The initial value of the reduction is set to 0. Inside the reducer function, total represents the
-            accumulated sum of string lengths, and name represents each individual name in the array. The reducer
-            function adds the length of each name to the total in each iteration. (like any accumulator, total +=
+          <pre><code class="javascript">names.reduce((total, name) =&gt; total + name.length, 0) / names.length;</code></pre>
+          <p>The initial value of the reduction is set to 0. Inside the reducer function, total
+            represents the
+            accumulated sum of string lengths, and name represents each individual name in the
+            array. The reducer
+            function adds the length of each name to the total in each iteration. (like any
+            accumulator, total +=
             name.length).</p>
         </details>
       </li>
       <li>Complete this ponder activities: <a
-          href="https://byui-cit.github.io/learning-modules/modules/js/array-methods/ponder1/" target="_blank">Practice
+          href="https://byui-cit.github.io/learning-modules/modules/js/array-methods/ponder1/"
+          target="_blank">Practice
           with Array methods</a> - WDD Learning Modules</li>
 
     </ul>
@@ -113,7 +135,8 @@
   <footer>
     <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 
 </body>

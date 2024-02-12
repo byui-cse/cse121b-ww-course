@@ -1,9 +1,9 @@
 const code = document.querySelectorAll("code");
-code.forEach((element) => {
-  element.addEventListener("mousedown", (e) => {
+code.forEach((element) =&gt; {
+  element.addEventListener("mousedown", (e) =&gt; {
     e.preventDefault();
   });
-  element.addEventListener("selectstart", (e) => {
+  element.addEventListener("selectstart", (e) =&gt; {
     e.preventDefault();
   });
 });
