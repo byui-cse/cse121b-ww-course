@@ -4,7 +4,7 @@ import { student, getReportButton, report, message } from './interface.js';
 const modal = document.querySelector("#modal");
 const modalContent = document.querySelector(".modal-content");
 const closeModal = document.querySelector(".close-button");
-closeModal.addEventListener("click", () =&gt; {
+closeModal.addEventListener("click", () => {
   modal.close();
 });
 
@@ -18,8 +18,8 @@ document.addEventListener('keypress', function (e) {
 
 function checkURL(url) {
   return fetch(url)
-    .then(res =&gt; res.ok)
-    .catch(err =&gt; false);
+    .then(res => res.ok)
+    .catch(err => false);
 }
 
 async function getReport() {
@@ -72,13 +72,13 @@ async function validateHTML(h) {
   let htmlErrorMessages = hResult.messages;
   if (htmlErrorMessages.length > 0) {
     modalContent.innerHTML = '';
-    htmlErrorMessages.forEach((message) =&gt; {
+    htmlErrorMessages.forEach((message) => {
       modalContent.innerHTML += `<p>▶ ${message.message}</p>`;
     });
     modal.showModal();
   }
 
-  let htmlErrorCount = hResult.messages.reduce((count, message) =&gt; {
+  let htmlErrorCount = hResult.messages.reduce((count, message) => {
     return message.type === 'error' ? count + 1 : count;
   }, 0);
 
@@ -92,11 +92,11 @@ function buildReport(data, url) {
   h = h.replace(/<!--[\s\S]*?-->/g, ''); // remove comments
 
   validateHTML(h)
-    .then((htmlErrorCount) =&gt; {
+    .then((htmlErrorCount) => {
       document.getElementById('hvalid').innerHTML = (htmlErrorCount === 0) ? '✅' : '❌';
       document.getElementById('htmlerrorscount').innerHTML = `Errors: ${htmlErrorCount}`;
     })
-    .catch((error) =&gt; {
+    .catch((error) => {
       document.getElementById('htmlerrorscount').innerHTML = `${error}`;
     });
 
