@@ -5,13 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CSE 121B | W05: Programming Tasks</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/course.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
 
 </head>
 
@@ -45,8 +44,7 @@
     </ol>
     <h4 class="step">Review the Public Temple Data</h4>
     <ol>
-      <li>Navigate to this <a
-          href="https://byui-cse.github.io/cse121b-ww-course/resources/temples.json"
+      <li>Navigate to this <a href="https://byui-cse.github.io/cse121b-ww-course/resources/temples.json"
           target="_blank">temple JSON file</a> by clicking on the link. Your browser will handle the
         parsing of the data to make it readable.</li>
       <li>Review the temple data format and naming structure.</li>
@@ -170,7 +168,8 @@
             string.</li>
           <li>"notutah": filter for temples where the <code>location</code> does
             <strong>not</strong> contain "Utah"
-            as a string.</li>
+            as a string.
+          </li>
           <li>"older": filter for temples where the <code>dedicated</code> date is before 1950.
             (compare versus <code class="javascript">new Date(1950, 0, 1)</code>).
           </li>
@@ -193,8 +192,8 @@
     </ol>
 
     <figure>
-      <img src="../images/w05-task-example-wide.png" alt="W05 Programming Tasks Example Output"
-        loading="lazy" width="500">
+      <img src="../images/w05-task-example-wide.png" alt="W05 Programming Tasks Example Output" loading="lazy"
+        width="500">
       <figcaption>Figure 2: Example Output</figcaption>
     </figure>
 
@@ -208,7 +207,17 @@
     <h3>Submission</h3>
     <ol>
       <li>Commit and push your work to GitHub.</li>
-      <li>Submit the GitHub Pages rendered URL in Canvas..</li>
+      <li>Submit the GitHub Pages rendered URL in Canvas.
+        <div class="callout info">
+          <p>💡Here is an example of what the URL should look like:</p>
+          <pre><code class="cli">https://<em>yourgithubusername</em>.github.io/cse121b/w05-task.html</code></pre>
+          <p>or</p>
+          <pre><code class="cli">https://<em>yourgithubusername</em>.github.io/cse121b</code></pre>
+          <p>is OK because each assignment is already included in the provided navigation structure on this home page
+            for the course.</p>
+        </div>
+
+      </li>
     </ol>
     <h3>Stretch</h3>
     <p>Add additional options such as sorting the temples alphabetically.</p>
@@ -222,8 +231,7 @@
   <footer>
     <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
   </footer>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
   <script src="../scripts/preventCodeSelect.js"></script>
 </body>
