@@ -5,13 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CSE 121B | W01: Programming Task</title>
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/course.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/ir-black.min.css">
 
 </head>
 
@@ -44,12 +43,12 @@
         <strong>DevTools</strong> environment,
       </li>
       <li>work with JavaScript <strong>variables</strong>, and</li>
-      <li><strong>publish</strong> your local work to your cse121b GitHub Pages remote space.</li>
-      <div class="callout info">All of the programming work for this class will be stored in your
-        local <strong>cse121b</strong> repository folder established in the assigned <a
-          href="index.html">setup
-          activities</a> and then a copy will be pushed (uploaded) to your
-        remote GitHub Pages cse121b repository for assessment.</div>
+      <li><strong>publish</strong> your local work to your cse121b GitHub Pages remote space.
+        <div class="callout info">All of the programming work for this class will be stored in your
+          local <strong>cse121b</strong> repository folder established in the assigned <a href="index.html">setup
+            activities</a> and then a copy will be pushed (uploaded) to your
+          remote GitHub Pages cse121b repository for assessment.</div>
+      </li>
     </ul>
     </p>
     <h3>Instructions</h3>
@@ -59,22 +58,20 @@
       material before viewing any answer key.</div>
 
     <h4 class="step">Setup</h4>
-    <figure style="float: right; margin: 0 0 10px 15px;">
+    <figure class="floatright">
       <img src="../images/w01-task-file-structure-example.png"
-        alt="Example W01 File Structure after unzipping and moving the file into cse121b"
-        loading="lazy" width="300">
+        alt="Example W01 File Structure after unzipping and moving the file into cse121b" loading="lazy" width="300">
       <figcaption>Figure 1: Example File Structure</figcaption>
     </figure>
     <ol>
       <li>Open Visual Studio Code (VS Code) and open your existing, local <code>cse121b</code>
         repository/folder that you established during the setup activities.</li>
-      <li>Download the <a
-          href="https://byui-cse.github.io/cse121b-ww-course/taskfiles/w01-task.zip">starting
+      <li>Download the <a href="https://byui-cse.github.io/cse121b-ww-course/taskfiles/w01-task.zip">starting
           files</a> and unzip them for file management.
         <div class="callout info">Downloading and unzipping are completed outside of VS Code using
           the operating system
-          and/or other tools. <a href="https://www.google.com/search?q=%how%20to%20unzip"
-            target="_blank">How to Unzip
+          and/or other tools. <a href="https://www.google.com/search?q=%how%20to%20unzip" target="_blank"
+            rel="noopener">How to Unzip
             Files.</a></div>
       </li>
       <li>Move the files (2) into the <code>cse121b</code> folder.
@@ -227,22 +224,24 @@
       </li>
       <li>Try to determine the problem.</li>
       <li>It is <strong>NOT</strong> required that you fix the code for this error.</li>
-      <details>
-        <summary>Solution</summary>
-        <p>In JavaScript, the <code>for ... in</code> loop is used to iterate over the properties of
-          an object, not for iterating over the elements of an array. When used with an array, it
-          iterates over the indices of
-          the array, not the actual elements. Thus returning 45 as the indices are 0 to 9. The
-          solution can be to change the for loop to a <code>for ... of</code> loop. The function
-          should return 55.
-        </p>
-      </details>
+
     </ol>
+    <details>
+      <summary>Solution</summary>
+      <p>In JavaScript, the <code>for ... in</code> loop is used to iterate over the properties of
+        an object, not for iterating over the elements of an array. When used with an array, it
+        iterates over the indices of
+        the array, not the actual elements. Thus returning 45 as the indices are 0 to 9. The
+        solution can be to change the for loop to a <code>for ... of</code> loop. The function
+        should return 55.
+      </p>
+    </details>
+
     <hr>
     <details>
       <summary>🚑 Task Demonstration</summary>
       <p>
-        🎦 <a href="https://video.byui.edu/media/t/1_rlyxosxw" target="_blank">W01: Assignment Task
+        🎦 <a href="https://video.byui.edu/media/t/1_rlyxosxw" target="_blank" rel="noopener">W01: Assignment Task
           Demonstration</a></p>
     </details>
 
@@ -253,6 +252,10 @@
       <li>Push your changes to the cse121b GitHub Pages enabled repository.</li>
       <li>Be prepared to submit the complete URL to your w01-task.html file.</li>
     </ol>
+    <div class="callout info">
+      💡Here is an example of what URL you will be submitting:<br>
+      <pre><code class="cli">https://<em>yourgithubusername</em>.github.io/cse121b/w01-task.html</code></pre>
+    </div>
 
     <hr>
     <nav>
@@ -264,8 +267,7 @@
   <footer>
     <p>Copyright &copy; Brigham Young University-Idaho | All rights reserved</p>
   </footer>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
   <script src="../scripts/preventCodeSelect.js"></script>
 </body>
